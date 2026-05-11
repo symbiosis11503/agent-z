@@ -16,6 +16,8 @@ AgentZ 解決中文圈兩大空缺：(1) 沒有繁中 first 的 curriculum (簡�
 
 ## 章節（20 章）
 
+- [章節索引](https://symbiosis11503.github.io/agent-z/chapters): 20 章索引 landing — 前言 / Watcher / Operator / Builder / 進階分流 5 層分組 + 時長 + 核心關鍵字
+
 ### 前言 — 真零基礎 onramp
 - [Ch-1 完全沒寫過 code 也能讀的 AI Agent 全景](https://symbiosis11503.github.io/agent-z/chapters/ch-1_zero_basics/): 30 min, Agent vs ChatGPT / ReAct 概念
 - [Ch 0 把工具裝好](https://symbiosis11503.github.io/agent-z/chapters/ch00_setup/): Terminal / Python / git / API key 從 0
