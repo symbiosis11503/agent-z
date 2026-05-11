@@ -250,3 +250,10 @@ Supervisor 架構（§2.2）最關鍵是 router prompt。試這個：
 - [MetaGPT paper](https://arxiv.org/abs/2308.00352)
 - `datawhalechina/hugging-multi-agent`（1.4K⭐）— MetaGPT 中文教程
 - ai-dict Handoffs 段
+
+---
+
+> 🛟 **卡關時看這裡**：
+> - handoff 卡死 / context 傳錯 → [故障排除 § Multi-agent](../../site/troubleshooting.md)
+> - Pipeline / Supervisor / Blackboard 3 架構 snippet → [`starter-code/ch14_multi_agent/`](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch14_multi_agent)
+> - Subagent vs Multi-agent 差別 → [名詞表 § 常被混淆的 pair](../../site/glossary.md#11-常被混淆的-pair-對比)

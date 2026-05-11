@@ -300,3 +300,10 @@ def hybrid_agent(task):
 - [Reflexion paper (Shinn et al. 2023)](https://arxiv.org/abs/2303.11366)
 - [Anthropic — Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)
 - `nibzard/awesome-agentic-patterns`（4.5K⭐）— pattern catalog
+
+---
+
+> 🛟 **卡關時看這裡**：
+> - ReAct loop 失控 / Reflection 死循環 → [故障排除 § Agent loop](../../site/troubleshooting.md)
+> - 3 範式 snippet copy-paste → [速查卡 § ReAct / Plan / Reflection](../../site/cheatsheet.md#react-loop-範式)
+> - ReAct vs Plan-and-Solve 怎麼選 → [名詞表 § 常被混淆的 pair](../../site/glossary.md#11-常被混淆的-pair-對比)

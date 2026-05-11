@@ -283,3 +283,10 @@ Ch 5 講的 hook 可以做 PreToolUse 攔截：
 - [Claude Code — settings reference](https://docs.claude.com/en/docs/agents-and-tools/claude-code/settings)
 - ai-dict Failure Modes 段：https://ai-dict.gh.miniasp.com/
 - 後面 **Ch 15 會用 Helix V3 的 cost cap / audit / replay 當完整 case study**
+
+---
+
+> 🛟 **卡關時看這裡**：
+> - cost 燒太兇 / runaway loop → [故障排除 § Cost/預算](../../site/troubleshooting.md)
+> - cost cap pattern fail-closed code + Prompt Cache (省 90%) → [速查卡 § Cost cap](../../site/cheatsheet.md#cost-cap-pattern)
+> - 名詞看不懂 → [60+ 名詞表](../../site/glossary.md)

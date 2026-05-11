@@ -330,3 +330,10 @@ description: Review a PR / diff and produce structured feedback in 繁中
 - WenyuChiou MCP-Skills catalog (62 entries): https://github.com/WenyuChiou/awesome-agentic-ai-zh
 - ai-dict Memory & Guidance 段：https://ai-dict.gh.miniasp.com/
 - `datawhalechina/agent-skills-with-anthropic`（吳恩達 + Anthropic agent skills 課程中文版，1K⭐）
+
+---
+
+> 🛟 **卡關時看這裡**：
+> - SKILL.md trigger 不起來 / Plugin 裝壞 → [故障排除 § 框架/Skills](../../site/troubleshooting.md)
+> - SKILL.md 標準格式 + auto-load 順序 → [速查卡 § Skill](../../site/cheatsheet.md#skill-auto-load-順序)
+> - MCP vs Skill 怎麼選 → [名詞表 § 常被混淆的 pair](../../site/glossary.md#11-常被混淆的-pair-對比)

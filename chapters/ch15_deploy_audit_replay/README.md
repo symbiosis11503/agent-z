@@ -388,3 +388,10 @@ clone https://github.com/symbiosis11503/helix-framework，讀：
 - [Anthropic — Production-ready agents](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/best-practices)
 - [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)
 - LangSmith / LangFuse / Helicone — agent observability tools
+
+---
+
+> 🛟 **卡關時看這裡**：
+> - deploy / replay 重現失敗 → [故障排除 § Production deploy](../../site/troubleshooting.md)
+> - V3 4 道閘門 governance pattern + Cost cap fail-closed code → [速查卡 § V3 Governance](../../site/cheatsheet.md#v3-governance-pattern-production-agent)
+> - 名詞看不懂 → [60+ 名詞表](../../site/glossary.md)

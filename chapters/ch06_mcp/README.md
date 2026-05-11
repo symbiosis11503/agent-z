@@ -336,3 +336,10 @@ await server.connect(transport);
 - [Anthropic — Introducing MCP](https://www.anthropic.com/news/model-context-protocol)
 - WenyuChiou 62-entry MCP catalog: https://github.com/WenyuChiou/awesome-agentic-ai-zh
 - ai-dict Tools & Environments 段：https://ai-dict.gh.miniasp.com/
+
+---
+
+> 🛟 **卡關時看這裡**：
+> - MCP server 連不上 / stdout 噪音 / scope 錯 → [故障排除 § MCP](../../site/troubleshooting.md)
+> - FastMCP boilerplate + claude.json 設定 + scope → [速查卡 § MCP](../../site/cheatsheet.md#mcp-server-boilerplate-python-fastmcp)
+> - 名詞看不懂 → [60+ 名詞表](../../site/glossary.md)
