@@ -48,6 +48,7 @@ export default defineConfig({
           { text: '名詞表 60+', link: '/glossary' },
           { text: 'LLM / API 申請', link: '/llm-providers' },
           { text: 'FAQ', link: '/faq' },
+          { text: '跟其他教程比較', link: '/compare' },
         ],
       },
       {
