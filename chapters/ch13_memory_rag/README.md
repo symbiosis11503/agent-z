@@ -247,6 +247,25 @@ Anthropic 報告 retrieval 召回率提升 35-49%。**成本**：每 chunk 多 1
 
 ---
 
+## 9a. 常見地雷
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **chunk 切太大 / 太小** | retrieval 不準 | 中文 200-500 字 / 英文 500-1000 token, 重疊 10-15% |
+| **沒 contextualize** | chunk 失去上下文 | 加 50-100 字 chunk-position context（[§6 contextual retrieval](#6-contextual-retrieval)）|
+| **embedding model 換掉**  | 舊資料 retrieval 突然全錯 | embedding model + version 寫死，每次升級全 re-embed |
+| **mixed language** | 中英混搭召回率差 | 用 multilingual model (cohere multilingual / openai 3-large) |
+| **沒 metadata filter** | 答案被無關文件淹沒 | 加 `where={"category": "policy"}` 等 filter |
+| **k 太大 / 太小** | k=20 太雜、k=3 漏掉 | 從 k=5 起手、看 result 調 |
+| **沒 rerank** | top-k 順序很爛 | 加 cohere rerank / cross-encoder 二次排序 |
+| **session memory 沒截斷** | 第 30 輪對話 context 撞 200K | 用 summarizer agent 每 10 輪壓縮成 1 段 |
+| **vector DB 改路徑** | 重啟後 collection 消失 | `PersistentClient(path=...)` 用絕對路徑 + 不要砍 |
+| **chunk overlap 沒設** | 跨 chunk 邊界資訊掉 | overlap 50-100 char / 50 token |
+| **PII 直接進 vector DB** | 隱私外洩 | 索引前 mask（姓名/電話/email/身分證）, 或用本地 embedding |
+| **RAG 蓋掉 LLM 知識** | 簡單問題給超詳細 RAG 答案 | LLM 判斷「要不要查 RAG」, 簡單問直答 |
+
+---
+
 ## 9b. 在這頁練 contextual retrieval 的 prompt
 
 Contextual Retrieval（§6）的核心是「給 chunk 加一段 50-100 字的位置 + 主題」。試試看：

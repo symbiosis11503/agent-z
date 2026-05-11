@@ -337,6 +337,27 @@ def replay(path):
 
 ---
 
+## 8a. 常見地雷
+
+自寫 framework 比用框架更容易踩這些：
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **loop 不停** | agent 跑同 tool 100 次 | `for _ in range(max_steps):` 硬限 + `stop_reason` 檢查 |
+| **沒檢 end_turn** | 一直跑下去 | `if resp.stop_reason == "end_turn": break` 是唯一停的方式 |
+| **history 累積爆 token** | 第 10 步 context 撞 200K cap | 滑動窗口 + summary, 或丟給 Sonnet 縮 |
+| **tool 回 None** | LLM 報「tool result 異常」 | tool 一定 return 非空 str/dict，None → `"(empty)"` |
+| **decorator 改 schema** | LLM 不知參數 | `@tool` 要從 typehints + docstring 自動抽 schema, 否則手填 |
+| **state 隨手 global** | 多 agent 共用同 dict 互相蓋 | 每 agent run 用獨立 `RunContext` 或 `agent.copy()` |
+| **不存 trace** | 出錯找不到原因 | 每步 append `(role, content)` 到 list 並 dump 成 JSON |
+| **錯誤吞掉** | tool fail 但 agent 不知道 | try/except 後 return `{"error": ...}` 讓 LLM 看到能 self-correct |
+| **prompt 沒 spec output format** | LLM 答非所問 | system 寫明「回 JSON / 表格 / 200 字內」 |
+| **沒 cost cap** | 一個 task 燒 $5 | 每 call 過 cost_tracker（[Ch 8 starter](../../starter-code/ch08_cost_observability/)） |
+| **沒 mock LLM** | 測試要花真錢 | 寫 `mock_llm()` 回固定字串，unit test 不打真 API |
+| **API 換版本就壞** | Anthropic SDK 更新 break | pin SDK 版本 + 整合測試 |
+
+---
+
 ## 8b. 在這頁讓 LLM 解釋自己的 tool_use 格式
 
 > 動手寫 mini framework 之前，先讓 LLM 告訴你它預期收到什麼回什麼——這個練習能幫你 debug 階段省幾小時。

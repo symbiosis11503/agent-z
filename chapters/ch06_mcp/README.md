@@ -301,6 +301,23 @@ await server.connect(transport);
 
 ---
 
+## 11a. 常見地雷
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **disconnected** | `/mcp` 顯示 server status disconnected | command 路徑用絕對路徑 / 看 stderr log / `which uv` 確認 |
+| **`print()` 弄壞 stdio** | server 起來但回應亂碼 | stdio mode 下**只能** `print(..., file=sys.stderr)`、stdout 給 MCP 用 |
+| **沒重啟 Claude Code** | 改 SKILL.md / 加 server 後沒生效 | `/exit` 重新 `claude` |
+| **schema 漏 required** | LLM 漏傳參數 | input_schema 明確列 `required: ["x", "y"]` |
+| **fastmcp vs raw mcp 混用** | import / decorator 不對 | 用 `mcp.server.fastmcp.FastMCP` 一路到底，別跨 |
+| **tool docstring 沒寫** | LLM 不知何時 call | docstring 寫「**何時用 + 輸入 + 輸出**」3 段 |
+| **權限濫開** | server 任何路徑都能讀 / 寫 | allowlist 限白名單路徑、危險操作要 confirmation gate |
+| **沒處理錯誤** | 一個 tool fail 整 server crash | 每 tool try/except, return `{"error": ...}` 給 LLM |
+| **stdout 亂寫 log** | Claude 收到 JSON-RPC 解析錯誤 | log lib 預設往 stderr; print 改 `print(..., file=sys.stderr)` |
+| **MCP server 失控** | LLM 連 50 次 search | server 加 rate limit / max_results cap |
+
+---
+
 ## 11b. 在這頁讓 LLM 幫你設計 MCP server
 
 要寫自己的 MCP server？跟 LLM 對話釐清需求：
