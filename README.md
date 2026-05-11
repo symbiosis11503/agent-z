@@ -10,7 +10,7 @@
 [![Status](https://img.shields.io/badge/v1-complete-green.svg)](CHANGELOG.md)
 ![Language](https://img.shields.io/badge/language-繁體中文-red)
 ![Chapters](https://img.shields.io/badge/chapters-20-blue)
-![Starter%20code](https://img.shields.io/badge/starter--code-6%20dirs-blueviolet)
+![Starter%20code](https://img.shields.io/badge/starter--code-10%20dirs-blueviolet)
 
 ---
 
@@ -77,12 +77,16 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 - ✅ [進度檢核表](https://symbiosis11503.github.io/agent-z/progress) — localStorage 記你跑到哪
 - 📋 [CONTRIBUTING.md](./CONTRIBUTING.md) — 5 條投稿路徑
 
-## Starter Code（跑得起來的真實 code）
+## Starter Code（跑得起來的真實 code，10 dirs）
 
 | 對應章 | 目錄 | 內容 |
 |---|---|---|
+| Ch 6 | [`starter-code/ch06_mcp/`](./starter-code/ch06_mcp/) | FastMCP server 3 tools + Claude Code 接法 |
+| Ch 7 | [`starter-code/ch07_skills_plugins/`](./starter-code/ch07_skills_plugins/) | SKILL.md template + project/user-scope install |
+| Ch 8 | [`starter-code/ch08_cost_observability/`](./starter-code/ch08_cost_observability/) | drop-in Anthropic SDK wrap + SQLite log + daily cap |
 | Ch 9 | [`starter-code/ch09_weather_agent/`](./starter-code/ch09_weather_agent/) | function calling weather agent |
 | Ch 10 | [`starter-code/ch10_paradigms/`](./starter-code/ch10_paradigms/) | ReAct / Plan-and-Solve / Reflection 三範式 |
+| Ch 11 | [`starter-code/ch11_frameworks/`](./starter-code/ch11_frameworks/) | vanilla / LangGraph / CrewAI / Smolagents / Pydantic AI 5 對照 |
 | Ch 12 | [`starter-code/ch12_mini_framework/`](./starter-code/ch12_mini_framework/) | mini agent framework from scratch |
 | Ch 13 | [`starter-code/ch13_memory_rag/`](./starter-code/ch13_memory_rag/) | session memory + Chroma RAG |
 | Ch 14 | [`starter-code/ch14_multi_agent/`](./starter-code/ch14_multi_agent/) | Pipeline / Supervisor / Blackboard 三架構 |
@@ -121,8 +125,8 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 
 ## Status
 
-**v1 complete** (2026-05-11) — 20 章 / ~6,200 行繁中 / 60+ 動手練習 / 6 starter code dirs / 互動 Web App live + PDF release ✅
-**v1.x 持續迭代中** — Ch 16/17/18 深度補完、社群投稿閘門開放、5 分鐘 Quick Win 上線
+**v1 complete** (2026-05-11) — 20 章 / ~6,200 行繁中 / 60+ 動手練習 / 10 starter code dirs / 互動 Web App live + PDF release ✅
+**v1.x 持續迭代中** — Ch 16/17/18 深度補完、starter code 全 coverage (ch06/07/08/11/14)、社群投稿閘門開放、5 分鐘 Quick Win 上線
 **v2 規劃中** — 章節內動手練習串 Helix V3 sandbox 真跑 + portfolio leaderboard
 
 請查 [CHANGELOG.md](./CHANGELOG.md)。
