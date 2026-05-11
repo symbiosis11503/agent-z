@@ -37,6 +37,7 @@ export default defineConfig({
 
     nav: [
       { text: '首頁', link: '/' },
+      { text: '5 分鐘 Quick Win', link: '/quickwin' },
       { text: '章節', link: '/chapters/ch-1_zero_basics/' },
       { text: '進度檢核', link: '/progress' },
       { text: '名詞表', link: '/glossary' },

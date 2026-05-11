@@ -10,7 +10,10 @@ hero:
     alt: AgentZ
   actions:
     - theme: brand
-      text: 從 Ch-1 開始 →
+      text: 5 分鐘 Quick Win →
+      link: /quickwin
+    - theme: alt
+      text: 從 Ch-1 開始
       link: /chapters/ch-1_zero_basics/
     - theme: alt
       text: 已經會 Python? 跳 Ch 1
