@@ -90,7 +90,10 @@ AgentZ 想補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills /
 
 ## Status
 
-**Active development** — 章節持續產出中，請查 [CHANGELOG.md](./CHANGELOG.md)。
+**v1 complete** (2026-05-11) — 20 章 / ~5,280 行繁中 / 60+ 動手練習 / 互動 Web App live。
+**v2 規劃中** — 章節內動手練習串 Helix V3 sandbox 真跑 + portfolio leaderboard。
+
+請查 [CHANGELOG.md](./CHANGELOG.md)。
 
 ---
 
