@@ -251,6 +251,23 @@ Ch 5 講的 hook 可以做 PreToolUse 攔截：
 
 ---
 
+## 9a. 常見地雷
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **沒設 monthly limit** | 帳單一個月 $500 | Anthropic Console / OpenAI Billing 都有 monthly limit, 學習階段設 $20 |
+| **PRICING 寫死過期** | 帳單跟 log 對不起來 | 每月對 [vendor pricing page](https://www.anthropic.com/pricing) 校；用 cost tracker 抽成設定檔 |
+| **retry 也算 cost** | 失敗 retry 5 次燒 5x | retry policy 寫進 budget; 429 retry 用 exponential backoff |
+| **prompt cache 沒用** | 大 system prompt 每次都付全錢 | 用 `cache_control` beta 把 system prompt cache 1 hr, 可省 90% |
+| **streaming 不關 connection** | 算 cost 算到中斷後也累計 | 收到 `message_stop` 確認 token 後才結算 |
+| **多 process 寫 SQLite** | `database is locked` | WAL mode 或升 PostgreSQL |
+| **estimate vs actual 對不起來** | pre-flight 估 200 token 實際燒 1000 | estimate 用 tiktoken-like lib 加 20% buffer |
+| **沒 per-user cap** | 一個 user 燒爆所有人 budget | 加 user_id quota，per-user daily / hourly cap |
+| **prod 跟 dev 共 quota** | dev 試壞 prod 也炸 | 不同 API key + 不同 cost db |
+| **/cost 數字看了不行動** | 看到燒 $1 還繼續跑 | 自動化 trip wire（程式攔截），不靠人類紀律 |
+
+---
+
 ## 9b. 在這頁讓 LLM 分析你的 cost trace
 
 把你最近一次 agent run 的 token 數字貼進去，看 LLM 怎麼診斷：

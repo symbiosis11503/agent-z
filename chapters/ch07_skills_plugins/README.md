@@ -297,6 +297,23 @@ description: Review a PR / diff and produce structured feedback in 繁中
 
 ---
 
+## 11a. 常見地雷
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **description 寫太空** | LLM 不觸發 / 誤觸發 | description = 「**何時用 + 做什麼**」一句話，<150 字 |
+| **frontmatter 缺 name** | skill 不出現 | `---` 區塊內必填 `name` + `description` |
+| **steps 太長** | LLM 跳步驟 | 砍到 < 7 步，再長就拆兩個 skill |
+| **絕對路徑寫死** | 別人 clone 跑不起 | 用相對路徑或 skill 自 detect cwd |
+| **跨 SKILL 命名衝突** | project / user 兩個同名 | project-scope 蓋過 user-scope，命名加 prefix |
+| **危險動作沒 confirmation** | skill 自動刪檔 / push | Constraints 段明寫「Never commit/push/delete without approval」 |
+| **沒寫 Constraints** | LLM 自由發揮 | Constraints 列邊界, 比 Steps 還重要 |
+| **改完不重啟** | 規則沒生效 | `/exit` 重新 `claude` 後驗 `/skill` |
+| **Skill 跟 MCP 混淆** | 把 tool 塞進 SKILL.md | SKILL = 工作流程 / MCP = 工具，分清楚 |
+| **Progressive Disclosure 不分層** | 一次塞 100 條規則 | 用 `## 看到 X 時` `## 看到 Y 時` 條件式呈現 |
+
+---
+
 ## 11b. 在這頁直接練 Skill description
 
 最關鍵是 frontmatter `description`——寫得好 LLM 會精準觸發，寫得糟會誤觸發 / 不觸發。

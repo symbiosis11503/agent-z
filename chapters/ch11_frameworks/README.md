@@ -256,6 +256,23 @@ print(result.data.temp)  # 26.0
 
 ---
 
+## 8a. 常見地雷
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **選框架靠 stars** | 用了找不到人問 / 廢棄 framework | 看 last commit / issues open ratio / discord 活躍度 |
+| **單 agent 用 CrewAI** | code 三倍長 | 單 agent → vanilla 或 Pydantic AI / 多 role 才上 CrewAI |
+| **沒退路設計** | framework 改 API、整個系統重寫 | 介面跟 framework 分離（adapter pattern），換框架只動 adapter |
+| **裝爆 dependency** | 1 GB venv + 互相衝突 | 用 `optional-deps` 各家獨立裝（如 ch11 starter `pyproject.toml`）|
+| **黑盒 debug** | framework 內部出錯看不懂 | 從 vanilla 起家、確定要的才升 framework |
+| **OOTB demo 看起來神** | 換 task 就爛 | demo task 通常選好 cherry-pick, 換成你的需求重評估 |
+| **prompt cache 沒生效** | framework 內部換掉 cache_control | 看 framework 是否 forward cache headers |
+| **streaming 不一致** | LangGraph 跟 raw API stream 格式不同 | 寫 adapter unifying event types |
+| **同 framework 多版本** | 同 repo 內混 LangChain v0.1 + v0.3 | pyproject pin 嚴格版本 + CI lock |
+| **沒 escape hatch** | framework 不支援某 case 卡死 | 框架 + raw API 混用, 困難 case 跳過 framework 直接 call SDK |
+
+---
+
 ## 8b. 在這頁讓 LLM 幫你選 framework
 
 貼你的需求、看 LLM 推薦哪個 framework + 理由。**不是讓 LLM 替你決定**，是讓它幫你檢查思路。
