@@ -1,3 +1,8 @@
+---
+title: 故障排除 Troubleshooting — 12 大類常見錯誤
+description: AgentZ 故障排除指南：12 大類常見錯誤 + 症狀 + 解法（環境/API 金鑰/Cost/Agent loop/Tool use/MCP/Memory/RAG/Multi-agent/Production deploy/框架/Researcher/Web 部署）。瀏覽器 Ctrl-F 友好。
+---
+
 # 故障排除指南 — Troubleshooting Compass
 
 學員 / 操作員 / Builder 跑 agent 時常見的問題 + 解法，按症狀分類。**用瀏覽器 Ctrl-F 找關鍵字最快**。

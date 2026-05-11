@@ -1,3 +1,8 @@
+---
+title: 速查卡 Cheatsheet — A4 可印單頁速查
+description: AgentZ A4 可印速查卡：Claude Code CLI / Anthropic SDK / pricing / ReAct / cost cap / MCP boilerplate / Computer Use / Subagent / V3 governance / 模型路由建議 / 章節 cost 估算。
+---
+
 # Cheatsheet — 速查卡
 
 單頁濃縮，A4 可印、貼鍵盤旁。學完 AgentZ 後忘了哪個指令、模板、模型名、cost 公式時看這頁。

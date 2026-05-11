@@ -1,3 +1,8 @@
+---
+title: AgentZ vs 其他 AI Agent 教程 — 14 維度誠實對照
+description: AgentZ 跟 hello-agents (47K⭐) / MS for Beginners (30K⭐) / HF agents-course (18K⭐) / OpenAI Cookbook (64K⭐) 14 維度比較 + 5 條 path 建議。不藏 — 誠實比較比讓你 sunk cost 好。
+---
+
 # AgentZ vs 其他 AI Agent 教程
 
 決定要不要走 AgentZ？這頁把 5 個主流 AI Agent 學習資源拿出來真實比較。**不是宣傳，是讓你選對適合自己的。**

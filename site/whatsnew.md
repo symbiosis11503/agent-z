@@ -1,3 +1,8 @@
+---
+title: What's New — AgentZ 更新紀錄
+description: AgentZ 版本變動 high-signal 摘要：v1.0 initial / v1.1 章節深度補完 / v1.2 ralph-loop polish wave (新增 cheatsheet / troubleshooting / compare / 名詞表 60+ / nav 7-item dropdown / A4 print CSS)。
+---
+
 # What's New — 更新紀錄
 
 AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」的高訊號摘要。完整時間序列見 [CHANGELOG.md](https://github.com/symbiosis11503/agent-z/blob/main/CHANGELOG.md)。
