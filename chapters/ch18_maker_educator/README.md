@@ -213,7 +213,7 @@ Hour 4 — 整合 + Cost
 | **demo 卡關** | 你的 demo 不能跑、現場 debug 20 min | 預錄影片 + 截圖 fallback |
 | **學員裝環境炸** | Python 版本 / pip / API key 各種問題 | 用 Colab / GitHub Codespaces 免裝 |
 | **進度差異大** | 高手 5 min 寫完、新手卡 30 min | pair programming 或 stretch goal |
-| **API quota 爆** | 30 學員同時跑炸 rate limit | 分階段跑或用本地 Ollama |
+| **API quota 爆** | 30 學員同時跑炸 rate limit | 分階段跑或用本地 Ollama（[本地 / 主權 LLM 指南](https://symbiosis11503.github.io/agent-z/llm-providers/local-sovereign)）|
 | **沒 reflection** | 學員做完不知道學到什麼 | 結尾 15 min retro：「今天學最深刻的一條」 |
 
 ### 3.6 互動式教材技巧

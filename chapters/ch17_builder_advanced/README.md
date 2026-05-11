@@ -88,6 +88,8 @@ prompt + RAG 已調極限嗎? ─ No ──► 繼續調 prompt
 
 ## 4. SFT pipeline — 真實 code
 
+> 💡 **想知道 Llama / Qwen / DeepSeek 等開源 model 怎麼本地跑或申請 cloud API**？翻 [LLM / API 申請 — 本地 / 主權 / 中文圈](https://symbiosis11503.github.io/agent-z/llm-providers/local-sovereign) — 含 Ollama / TAIDE / Qwen-GLM-Yi 三類詳細申請流程。
+
 ```python
 # pip install trl transformers datasets peft bitsandbytes accelerate
 from trl import SFTTrainer, SFTConfig
