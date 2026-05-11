@@ -112,7 +112,7 @@ export default defineConfig({
       { text: '首頁', link: '/' },
       { text: '5 分鐘 Quick Win', link: '/quickwin' },
       { text: '課程地圖', link: '/roadmap' },
-      { text: '章節', link: '/chapters/ch-1_zero_basics/' },
+      { text: '章節', link: '/chapters' },
       {
         text: '工具箱',
         items: [
@@ -214,6 +214,13 @@ export default defineConfig({
         },
       ],
       '/chapters/': [
+        {
+          text: '🏠 章節索引',
+          collapsed: false,
+          items: [
+            { text: '20 章總覽 / 學習層 ladder', link: '/chapters' },
+          ]
+        },
         {
           text: '前言（真零基礎 onramp）',
           collapsed: false,
