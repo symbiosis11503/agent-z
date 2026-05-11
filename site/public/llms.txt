@@ -1,0 +1,73 @@
+# AgentZ — 繁中 AI Agent 學習系統
+
+> 從零基礎到 AI Agent 構建者的繁體中文 first-class、vendor-neutral、Claude Code 生態深入的漸進式學習教材。20 章 / 6,500+ 行 / 10 個 starter-code dirs / 60+ 動手練習，MIT 授權。
+
+AgentZ 解決中文圈兩大空缺：(1) 沒有繁中 first 的 curriculum (簡中圈有 hello-agents 47K⭐，繁中只有學習地圖)；(2) 多數教程綁特定 vendor (Azure / HF)。AgentZ 是繁中 first-class curriculum + Claude / OpenAI / Gemini / Groq / OpenRouter / DeepSeek vendor-neutral + Claude Code 生態系 (MCP / Skills / Plugins) 當一級題材深入。
+
+學習者走過 4 層 ladder：零基礎 → Watcher (理解 LLM/prompt/agent) → Operator (CLI agent/MCP/Skills/cost) → Builder (從 0 寫 agent / framework / memory / multi-agent / production governance) → 進階分流 (Researcher / Builder-RL / Maker / Educator) → Capstone (portfolio entry)。預期 5-50 小時依背景而異。
+
+## 主入口
+
+- [首頁](https://symbiosis11503.github.io/agent-z/index): AgentZ 簡介 + 4-ladder 學習路徑 + 9 feature highlights
+- [5 分鐘 Quick Win](https://symbiosis11503.github.io/agent-z/quickwin): 不裝 Python 用既有 ChatGPT/Claude 帳號體驗 agent ReAct pattern
+- [課程地圖 (Roadmap)](https://symbiosis11503.github.io/agent-z/roadmap): 20 章難度/時間/前置/4 學習計畫對照
+- [FAQ](https://symbiosis11503.github.io/agent-z/faq): 22 題 6 大類常見問題 (適合性/錢/環境/時間/內容/商用)
+- [學習進度檢核](https://symbiosis11503.github.io/agent-z/progress): localStorage backed milestone tracker + portfolio repo 模板
+
+## 章節（20 章）
+
+### 前言 — 真零基礎 onramp
+- [Ch-1 完全沒寫過 code 也能讀的 AI Agent 全景](https://symbiosis11503.github.io/agent-z/chapters/ch-1_zero_basics/): 30 min, Agent vs ChatGPT / ReAct 概念
+- [Ch 0 把工具裝好](https://symbiosis11503.github.io/agent-z/chapters/ch00_setup/): Terminal / Python / git / API key 從 0
+
+### Part 1 — Watcher (理解)
+- [Ch 1 LLM 是什麼](https://symbiosis11503.github.io/agent-z/chapters/ch01_llm_basics/): token / context / 各家 LLM 比較
+- [Ch 2 Prompt 設計](https://symbiosis11503.github.io/agent-z/chapters/ch02_prompt/): system / few-shot / CoT
+- [Ch 3 什麼是 Agent](https://symbiosis11503.github.io/agent-z/chapters/ch03_what_is_agent/): 工具呼叫 / ReAct / 為何需要
+
+### Part 2 — Operator (操作)
+- [Ch 4 CLI Agent 入門](https://symbiosis11503.github.io/agent-z/chapters/ch04_cli_agents/): Claude Code / Codex / OpenCode 比較
+- [Ch 5 CLI Workflow](https://symbiosis11503.github.io/agent-z/chapters/ch05_cli_workflow/): CLAUDE.md / slash command / 多步驟拆解
+- [Ch 6 MCP](https://symbiosis11503.github.io/agent-z/chapters/ch06_mcp/): Model Context Protocol stdio/SSE + 自寫 MCP server
+- [Ch 7 Skills / Plugins / Marketplace](https://symbiosis11503.github.io/agent-z/chapters/ch07_skills_plugins/): SKILL.md + Progressive Disclosure
+- [Ch 8 Cost 觀測 / 介入](https://symbiosis11503.github.io/agent-z/chapters/ch08_cost_observability/): 預算 cap / token 追蹤 / 中斷
+
+### Part 3 — Builder (構建)
+- [Ch 9 Function calling / Tool use](https://symbiosis11503.github.io/agent-z/chapters/ch09_function_calling/): Anthropic vs OpenAI tool schema / parallel tools / error recovery
+- [Ch 10 ReAct / Plan-and-Solve / Reflection](https://symbiosis11503.github.io/agent-z/chapters/ch10_react_paradigms/): 三範式對照 + token/quality 比較
+- [Ch 11 框架比較](https://symbiosis11503.github.io/agent-z/chapters/ch11_frameworks/): LangGraph / CrewAI / Smolagents / Pydantic AI 4 家對照
+- [Ch 12 自寫 mini framework](https://symbiosis11503.github.io/agent-z/chapters/ch12_mini_framework/): ~200 行 ReAct framework from scratch
+- [Ch 13 Memory & RAG](https://symbiosis11503.github.io/agent-z/chapters/ch13_memory_rag/): session memory / Chroma / Contextual Retrieval
+- [Ch 14 Multi-agent](https://symbiosis11503.github.io/agent-z/chapters/ch14_multi_agent/): Pipeline / Supervisor / Blackboard 3 架構
+- [Ch 15 Deploy + audit + replay + cost cap](https://symbiosis11503.github.io/agent-z/chapters/ch15_deploy_audit_replay/): Helix V3 production case study
+
+### Part 4 — 進階分流
+- [Ch 16 Researcher 路線](https://symbiosis11503.github.io/agent-z/chapters/ch16_researcher/): paper bot / deep research / DOI 驗證 / peer review
+- [Ch 17 Builder 進階 (Agentic-RL)](https://symbiosis11503.github.io/agent-z/chapters/ch17_builder_advanced/): SFT / DPO / GRPO / DeepSeek-R1 復現
+- [Ch 18 Maker / Educator 路線](https://symbiosis11503.github.io/agent-z/chapters/ch18_maker_educator/): 個人助理 / workshop syllabus / Capstone Rubric
+
+## 額外資源
+
+- [LLM / API 申請指南](https://symbiosis11503.github.io/agent-z/llm-providers): 11 家 LLM (Claude/GPT/Gemini/Groq/DeepSeek/Mistral/OpenRouter/Grok/Ollama/TAIDE/Qwen) 申請流程 + curl/Python 範例 + 費用 + 怎麼選決策矩陣
+- [50+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary): 繁中+English 4 欄完整 (含 vibe coding / SDD / TDD / AFK 執行 / TAIDE)
+- [關於 AgentZ](https://symbiosis11503.github.io/agent-z/about): 5 個差異化定位 + 課程結構 + 維護者
+- [CONTRIBUTING](https://github.com/symbiosis11503/agent-z/blob/main/CONTRIBUTING.md): 5 條投稿路徑 + Style guide
+
+## Starter code (10 dirs, GitHub)
+
+- [ch06_mcp](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch06_mcp): FastMCP server + Claude Code 接法
+- [ch07_skills_plugins](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch07_skills_plugins): SKILL.md template
+- [ch08_cost_observability](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch08_cost_observability): SDK wrap + SQLite + daily cap
+- [ch09_weather_agent](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch09_weather_agent): function calling weather agent
+- [ch10_paradigms](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch10_paradigms): ReAct / Plan-and-Solve / Reflection 3 範式
+- [ch11_frameworks](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch11_frameworks): vanilla / LangGraph / CrewAI / Smolagents / Pydantic AI 5 對照
+- [ch12_mini_framework](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch12_mini_framework): mini agent framework from 0
+- [ch13_memory_rag](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch13_memory_rag): session memory + Chroma RAG
+- [ch14_multi_agent](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch14_multi_agent): Pipeline/Supervisor/Blackboard 3 架構
+- [ch15_v3_governance](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch15_v3_governance): AuditSink + ReplayStore + FastAPI
+
+## License & Source
+- MIT — 章節 + starter code 可商用
+- Repo: https://github.com/symbiosis11503/agent-z
+- 維護: Symbiosis (SBS) — 台灣 AI Agent 系統研發團隊
+- Discussions: https://github.com/symbiosis11503/agent-z/discussions

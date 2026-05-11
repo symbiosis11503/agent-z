@@ -359,6 +359,17 @@ DeepSeek-R1 2025-01 發 paper 後，開源圈兩個月內出了 5+ 個復現專�
 
 ---
 
+## 11b. 在這頁練 reward function 設計
+
+給 LLM 一個 agent 任務，看它能不能寫出 reward function：
+
+<LLMTryout
+  title="Ch 17 in-page tryout — reward function 設計"
+  defaultSystem="你是 agentic-RL 教練。看使用者描述的 agent 任務，輸出 (1) 適合的 reward function 設計（outcome / process / verifier / mixed） (2) 至少 1 個 reward hacking 風險警告 (3) suggested verifier 怎寫。回繁中 + Python pseudo-code。"
+  defaultPrompt="我要訓一個 agent 去訂便宜機票。怎麼設 reward？" />
+
+---
+
 ## 12. 補充閱讀
 
 - [DeepSeek-R1 paper](https://arxiv.org/abs/2501.12948) — 必讀

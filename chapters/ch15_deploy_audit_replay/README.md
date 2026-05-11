@@ -372,6 +372,15 @@ clone https://github.com/symbiosis11503/helix-framework，讀：
 
 ---
 
+## 9b. 在這頁練「production agent SOP」prompt
+
+讓 LLM 模擬 V3 governance — 給定一個 agent 設計，看它能否抓出 governance 缺口：
+
+<LLMTryout
+  title="Ch 15 in-page tryout — production SOP review"
+  defaultSystem="你是 production agent reviewer。看使用者描述的 agent 設計，從 4 個維度檢查 (1) cost cap 設了沒 (2) audit log 寫哪 (3) replay 能否 reproduce (4) abort 機制有沒有。每維度 1 句話 verdict + 1 句改善建議。回繁中。"
+  defaultPrompt="我寫了一個 email summarizer agent。流程: 收信 → Claude Haiku 摘要 → Slack 通知。沒設 cost cap, 沒 log。每天會被 cron 叫 24 次。" />
+
 ## 10. 補充閱讀
 
 - [Helix V3 GitHub](https://github.com/symbiosis11503/helix-framework)
