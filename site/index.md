@@ -16,6 +16,9 @@ hero:
       text: 已經會 Python? 跳 Ch 1
       link: /chapters/ch01_llm_basics/
     - theme: alt
+      text: LLM / API 申請指南
+      link: /llm-providers
+    - theme: alt
       text: GitHub
       link: https://github.com/symbiosis11503/agent-z
     - theme: alt
@@ -41,6 +44,15 @@ features:
   - icon: 🛠
     title: 動手練習不准跳
     details: 每章 1-3 個練習，題目 + 成功標準清楚。完成 milestone evidence 解鎖下章。v2 後串 Helix V3 sandbox 真自動驗證。
+  - icon: 🔑
+    title: 11 家 LLM API 申請懶人包
+    details: <a href="/agent-z/llm-providers">Claude / GPT / Gemini / Groq / DeepSeek / Mistral / OpenRouter / TAIDE / Ollama</a> 申請流程 + curl/Python 範例 + 費用比較 + 怎麼選決策矩陣。
+  - icon: 🇹🇼
+    title: TAIDE 主權 LLM 整合
+    details: 台灣國科會 + 工研院 TAIDE 模型自架步驟，含 M3 Ultra Ollama recipe。AgentZ Ch 13 / Ch 17 用得到。
+  - icon: 📖
+    title: 50+ 名詞表（繁中 + English）
+    details: 每個專業名詞 4 欄完整解釋（專業介紹 / 白話解釋 / 應用範例 / 章節）。10 大類別包含 vibe coding、SDD、TDD、AFK 執行、delegation。
 ---
 
 ## 為什麼又一本？

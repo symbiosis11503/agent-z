@@ -12,12 +12,23 @@ export default defineConfig({
     'chapters/:dir/README.md': 'chapters/:dir/index.md',
   },
 
+  sitemap: {
+    hostname: 'https://symbiosis11503.github.io/agent-z/',
+  },
+
   head: [
     ['meta', { name: 'theme-color', content: '#5b21b6' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'AgentZ — 從零到 AI Agent 構建者' }],
     ['meta', { property: 'og:description', content: '繁中 first-class、vendor-neutral、Claude Code 生態深入的 AI Agent 學習系統' }],
+    ['meta', { property: 'og:url', content: 'https://symbiosis11503.github.io/agent-z/' }],
+    ['meta', { property: 'og:image', content: 'https://symbiosis11503.github.io/agent-z/logo.svg' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'AgentZ — 從零到 AI Agent 構建者' }],
+    ['meta', { name: 'twitter:description', content: '繁中 first-class、vendor-neutral、Claude Code 生態深入的 AI Agent 學習系統' }],
+    ['meta', { name: 'keywords', content: 'AI Agent, Claude Code, MCP, AgentZ, 繁體中文, AI 學習, LLM, ReAct, RAG, multi-agent, agentic-RL, TAIDE' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/agent-z/logo.svg' }],
+    ['link', { rel: 'canonical', href: 'https://symbiosis11503.github.io/agent-z/' }],
   ],
 
   themeConfig: {
@@ -123,6 +134,17 @@ export default defineConfig({
     docFooter: {
       prev: '上一章',
       next: '下一章',
+    },
+
+    editLink: {
+      pattern: ({ filePath }) => {
+        // chapters/ is a symlink to repo-root chapters — edit the real file, not the symlink
+        if (filePath.startsWith('chapters/')) {
+          return `https://github.com/symbiosis11503/agent-z/edit/main/${filePath}`
+        }
+        return `https://github.com/symbiosis11503/agent-z/edit/main/site/${filePath}`
+      },
+      text: '在 GitHub 編輯本頁',
     },
 
     outline: { label: '本頁目錄' },
