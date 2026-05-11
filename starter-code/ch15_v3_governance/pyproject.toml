@@ -1,0 +1,10 @@
+[project]
+name = "agentz-ch15-governance"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.45",
+    "fastapi>=0.115",
+    "uvicorn>=0.32",
+    "pydantic>=2.9",
+]
