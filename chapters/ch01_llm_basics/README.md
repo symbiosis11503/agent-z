@@ -148,6 +148,8 @@ LLM 看到這串，會接著 `assistant` 角色回應「早安」。
 
 短答案：**沒有「最好」的 model，只有「現在這個任務的對的 model」**。
 
+> 📋 **想看 11 家詳細對照（含申請流程 + curl/Python 範例 + 費用）**？翻 [LLM / API 申請指南](https://symbiosis11503.github.io/agent-z/llm-providers) — 比這節更深，分 [商業](https://symbiosis11503.github.io/agent-z/llm-providers/commercial) / [開源聚合](https://symbiosis11503.github.io/agent-z/llm-providers/opensource-aggregator) / [本地主權](https://symbiosis11503.github.io/agent-z/llm-providers/local-sovereign) 3 分類頁面。
+
 ### 三大 vendor
 
 | 家 | 強項 | 弱項 | 適合 |

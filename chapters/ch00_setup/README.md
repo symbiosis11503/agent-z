@@ -128,6 +128,8 @@ $ git config --global user.email "you@example.com"
 
 我們要用真的 LLM API 來練習。你需要至少**一家**的 API key。本書範例會用 Anthropic（Claude），但 OpenAI（GPT）也能 follow，後面章節會教其他家（Gemini / Groq / OpenRouter）。
 
+> 💡 **想看完整 11 家 LLM 對照（含免費層 / 怎麼選 / curl 範例 / 費用）**？翻 [LLM / API 申請指南](https://symbiosis11503.github.io/agent-z/llm-providers)（分 3 分類頁面：[商業](https://symbiosis11503.github.io/agent-z/llm-providers/commercial) / [開源聚合](https://symbiosis11503.github.io/agent-z/llm-providers/opensource-aggregator) / [本地主權](https://symbiosis11503.github.io/agent-z/llm-providers/local-sovereign)）。
+
 ### 我推薦：Anthropic Claude（5 美金免費額度）
 
 1. 去 https://console.anthropic.com/
