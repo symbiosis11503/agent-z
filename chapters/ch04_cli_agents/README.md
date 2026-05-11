@@ -217,3 +217,10 @@ Claude Code 啟動時會：
 - [OpenCode 開源](https://github.com/sst/opencode)
 - WenyuChiou Stage A1 CLI agent 入門：https://github.com/WenyuChiou/awesome-agentic-ai-zh
 - shareAI-lab/learn-claude-code（60K⭐）— 從零打造 nano claude-code-like harness，看完這本書再讀效果好
+
+---
+
+> 🛟 **卡關時看這裡**：
+> - 報錯 / 跑不起來 → [故障排除](../../site/troubleshooting.md)
+> - 忘了指令 → [速查卡 Cheatsheet](../../site/cheatsheet.md)
+> - 名詞看不懂 → [60+ 名詞表](../../site/glossary.md)

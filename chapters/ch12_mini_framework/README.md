@@ -374,3 +374,10 @@ def replay(path):
 - [Anthropic — Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)
 - `shareAI-lab/learn-claude-code`（60K⭐）— 從 0 構建 nano claude-code-like agent harness（比這章規模大、可以當下一步）
 - `datawhalechina/tiny-universe`（4.8K⭐）— 手寫 RAG / Agent / Eval 的「白盒子」
+
+---
+
+> 🛟 **卡關時看這裡**：
+> - agent loop 失控 / tool loop → [故障排除 § Agent loop](../../site/troubleshooting.md)
+> - ReAct / Plan-and-Solve / Reflection 範式 snippet → [速查卡 § 範式](../../site/cheatsheet.md#react-loop-範式)
+> - 名詞看不懂 → [60+ 名詞表](../../site/glossary.md)

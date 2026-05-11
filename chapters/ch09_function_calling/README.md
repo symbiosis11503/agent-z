@@ -365,3 +365,10 @@ Ch 15 會在 V3 case study 看完整 production-grade 實作。
 - [OpenAI — Function calling guide](https://platform.openai.com/docs/guides/function-calling)
 - [Hugging Face Agents Course Unit 1 Bonus — Fine-tune for function calling](https://huggingface.co/learn/agents-course/bonus-unit1/introduction)
 - ai-dict Tools & Environments 段
+
+---
+
+> 🛟 **卡關時看這裡**：
+> - tool_use 報錯 / 流程不對 → [故障排除 § Tool use](../../site/troubleshooting.md)
+> - tool_use 完整 schema + stop_reason 處理 → [速查卡 § Anthropic SDK](../../site/cheatsheet.md#anthropic-sdk-速查)
+> - 名詞看不懂 → [60+ 名詞表](../../site/glossary.md)
