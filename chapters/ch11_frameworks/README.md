@@ -254,6 +254,15 @@ print(result.data.temp)  # 26.0
 
 ---
 
+## 8b. 在這頁讓 LLM 幫你選 framework
+
+貼你的需求、看 LLM 推薦哪個 framework + 理由。**不是讓 LLM 替你決定**，是讓它幫你檢查思路。
+
+<LLMTryout
+  title="Ch 11 in-page tryout — framework 推薦徵詢"
+  defaultSystem="你是 agent framework consultant。看使用者需求，從 LangGraph / CrewAI / Smolagents / Pydantic AI / Raw API 五個選項推薦 1-2 個，並給具體理由。回繁中。如果使用者的需求其實單 LLM call 就能解，直接說「不需要 framework」。"
+  defaultPrompt="我想做：每天早上看我 email + 整理重要的給我看。預估每天 50 封 email。" />
+
 ## 9. 補充閱讀
 
 - [LangGraph 文件](https://langchain-ai.github.io/langgraph/)

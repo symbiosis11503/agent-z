@@ -18,6 +18,9 @@ hero:
     - theme: alt
       text: GitHub
       link: https://github.com/symbiosis11503/agent-z
+    - theme: alt
+      text: 下載 PDF 離線版
+      link: https://github.com/symbiosis11503/agent-z/releases/latest
 
 features:
   - icon: 🪜

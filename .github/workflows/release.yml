@@ -1,0 +1,46 @@
+name: Build PDF + GitHub Release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build_pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pandoc + xelatex + Noto CJK fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            pandoc \
+            texlive-xetex \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-lang-chinese \
+            fonts-noto-cjk \
+            fonts-noto-cjk-extra
+      - name: Build PDF
+        run: bash _scripts/build_pdf.sh AgentZ_${{ github.ref_name }}.pdf
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AgentZ-PDF
+          path: AgentZ_*.pdf
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: AgentZ_*.pdf
+          body: |
+            AgentZ ${{ github.ref_name }} — PDF release.
+
+            完整互動版（含即時試 API、進度檢核、深色模式）：
+            https://symbiosis11503.github.io/agent-z/
+
+            License: MIT
+          generate_release_notes: true

@@ -337,6 +337,15 @@ def replay(path):
 
 ---
 
+## 8b. 在這頁讓 LLM 解釋自己的 tool_use 格式
+
+> 動手寫 mini framework 之前，先讓 LLM 告訴你它預期收到什麼回什麼——這個練習能幫你 debug 階段省幾小時。
+
+<LLMTryout
+  title="Ch 12 in-page tryout — 問 LLM 它預期的 tool 格式"
+  defaultSystem="你是 Anthropic Claude messages API 的設計者。看使用者問題，解釋這個 API 的 tool_use 機制：(1) 工具如何定義 (2) LLM 怎麼觸發 tool_use block (3) 開發者該怎麼回 tool_result。用繁中 + 範例 JSON。"
+  defaultPrompt="我要實作一個 weather agent，怎麼定義 get_weather 工具 + 處理回應？" />
+
 ## 9. 補充閱讀
 
 - [Anthropic — Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)

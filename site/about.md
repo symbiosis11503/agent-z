@@ -35,6 +35,12 @@ Symbiosis (SBS) 是台灣的 AI Agent 系統研發團隊。我們同時維護：
 - **OpenClaw** — 個人助理 agent
 - **AgentZ**（本站）— 從零到 AI Agent 構建者學習系統
 
+## 下載
+
+- 🌐 線上互動版（本網站）— 含 4-provider 即時試 API、進度檢核
+- 📄 PDF 離線版 — [GitHub Releases](https://github.com/symbiosis11503/agent-z/releases/latest) 抓最新 `AgentZ_v*.pdf`
+- 📦 完整 source — `git clone https://github.com/symbiosis11503/agent-z`
+
 ## License
 
 [MIT](https://github.com/symbiosis11503/agent-z/blob/main/LICENSE) — 章節內容跟 starter code 都可以 copy 進你自己的商業專案。

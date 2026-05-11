@@ -266,6 +266,15 @@ def hybrid_agent(task):
 
 ---
 
+## 9b. 在這頁直接練 CoT prompt
+
+問同一個邏輯題、比較有 / 沒有 CoT 兩種寫法。System prompt 切換 CoT 風格、看答案結構差別。
+
+<LLMTryout
+  title="Ch 10 in-page tryout — 加 CoT 看差別"
+  defaultSystem="解答時，先用 <thinking> 標籤把思路寫出來，再用 <answer> 標籤給答案。繁中思考。"
+  defaultPrompt="一個房間有 3 個開關控制 3 顆燈泡，你只能進房間一次，怎麼判斷哪個開關對哪顆燈？" />
+
 ## 10. 補充閱讀
 
 - [ReAct paper (Yao et al. 2022)](https://arxiv.org/abs/2210.03629)

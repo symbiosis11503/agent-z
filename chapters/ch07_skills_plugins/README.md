@@ -295,6 +295,15 @@ description: Review a PR / diff and produce structured feedback in 繁中
 
 ---
 
+## 11b. 在這頁直接練 Skill description
+
+最關鍵是 frontmatter `description`——寫得好 LLM 會精準觸發，寫得糟會誤觸發 / 不觸發。
+
+<LLMTryout
+  title="Ch 7 in-page tryout — Skill description 評估"
+  defaultSystem="你是 Skill design reviewer。看使用者給的 Skill description，評估 (1) 是否精準（不會誤觸發）(2) 是否完整（涵蓋主要場景）(3) 給 1-2 個改寫建議。回繁中。"
+  defaultPrompt="評估這個 description：「幫助使用者寫 email」" />
+
 ## 12. 補充閱讀
 
 - [Claude Code — Skills 文件](https://docs.claude.com/en/docs/agents-and-tools/claude-code/skills)

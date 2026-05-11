@@ -284,6 +284,15 @@ Claude Code 支援 hook——當 agent 要呼叫某個工具時（PreToolUse / P
 
 ---
 
+## 9b. 在這頁直接練 slash command 的 prompt
+
+把你想做的「常用工作流程」貼進 User prompt，把 system prompt 想像成 slash command 的內容。
+
+<LLMTryout
+  title="Ch 5 in-page tryout — slash command body 草稿"
+  defaultSystem="你是 slash command body 設計助手。看使用者描述他常做的任務，輸出一份適合存成 .claude/commands/<name>.md 的 prompt body。要求：(1) 列步驟 (2) 列「不可做」 (3) 結尾告訴 agent 要不要等使用者確認。回繁中。"
+  defaultPrompt="我常常要在 review 一個 PR 後寫 commit message 跟 push。" />
+
 ## 10. 補充閱讀
 
 - [Claude Code — CLAUDE.md best practices](https://docs.claude.com/en/docs/agents-and-tools/claude-code/memory)
