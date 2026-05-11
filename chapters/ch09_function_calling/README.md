@@ -329,6 +329,25 @@ Ch 15 會在 V3 case study 看完整 production-grade 實作。
 
 ---
 
+## 9a. 常見地雷
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **forgot to append `tool_result`** | API 報「expected tool_result for tool_use_id」 | 收到 `stop_reason='tool_use'` 後必須 append `{"role":"user","content":[{"type":"tool_result", "tool_use_id":..., "content":...}]}` |
+| **tool_use_id 對不上** | tool_result 被忽略 / 報錯 | id 必須 verbatim copy from tool_use block，不能自己編 |
+| **回傳格式錯** | LLM 收到怪結果亂答 | tool return 要 JSON-serializable (str / dict), 不要 datetime / numpy array; `json.dumps()` 一下 |
+| **沒設 max_steps** | loop 跑無限次 | 寫 `for _ in range(N):` 限步數、超過 graceful exit |
+| **schema 寫太簡略** | LLM 傳錯 input shape | input_schema 用完整 JSON Schema (required / type / description) |
+| **description 寫「找東西」** | LLM 不知何時 call | description 寫「**何時用 + 期望輸入 + 期望輸出**」3 段 |
+| **stop_reason 沒檢查** | end_turn 跟 tool_use 混淆 | `if resp.stop_reason == "end_turn": break` 是唯一停的方式 |
+| **多家 SDK 不一致** | Anthropic / OpenAI tool call 結構差很多 | 看 [Ch 11 框架](../ch11_frameworks/) 用框架幫你統一介面 |
+| **`required` 漏寫** | LLM 傳少參數 | input_schema 寫 `"required": ["arg1", "arg2"]` |
+| **tool 自己會 raise** | agent crash | tool 內 try/except, 失敗 return `{"error": "..."}` 讓 LLM 知道 |
+| **parallel tool 漏接** | 多 tool_use blocks 只處理 1 個 | iterate `for block in resp.content if block.type == "tool_use"` 全部接 |
+| **input 是 dict 還是 str** | `block.input["x"]` vs `json.loads(block.input)` | Anthropic 是 dict, OpenAI tool call arguments 是 JSON string — 看好 SDK 文件 |
+
+---
+
 ## 9b. 在這頁直接練 tool use 風格的 prompt
 
 > ⚠️ 真正的 tool use 需要 server 端 wire（這頁沒接工具）。這邊只練習「叫 LLM 用 JSON 表達想 call 什麼工具」的 prompt 風格——下一步就拿去 Ch 12 的 mini framework 真接。

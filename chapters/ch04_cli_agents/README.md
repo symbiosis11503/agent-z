@@ -186,6 +186,21 @@ Claude Code 啟動時會：
 
 ---
 
+## 9a. 常見地雷
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **API key 沒 export** | claude 起來說 `ANTHROPIC_API_KEY not set` | `echo $ANTHROPIC_API_KEY` 看是否有 / 加到 `~/.zshrc` 或 `~/.bashrc` |
+| **npm 裝錯** | 路徑 / Node 版本衝突 | 用 nvm 把 Node 升到 18+ 後重裝 |
+| **CLAUDE.md 沒生效** | Claude 不按你寫的規則 | 確認檔案在 cwd 或 ~/，重啟 Claude Code |
+| **token 一下噴光** | $0.50 用一次 chat | 開 `/cost` 看花費；用 Haiku 而不是 Opus；設 `~/.claude/settings.json` model 預設 |
+| **agent loop 失控** | 反覆跑同樣的 tool 50 次 | `Esc` 中斷、prompt 加「最多 5 步」、用 plan mode 先看計畫 |
+| **改錯檔** | Claude 動了你不想動的檔 | 加 `.claudeignore`、用 git 隨時可 `git checkout` 還原 |
+| **MCP server 接不上** | `/mcp` 顯示 disconnected | 看 [Ch 6 §常見地雷](../ch06_mcp/) — 多半是路徑或 dep 問題 |
+| **/clear 後失憶** | 之前 context 全沒了 | 重要訊息寫進 CLAUDE.md 或用 `/resume` |
+| **plan mode 跳過** | Claude 沒給 plan 就直接動手 | `/plan` 強制進入 plan mode；用 `--plan` flag 啟動時開 |
+| **不能跨 session 記東西** | 重啟後不記得昨天教的事 | 寫 CLAUDE.md / SKILL 持久化、或用 memory MCP |
+
 ## 9b. 在這頁讓 LLM 幫你比較 CLI
 
 把你的需求貼進去，看 LLM 怎麼推薦 4 家裡的哪一家：
