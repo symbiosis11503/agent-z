@@ -8,6 +8,9 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   ignoreDeadLinks: true,
+  rewrites: {
+    'chapters/:dir/README.md': 'chapters/:dir/index.md',
+  },
 
   head: [
     ['meta', { name: 'theme-color', content: '#5b21b6' }],
