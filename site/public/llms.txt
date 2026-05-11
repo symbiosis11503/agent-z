@@ -48,7 +48,11 @@ AgentZ 解決中文圈兩大空缺：(1) 沒有繁中 first 的 curriculum (簡�
 
 ## 額外資源
 
-- [LLM / API 申請指南](https://symbiosis11503.github.io/agent-z/llm-providers): 11 家 LLM (Claude/GPT/Gemini/Groq/DeepSeek/Mistral/OpenRouter/Grok/Ollama/TAIDE/Qwen) 申請流程 + curl/Python 範例 + 費用 + 怎麼選決策矩陣
+- [LLM / API 申請 — 3 分頁總覽](https://symbiosis11503.github.io/agent-z/llm-providers): 11 家 LLM 申請流程 + curl/Python 範例 + 費用 + 怎麼選決策矩陣
+  - [商業 API (Claude/GPT/Gemini)](https://symbiosis11503.github.io/agent-z/llm-providers/commercial) — 美國三大廠
+  - [開源 / 聚合 / 速度 / 便宜](https://symbiosis11503.github.io/agent-z/llm-providers/opensource-aggregator) — Groq / DeepSeek / Mistral / OpenRouter / Grok
+  - [本地 / 主權 / 中文圈](https://symbiosis11503.github.io/agent-z/llm-providers/local-sovereign) — Ollama / TAIDE / Qwen-GLM-Yi
+  - [全本一頁 Ctrl-F](https://symbiosis11503.github.io/agent-z/llm-providers/all) — 3 分頁合成版
 - [速查卡 — 6 個分頁總覽](https://symbiosis11503.github.io/agent-z/cheatsheet): CLI/Git · SDK · Pricing · Patterns · MCP/Skills · Governance — 每頁可單獨印 A4
   - [CLI / Git](https://symbiosis11503.github.io/agent-z/cheatsheet/cli) — Claude Code 指令 + CLAUDE.md 模板 + Git conventions
   - [SDK](https://symbiosis11503.github.io/agent-z/cheatsheet/sdk) — Anthropic SDK basic / tool_use / streaming / Prompt Cache

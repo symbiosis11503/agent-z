@@ -57,7 +57,10 @@ export default defineConfig({
           { text: '— 實務 (Memory/RAG)', link: '/glossary/practice' },
           { text: '— Production', link: '/glossary/production' },
           { text: '— 台灣 AI / pair', link: '/glossary/taiwan-misc' },
-          { text: 'LLM / API 申請', link: '/llm-providers' },
+          { text: 'LLM / API 申請 總覽', link: '/llm-providers' },
+          { text: '— 商業 API (Claude/GPT/Gemini)', link: '/llm-providers/commercial' },
+          { text: '— 開源/聚合 (Groq/DeepSeek/Mistral/OpenRouter/Grok)', link: '/llm-providers/opensource-aggregator' },
+          { text: '— 本地/主權 (Ollama/TAIDE/Qwen)', link: '/llm-providers/local-sovereign' },
           { text: 'FAQ', link: '/faq' },
           { text: '跟其他教程比較', link: '/compare' },
         ],
@@ -115,6 +118,25 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '📄 全本一頁', link: '/glossary/all' },
+          ],
+        },
+      ],
+      '/llm-providers/': [
+        {
+          text: 'LLM / API 申請 3 個分類',
+          collapsed: false,
+          items: [
+            { text: '🏠 總覽 / 比較表', link: '/llm-providers' },
+            { text: '💳 商業 API (Claude/GPT/Gemini)', link: '/llm-providers/commercial' },
+            { text: '⚡ 開源/聚合/速度/便宜', link: '/llm-providers/opensource-aggregator' },
+            { text: '🏠 本地/主權/中文圈', link: '/llm-providers/local-sovereign' },
+          ],
+        },
+        {
+          text: 'Ctrl-F 搜尋',
+          collapsed: false,
+          items: [
+            { text: '📄 全本一頁', link: '/llm-providers/all' },
           ],
         },
       ],
