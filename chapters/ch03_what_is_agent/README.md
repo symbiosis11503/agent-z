@@ -305,6 +305,21 @@ print(f"=== Final answer ===\n{r.content[0].text if r.content else '(empty)'}")
 
 ---
 
+## 7a. 常見地雷（agent 概念誤區）
+
+| 地雷 | 真相 |
+|---|---|
+| **Agent 完全自主** | 應該人類 in-the-loop, 關鍵決策 (付錢/寄信/改 prod) 必確認 |
+| **Agent = AGI** | 不是。Agent 只是 LLM + 工具 + 循環, 沒意識也不主動 |
+| **越多 agent 越好** | 多 agent 引入 coordination overhead。簡單任務單 agent |
+| **agent 不會錯** | hallucinate / cost 失控 / loop 不停 / reward hacking 都會 |
+| **ReAct 是唯一範式** | 還有 Plan-and-Solve / Reflection / CodeAct / Multi-agent ([Ch 10](../ch10_react_paradigms/) / [Ch 14](../ch14_multi_agent/)) |
+| **所有 task 都該 agentize** | task 結構化、可重複、用 script 解就好。Agent 適合「需要判斷 + 工具切換」的 |
+| **沒 governance 也能 ship** | Production agent 必有 cost cap / audit / replay ([Ch 8](../ch08_cost_observability/) / [Ch 15](../ch15_deploy_audit_replay/)) |
+| **越大 model 越好** | 簡單 routing 用 Haiku、複雜推理才 Opus |
+
+---
+
 ## 7b. 在這頁直接看 LLM 怎麼描述自己會做的事
 
 LLM 雖然不會真的 call 工具（這頁沒接 tool），但你可以叫它**模擬**一次 agent 思路。

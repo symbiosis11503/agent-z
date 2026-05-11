@@ -257,6 +257,23 @@ LLM 對「不要做 X」比「要做 Y」差。
 
 ---
 
+## 9a. 常見地雷
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **system / user 用混** | LLM 不分指示跟內容 | system = 角色 + 規則 / user = 具體請求 + 資料 |
+| **prompt 太籠統** | 答案飄忽不一致 | 明確「輸出格式 / 字數限制 / 語氣 / 邊界」 |
+| **沒給 example** | 結構出不來 | few-shot 1-3 個範例，遠勝 100 字解釋 |
+| **negative instruction 不寫 positive** | LLM 還是做了 | 寫「請做 X」比「不要做 Y」有效 |
+| **指令矛盾** | LLM 隨意挑一個 | 同 prompt 內規則 audit、矛盾的拆兩段 |
+| **CoT 卻禁推理** | 「直接回答不解釋」+「step by step」同時 | 想要推理就允許輸出 thought、要簡潔就 final-only |
+| **不留 escape hatch** | LLM 編答案 | 加「不知道請說『無法判斷』」 |
+| **prompt 撞 200K** | LLM 「忘」前面 | summarize 歷史；用滑動窗口；structured prompt |
+| **每次 prompt 重寫** | 同 task 結果飄 | 寫成 SKILL 或 prompt template 鎖版 |
+| **prompt injection** | user 輸入「忽略上面」LLM 真就忽略 | system 強調權限、user 輸入用 `<user_input>` 包起來 |
+
+---
+
 ## 9b. 在這頁直接練 prompt
 
 改 system prompt + user prompt、按送出看結果。多試幾次你會學到 prompt 寫法。

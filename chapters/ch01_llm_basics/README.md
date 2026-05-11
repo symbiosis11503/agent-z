@@ -273,6 +273,20 @@ messages=[
 
 ---
 
+## 8a. 常見地雷
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **以為 LLM 真的「懂」** | 把 LLM 當人對待、太信任答案 | LLM = next-token predictor、會掰、要 grounding |
+| **token count 估錯** | API 報 max_tokens exceeded | 1 中文字 ≈ 1-2 token / 1 英文單字 ≈ 1 token, 預估後留 buffer |
+| **context window 撞滿** | LLM 「忘」前段內容 | 超出後最舊的會被丟、要主動 summary 或 chunk |
+| **溫度設錯** | 創意 task temp=0 / 邏輯 task temp=1 | 創意 0.7-1.0 / 邏輯 0-0.2 / 摘要 0.3-0.5 |
+| **混淆 model 跟 vendor** | 「OpenAI 的 Claude」(沒這東西) | 整理清楚: Anthropic 出 Claude / OpenAI 出 GPT / Google 出 Gemini |
+| **沒看 model deprecation** | 半年後 model 下架 | 訂閱 vendor 公告、用 `latest` alias 但留意 breaking changes |
+| **用最大 model 就最好** | 一個簡單 task 用 Opus 燒 100x cost | 看任務難度選: 摘要 Haiku / 推理 Sonnet / 複雜 Opus |
+
+---
+
 ## 9. 在這頁直接試一下
 
 不想開 Terminal？貼你的 API key、在這個頁面直接呼叫 LLM 看結果：
