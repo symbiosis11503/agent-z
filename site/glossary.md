@@ -421,7 +421,47 @@ AgentZ 用詞 + 業界術語的繁中對照。每條 **4 欄**：專業介紹、
 
 ---
 
-## 11. 外部權威詞典（不重複造輪）
+## 11. 常被混淆的 pair 對比
+
+學習者最常搞混的 7 組對比。**「兩個都是 X，但...」** 一句話切清楚。
+
+### MCP vs Skill
+- **MCP** = agent ↔ 外部「函式庫 / API」的共通 protocol（執行能力）
+- **Skill** = 給 LLM 看的「教戰手冊 / SOP」（指引 LLM 怎麼做）
+- 一句話：**MCP 給工具、Skill 給說明書**。同一個任務可以兩個都用——MCP 提供「寄信」function、Skill 告訴 LLM「寄信前 5 步檢查」。
+
+### Tool Use vs Function Calling
+- **同一個東西的兩個名字**。Anthropic 文件用「tool use」、OpenAI 早期叫「function calling」、現在統一回「tools」。
+- API 層面差異：Anthropic `tool_use` block / OpenAI `tool_calls` array — schema 不同但概念同。
+
+### Agent vs Workflow
+- **Workflow** = 你預先寫死的 step sequence（A → B → C），無分支決策
+- **Agent** = LLM 自己決定下一步（A → ? → ?），自主路由
+- 一句話：**Workflow 是火車軌道、Agent 是 GPS 導航**。Workflow 可預測但不靈活；Agent 靈活但要 cost cap / audit 護欄。
+
+### ReAct vs Plan-and-Solve
+- **ReAct** = 邊想邊做（每步 reason → act → observe → reason...），動態反應 environment
+- **Plan-and-Solve** = 先想完 plan 再 execute（planner 列 5 步、executor 照跑）
+- 哪個好？**短任務 / environment 變動大 → ReAct；步驟清楚 / 可預測 → Plan-and-Solve**。實務常混（Plan 主導 + 每步 ReAct 微調）。
+
+### Fine-tuning vs RAG
+- **Fine-tuning** = 改模型權重（讓 LLM「內化」某 domain）；成本高、需要 GPU / 訓練資料
+- **RAG** = 不改模型，每次推論前撈相關資料塞 context（讓 LLM「查資料庫」）
+- 哪個好？**事實 / 知識頻繁更新 → RAG；風格 / tone / 特定格式輸出 → Fine-tuning**。多數情境 RAG 先試（便宜 100x），不夠才 fine-tune。
+
+### Subagent vs Multi-agent
+- **Subagent** = 主 agent 派下去做子任務的隔離 agent（context 不共享，只回結果）
+- **Multi-agent** = 多個 agent 各自有角色 / 工具集，協作完成任務（context 部分共享或 handoff）
+- 一句話：**Subagent 是外包工讀生、Multi-agent 是團隊**。Subagent 是 Multi-agent 的最簡形式。
+
+### CLI Agent vs Code-editing Agent
+- **CLI Agent** = 「介面類別」（terminal 跑、shell-driven 的 agent）
+- **Code-editing Agent** = 「工作類別」（會自主多輪改 codebase 的 agent）
+- 多數 CLI Agent（Claude Code / Codex / OpenCode）都是 code-editing agent；但 code-editing 不一定是 CLI（Cursor / Cline 是 IDE-based）。
+
+---
+
+## 12. 外部權威詞典（不重複造輪）
 
 - 🔗 **[ai-dict.gh.miniasp.com](https://ai-dict.gh.miniasp.com/)** — Matt Pocock AI Coding Dictionary 繁中（保哥技術社群翻譯）。7 sections: Models / Sessions+Context / Tools+Environments / Failure Modes / Handoffs / Memory+Guidance / Work Modes。本書每章末「補充閱讀」會對應到 ai-dict 對應 section。
 - 🔗 **[WenyuChiou/awesome-agentic-ai-zh resources/glossary.md](https://github.com/WenyuChiou/awesome-agentic-ai-zh/blob/main/resources/glossary.md)** — 30+ 詞，每個 30-80 字解釋。
