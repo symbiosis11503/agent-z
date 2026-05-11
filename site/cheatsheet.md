@@ -7,7 +7,7 @@ description: AgentZ 速查卡分 6 個焦點頁面：CLI/Git · SDK · Pricing �
 
 學完 AgentZ 後忘了哪個指令、模板、模型名、cost 公式時翻這裡。**分 6 個焦點頁面**，每頁可單獨列印 A4。
 
-> 想要單頁全本？舊版 v1.2 single-page release 仍在 [GitHub releases](https://github.com/symbiosis11503/agent-z/releases)。新版分頁設計目的：每個焦點頁更短、更好查。
+> 想要 A4 一次印全本？翻 **[全本一頁印刷版](./cheatsheet/all)**（用 VitePress include 自動合成，內容跟 6 分頁同步）。
 
 [[toc]]
 

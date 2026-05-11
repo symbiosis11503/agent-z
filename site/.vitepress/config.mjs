@@ -84,6 +84,13 @@ export default defineConfig({
             { text: '🛡 Governance', link: '/cheatsheet/governance' },
           ],
         },
+        {
+          text: '列印',
+          collapsed: false,
+          items: [
+            { text: '📄 全本一頁 (A4 印)', link: '/cheatsheet/all' },
+          ],
+        },
       ],
       '/chapters/': [
         {
