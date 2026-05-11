@@ -29,6 +29,7 @@ export default defineConfig({
       { text: '章節', link: '/chapters/ch-1_zero_basics/' },
       { text: '進度檢核', link: '/progress' },
       { text: '名詞表', link: '/glossary' },
+      { text: 'LLM / API', link: '/llm-providers' },
       { text: '關於', link: '/about' },
       { text: 'GitHub', link: 'https://github.com/symbiosis11503/agent-z' },
     ],
