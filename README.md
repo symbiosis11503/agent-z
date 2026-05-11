@@ -2,9 +2,17 @@
 
 > 從完全沒寫過 code 的零基礎開始，走到能自己構建 multi-agent 系統的熟練技術人員
 
+**👉 線上閱讀**：<https://symbiosis11503.github.io/agent-z/>
+**👉 5 分鐘 Quick Win**：<https://symbiosis11503.github.io/agent-z/quickwin>
+**👉 PDF 離線版**：[最新 Release](https://github.com/symbiosis11503/agent-z/releases/latest)
+
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Status](https://img.shields.io/badge/status-active%20development-orange)
+[![Status](https://img.shields.io/badge/v1-complete-green.svg)](CHANGELOG.md)
 ![Language](https://img.shields.io/badge/language-繁體中文-red)
+![Chapters](https://img.shields.io/badge/chapters-20-blue)
+![Starter%20code](https://img.shields.io/badge/starter--code-6%20dirs-blueviolet)
+
+---
 
 ## 為什麼又一本？
 
@@ -13,7 +21,7 @@
 1. **沒有繁中 first 的 curriculum**。簡中圈 `datawhalechina/hello-agents` 已經很強（47K⭐），但繁中只有 `WenyuChiou/awesome-agentic-ai-zh` 是學習地圖，不是 curriculum。
 2. **多數教程綁特定 vendor**：Azure / HuggingFace / 單一框架。實務上我們需要在 Claude / OpenAI / Gemini / Groq / OpenRouter 之間切換。
 
-AgentZ 想補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Plugins / Marketplace）當一級題材深入講——這是其他教程多數一筆帶過、但 2025-2026 實務上最重要的工作環境。
+AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Plugins / Marketplace）當一級題材深入講——這是其他教程多數一筆帶過、但 2025-2026 實務上最重要的工作環境。
 
 ## 你會走什麼路？
 
@@ -26,7 +34,7 @@ AgentZ 想補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills /
 
 四層 ladder，每層都有「milestone evidence」——做完該章節，你會有一個 GitHub repo / run ID / portfolio entry 證明你真的會了，不是看過。
 
-## 章節目錄（v1，18 章 + capstone）
+## 章節目錄（v1，20 章 + capstone）
 
 ### Part 0 — 真零基礎 onramp（完全沒寫過 code 的人從這裡開始）
 - [Ch-1 完全沒寫過 code 也能讀的 AI Agent 全景](./chapters/ch-1_zero_basics/) — 30 分鐘讀完
@@ -54,12 +62,33 @@ AgentZ 想補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills /
 - Ch 15 [Deploy + audit + replay + cost cap](./chapters/ch15_deploy_audit_replay/) — 用 Helix V3 完整 case study
 
 ### Part 4 — 進階分流
-- Ch 16 [Researcher 路線](./chapters/ch16_researcher/)
-- Ch 17 [Builder 進階](./chapters/ch17_builder_advanced/) — Agentic-RL 入門
-- Ch 18 [Maker / Educator 路線](./chapters/ch18_maker_educator/)
+- Ch 16 [Researcher 路線](./chapters/ch16_researcher/) — paper summary / deep research / peer review
+- Ch 17 [Builder 進階](./chapters/ch17_builder_advanced/) — Agentic-RL / SFT / GRPO / DeepSeek-R1 復現
+- Ch 18 [Maker / Educator 路線](./chapters/ch18_maker_educator/) — 個人助理 / 教學設計
 
 ### Capstone — 畢業作品集
-依進階分流交一個完整可運行的 agent 系統。
+依進階分流交一個完整可運行的 agent 系統。[Rubric 5 條 + 範例](./chapters/ch18_maker_educator/#5-結尾capstone-是什麼)。
+
+## 額外資源頁
+
+- 🚀 [5 分鐘 Quick Win](https://symbiosis11503.github.io/agent-z/quickwin) — 不用裝 Python、5 min 看 agent 真的在做事
+- 🔑 [LLM / API 申請指南](https://symbiosis11503.github.io/agent-z/llm-providers) — 11 家 LLM 申請流程 + curl/Python 範例 + 費用
+- 📖 [50+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary) — 繁中/English + 4 欄完整解釋（含 vibe coding / SDD / TDD / AFK 執行）
+- ✅ [進度檢核表](https://symbiosis11503.github.io/agent-z/progress) — localStorage 記你跑到哪
+- 📋 [CONTRIBUTING.md](./CONTRIBUTING.md) — 5 條投稿路徑
+
+## Starter Code（跑得起來的真實 code）
+
+| 對應章 | 目錄 | 內容 |
+|---|---|---|
+| Ch 9 | [`starter-code/ch09_weather_agent/`](./starter-code/ch09_weather_agent/) | function calling weather agent |
+| Ch 10 | [`starter-code/ch10_paradigms/`](./starter-code/ch10_paradigms/) | ReAct / Plan-and-Solve / Reflection 三範式 |
+| Ch 12 | [`starter-code/ch12_mini_framework/`](./starter-code/ch12_mini_framework/) | mini agent framework from scratch |
+| Ch 13 | [`starter-code/ch13_memory_rag/`](./starter-code/ch13_memory_rag/) | session memory + Chroma RAG |
+| Ch 14 | [`starter-code/ch14_multi_agent/`](./starter-code/ch14_multi_agent/) | Pipeline / Supervisor / Blackboard 三架構 |
+| Ch 15 | [`starter-code/ch15_v3_governance/`](./starter-code/ch15_v3_governance/) | audit + replay + cost cap (V3 case study) |
+
+跑：每個 dir 內 `uv sync && uv run <file>.py`，設好 `ANTHROPIC_API_KEY` 即可。
 
 ## 怎麼學？
 
@@ -69,7 +98,7 @@ AgentZ 想補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills /
 
 ## 載體規劃
 
-- **v1**（你在看的這個）：純 markdown + GitHub Pages 線上閱讀 + PDF release
+- **v1**（你在看的這個）：純 markdown + GitHub Pages 線上閱讀 + PDF release ✅
 - **v2**：每章「動手練習」可選擇打開 `learn.symbiosis.tw` sandbox，串 Helix V3 multi-provider + audit / replay / cost / MCP primitives 真跑
 - **v3**：自動 zh-CN / EN 翻譯 + 社群投稿 + portfolio leaderboard
 
@@ -86,15 +115,19 @@ AgentZ 想補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills /
 
 ## Contributing
 
-正體中文 + 動手練習 patterns 為主。詳見 [CONTRIBUTING.md](./CONTRIBUTING.md)（撰寫中）。
+繁體中文 + 動手練習 patterns 為主。詳見 [CONTRIBUTING.md](./CONTRIBUTING.md)。
+
+歡迎：bug / typo 修、章節 common pitfalls 補、starter code 投稿、翻譯（zh-CN / EN）、Capstone gallery 投稿。
 
 ## Status
 
-**v1 complete** (2026-05-11) — 20 章 / ~5,280 行繁中 / 60+ 動手練習 / 互動 Web App live。
-**v2 規劃中** — 章節內動手練習串 Helix V3 sandbox 真跑 + portfolio leaderboard。
+**v1 complete** (2026-05-11) — 20 章 / ~6,200 行繁中 / 60+ 動手練習 / 6 starter code dirs / 互動 Web App live + PDF release ✅
+**v1.x 持續迭代中** — Ch 16/17/18 深度補完、社群投稿閘門開放、5 分鐘 Quick Win 上線
+**v2 規劃中** — 章節內動手練習串 Helix V3 sandbox 真跑 + portfolio leaderboard
 
 請查 [CHANGELOG.md](./CHANGELOG.md)。
 
 ---
 
-維護：[Symbiosis (SBS)](https://symbiosis.tw) 團隊；ssh `learn.symbiosis.tw`
+維護：[Symbiosis (SBS)](https://symbiosis.tw) 團隊
+線上閱讀：<https://symbiosis11503.github.io/agent-z/>（learn.symbiosis.tw DNS 規劃中）
