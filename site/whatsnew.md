@@ -1,6 +1,6 @@
 ---
 title: What's New — AgentZ 更新紀錄
-description: AgentZ 版本變動 high-signal 摘要：v1.0 initial / v1.1 章節深度補完 / v1.2 ralph-loop polish wave / v1.3 三大長頁拆分 (cheatsheet 6 / glossary 5 / llm-providers 3 個分頁 + 各 all-in-one)。
+description: AgentZ 版本變動 high-signal 摘要：v1.0 initial / v1.1 章節深度補完 / v1.2 ralph-loop polish / v1.3 三大長頁拆分 / v1.4 SEO canonical 修復 + @kojenchieh 哲學金句並入。
 ---
 
 # What's New — 更新紀錄
@@ -10,6 +10,33 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 > **Watch the repo** 不定時 polish — [GitHub Watch](https://github.com/symbiosis11503/agent-z) → Releases-only 抓重大改版。
 
 [[toc]]
+
+---
+
+## 2026-05-12 — v1.4 SEO 大修 + 第二條哲學金句
+
+### SEO canonical / og: / twitter: 全 51 頁修對
+
+bug 抓出來：iter 1-4 拆完 14 個 subpage 後，發現原本所有 page（含拆前的）的 `<link rel="canonical">` 都指向 home URL — Google 會把全站當 home 的 duplicate，只 index home。social share（Twitter / Discord / Slack）也都顯示 home title / description。
+
+**Fix (iter 10-11)**：
+
+- 砍 `head[]` 裡寫死的 canonical + 社群 meta
+- 加 `transformPageData` hook 算每 page 自己的 URL → 自動產 `canonical` / `og:url` / `og:title` / `og:description` / `twitter:title` / `twitter:description`
+- 處理 cleanUrls + base + chapter symlink 重寫 3 個邊界
+- 例：[/glossary/foundation](./glossary/foundation) 的 canonical = `https://symbiosis11503.github.io/agent-z/glossary/foundation`、og:title = `名詞表 — 基礎概念 · AgentZ`
+
+51 個 page 每個都自己的 SEO identity 了。
+
+### @kojenchieh 哲學金句並入 3 處 (boss 5/11 23:18 「素材」 ping)
+
+[@kojenchieh on Threads](https://www.threads.com/@kojenchieh/post/DYNwkBekqVz) 講效能測試精神：「工具 10%、定義+觀測+人類判斷 90%」、金句「AI 可以幫你寫腳本，但『什麼叫好』，還是要人來定義」。跟 AgentZ「Don't build smarter LLMs—build smarter integrations」+「prompt = specification」同源 — 並入 3 處：
+
+- [Ch -1 沙發讀](./chapters/ch-1_zero_basics/)開頭 — 入門時就建立「工具 10%、定義 90%」 framing
+- [Ch 17 §Reward function 設計](./chapters/ch17_builder_advanced/#reward-function-設計-最容易踩坑的地方) — RL「AI 寫 reward function、你定義 good」直接對應
+- 首頁 [## 哲學段](./) — 兩條金句並列
+
+每處附原連結署名作者，不曲解原意。
 
 ---
 
