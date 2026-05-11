@@ -2,6 +2,31 @@
 
 All notable changes to AgentZ.
 
+## v1.1 — 2026-05-11 (持續迭代擴充)
+
+### 章節深度補完
+- **Ch 16 Researcher** 135 → 358 行 — 加完整 arxiv API code / Pipeline multi-agent / Deep research 4 步 / Peer review 4-reviewer / verify_doi 實作 / 常見地雷 8 條 / Anthropic multi-agent case
+- **Ch 17 Builder Advanced** 157 → 374 行 — SFT 真實 TRL code / GRPO trainer code / Unsloth/Axolotl 對照 / reward function 4 類設計 / 常見地雷 9 條 / DeepSeek-R1 復現浪潮 case (open-r1/TinyZero)
+- **Ch 18 Maker/Educator** 227 → 332 行 — 家庭氣候 agent / Mac menubar Tauri / 教學地雷 6 條 / Capstone Rubric 5 條
+- **Ch -1 Zero Basics** 164 → 213 行 — Agent in-action 5 範例 / 你適合讀嗎自我檢查 / 5 個常見誤解
+
+### Starter code 擴充
+- **`starter-code/ch11_frameworks/`** — 5 framework 對照：vanilla / LangGraph / CrewAI / Smolagents / Pydantic AI（同任務 5 種寫法 + 7 維度比較表）
+- **`starter-code/ch14_multi_agent/`** — 3 架構：Pipeline / Supervisor / Blackboard
+
+### 新頁
+- **`/quickwin`** — 5 分鐘 Quick Win，不用裝 Python 看 agent 真的在做事 + 起始章節 Q1-Q3 決策
+- **`/llm-providers`** — 11 家 LLM 申請流程 + curl/Python 範例 + 費用 + 怎麼選決策矩陣
+- **`/glossary` rewrite** — 50+ 名詞 4 欄完整解釋（含 vibe coding / SDD / TDD / AFK 執行 / TAIDE）
+
+### 治理 + UX
+- VitePress sitemap + robots.txt + canonical URL + OG/Twitter meta 完整 SEO
+- editLink 函式（handles symlinked chapters/）每頁 footer 「在 GitHub 編輯本頁」
+- Homepage hero CTA 改 「5 分鐘 Quick Win」 為 brand action
+- Homepage features 加 3 個 (LLM API / TAIDE / 名詞表 50+)
+- **CONTRIBUTING.md** — 5 條投稿路徑 + PR 流程 + Style guide + Code of Conduct
+- README 重整：Live URL 拉頂 / 6 starter-code 表格 / badges / Status
+
 ## v1.0 — 2026-05-11 (initial complete release)
 
 ### 20 章繁中 curriculum 全完工
@@ -39,8 +64,9 @@ All notable changes to AgentZ.
 
 ### NOT_YET_DONE (v2 / v3 路線)
 
-- 各章 inline `<LLMTryout />` 嵌入（v1 元件就緒，但沒進每章 body）
-- learn.symbiosis.tw custom domain DNS（需 Cloudflare CNAME）
+- learn.symbiosis.tw custom domain DNS（需 Cloudflare CNAME，CNAME file 已 commit）
 - v2 sandbox 串 Helix V3 真實 audit / replay / cost
 - 自動 zh-CN / EN 翻譯（co-op-translator）
 - 社群投稿 + portfolio leaderboard
+- 各章 inline `<LLMTryout />` 嵌入完整 coverage（目前 5/7/10/11/12 已有，其他章節待補）
+- starter code Ch 6 (MCP) / Ch 7 (Skills) / Ch 8 (Cost) 尚未補
