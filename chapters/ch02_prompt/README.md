@@ -257,6 +257,15 @@ LLM 對「不要做 X」比「要做 Y」差。
 
 ---
 
+## 9b. 在這頁直接練 prompt
+
+改 system prompt + user prompt、按送出看結果。多試幾次你會學到 prompt 寫法。
+
+<LLMTryout
+  title="Ch 2 in-page tryout — 改 system prompt 看差別"
+  defaultSystem="你是繁中翻譯助理。只翻譯，不解釋。如果使用者用非英文發訊息，請回「請給英文」並停止。"
+  defaultPrompt="Translate: API key" />
+
 ## 10. 補充閱讀
 
 - [Anthropic — Prompt engineering overview](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)

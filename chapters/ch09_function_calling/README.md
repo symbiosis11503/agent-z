@@ -329,6 +329,15 @@ Ch 15 會在 V3 case study 看完整 production-grade 實作。
 
 ---
 
+## 9b. 在這頁直接練 tool use 風格的 prompt
+
+> ⚠️ 真正的 tool use 需要 server 端 wire（這頁沒接工具）。這邊只練習「叫 LLM 用 JSON 表達想 call 什麼工具」的 prompt 風格——下一步就拿去 Ch 12 的 mini framework 真接。
+
+<LLMTryout
+  title="Ch 9 in-page tryout — 練「想呼叫工具」的 JSON 輸出"
+  defaultSystem="你是 weather assistant。你的回應必須是合法 JSON：{tool: 'get_weather' | 'final', input?: {city: string}, answer?: string}。如果想查天氣回 tool，如果已經有資料回 final。除了 JSON 不要寫任何字。"
+  defaultPrompt="台北現在天氣？" />
+
 ## 10. 補充閱讀
 
 - [Anthropic — Tool use overview](https://docs.anthropic.com/en/docs/build-with-claude/tool-use/overview)

@@ -305,6 +305,15 @@ print(f"=== Final answer ===\n{r.content[0].text if r.content else '(empty)'}")
 
 ---
 
+## 7b. 在這頁直接看 LLM 怎麼描述自己會做的事
+
+LLM 雖然不會真的 call 工具（這頁沒接 tool），但你可以叫它**模擬**一次 agent 思路。
+
+<LLMTryout
+  title="Ch 3 in-page tryout — 模擬 ReAct 思路"
+  defaultSystem="你是 agent ReAct simulator。看任務，模擬出 Reason / Act / Observe 循環。每輪 4-6 句，最多 5 輪。Act 寫成偽工具呼叫（不真的執行）。"
+  defaultPrompt="任務：找出台北現在的天氣 + 推薦穿什麼出門。" />
+
 ## 8. 補充閱讀
 
 - [Anthropic — Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) — 必讀；什麼時候用 agent、什麼時候不用

@@ -273,7 +273,18 @@ messages=[
 
 ---
 
-## 9. 補充閱讀
+## 9. 在這頁直接試一下
+
+不想開 Terminal？貼你的 API key、在這個頁面直接呼叫 LLM 看結果：
+
+<LLMTryout
+  title="Ch 1 in-page tryout — 同一個問題、四家 LLM"
+  defaultPrompt="用繁中三句話解釋什麼是 token，並舉一個中英文對照例子。"
+  defaultSystem="" />
+
+(API key 只留在你瀏覽器、直接打 vendor、不經我們的伺服器。)
+
+## 10. 補充閱讀
 
 - [Anthropic — Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) — 什麼時候用 framework / 什麼時候用 raw API
 - [tiktokenizer.vercel.app](https://tiktokenizer.vercel.app/) — 線上看你的 prompt 被 tokenize 成什麼樣
