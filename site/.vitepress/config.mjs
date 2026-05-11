@@ -51,6 +51,35 @@ export default defineConfig({
       ['meta', { name: 'twitter:title', content: pageTitle }],
       ['meta', { name: 'twitter:description', content: pageDesc }],
     )
+
+    // JSON-LD on home page: Course schema for SEO rich results / Knowledge Graph
+    if (rel === '') {
+      const ldCourse = {
+        '@context': 'https://schema.org',
+        '@type': 'Course',
+        name: 'AgentZ — 從零到 AI Agent 構建者',
+        description: defaultDesc,
+        url: base,
+        provider: {
+          '@type': 'Organization',
+          name: 'Symbiosis (SBS)',
+          url: 'https://github.com/symbiosis11503/agent-z',
+        },
+        inLanguage: 'zh-TW',
+        learningResourceType: 'Curriculum',
+        educationalLevel: 'Beginner to Advanced',
+        teaches: 'AI Agent / LLM / Claude Code / MCP / RAG / multi-agent / Agentic-RL',
+        license: 'https://opensource.org/licenses/MIT',
+        hasCourseInstance: {
+          '@type': 'CourseInstance',
+          courseMode: 'Online',
+          courseWorkload: 'P60H', // approx 60 hours
+        },
+      }
+      pageData.frontmatter.head.push(
+        ['script', { type: 'application/ld+json' }, JSON.stringify(ldCourse)],
+      )
+    }
   },
 
   themeConfig: {
