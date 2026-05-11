@@ -5,6 +5,8 @@
 > 動手練習：寫一個自己的 Skill、從 Marketplace 裝一個、用 progressive disclosure 設計第三個。
 >
 > 前置：完成 [Ch 6](../ch06_mcp/) — 已經會裝 MCP server + 自己寫一個。
+>
+> 🛠 **Starter code**: [`starter-code/ch07_skills_plugins/`](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch07_skills_plugins) — changelog-helper SKILL.md template + project / user-scope install + 6 條常見地雷。
 
 ---
 

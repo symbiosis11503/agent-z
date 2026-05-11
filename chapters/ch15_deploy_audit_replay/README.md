@@ -5,6 +5,8 @@
 > 動手練習：把你 Ch 12 的 mini framework 升級到 V3 級 governance、deploy 上線一個 HTTP API。
 >
 > 前置：完成 [Ch 14](../ch14_multi_agent/) — multi-agent 寫得出來。
+>
+> 🛠 **Starter code**: [`starter-code/ch15_v3_governance/`](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch15_v3_governance) — AuditSink + ReplayStore + agent_with_audit.py SQLite governance scaffold (練習 15.1) + FastAPI server (練習 15.2)。
 
 ---
 

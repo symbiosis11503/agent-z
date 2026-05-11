@@ -5,6 +5,8 @@
 > 動手練習：寫三個版本的同一個 agent（ReAct / Plan-and-Solve / Reflection）+ 對比結果。
 >
 > 前置：完成 [Ch 9](../ch09_function_calling/) — tool use loop 寫得出來。
+>
+> 🛠 **Starter code**: [`starter-code/ch10_paradigms/`](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch10_paradigms) — ReAct / Plan-and-Solve / Reflection **三範式同任務對照**。
 
 ---
 

@@ -5,6 +5,8 @@
 > 動手練習：用三種架構寫同一個 task（research → write → review），對比。
 >
 > 前置：完成 [Ch 13](../ch13_memory_rag/) — 你的 agent 有 memory 了。
+>
+> 🛠 **Starter code**: [`starter-code/ch14_multi_agent/`](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch14_multi_agent) — Pipeline / Supervisor / Blackboard **三架構同任務對照**（同一 research → write → review task 在 3 種架構下實作）。
 
 ---
 

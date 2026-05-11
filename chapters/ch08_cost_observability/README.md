@@ -5,6 +5,8 @@
 > 動手練習：算一次 agent 跑完真實花了多少、設一個 budget cap、強制中止一個 runaway agent。
 >
 > 前置：完成 [Ch 7](../ch07_skills_plugins/) — Skills 寫得出來。
+>
+> 🛠 **Starter code**: [`starter-code/ch08_cost_observability/`](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch08_cost_observability) — drop-in Anthropic SDK wrap + SQLite log + daily cap fail-closed + by_model/by_run report + 7 條常見地雷。
 
 ---
 

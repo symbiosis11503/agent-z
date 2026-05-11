@@ -5,6 +5,8 @@
 > 動手練習：寫一個有 session memory 的 agent、加一個 RAG layer、做 contextual retrieval 對比。
 >
 > 前置：完成 [Ch 12](../ch12_mini_framework/) — 有自己的 mini framework 能加 memory。
+>
+> 🛠 **Starter code**: [`starter-code/ch13_memory_rag/`](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch13_memory_rag) — session memory (SQLite-backed) + Chroma RAG pipeline + contextual retrieval demo。
 
 ---
 

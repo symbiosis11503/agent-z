@@ -5,6 +5,8 @@
 > 動手練習：寫一個 weather agent 從零開始（不靠 CLI agent）+ 加 parallel tool + 加錯誤處理。
 >
 > 前置：完成 [Ch 8](../ch08_cost_observability/) — Operator 階段全完。
+>
+> 🛠 **Starter code**: [`starter-code/ch09_weather_agent/`](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch09_weather_agent) — function calling weather agent 從 0 寫起、含 tool schema / loop / parallel tools。
 
 ---
 

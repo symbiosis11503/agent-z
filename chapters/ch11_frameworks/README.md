@@ -5,6 +5,8 @@
 > 動手練習：用 LangGraph + CrewAI 寫同一個 agent、比較程式碼行數 / debug 體驗。
 >
 > 前置：完成 [Ch 10](../ch10_react_paradigms/) — ReAct / Plan / Reflection 範式都寫過。
+>
+> 🛠 **Starter code**: [`starter-code/ch11_frameworks/`](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch11_frameworks) — **同一任務 5 種寫法**（vanilla / LangGraph / CrewAI / Smolagents / Pydantic AI）+ 7 維度對照表 + 決策樹「怎麼選」。
 
 ---
 

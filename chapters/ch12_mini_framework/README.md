@@ -5,6 +5,8 @@
 > 動手練習：跟著章節寫完 `agentz_mini.py`、用它跑 3 個不同 task。
 >
 > 前置：完成 [Ch 11](../ch11_frameworks/) — 知道現成 framework 長什麼樣。
+>
+> 🛠 **Starter code**: [`starter-code/ch12_mini_framework/`](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch12_mini_framework) — 完整 `agentz_mini.py` ~200 行可跑版本，含 `@tool` decorator + ReAct loop + step trace。
 
 ---
 

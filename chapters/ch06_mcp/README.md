@@ -5,6 +5,8 @@
 > 動手練習：裝 3 個官方 MCP server + 自寫一個 Hello-MCP server。
 >
 > 前置：完成 [Ch 5](../ch05_cli_workflow/) — CLAUDE.md / slash command 寫得出來。
+>
+> 🛠 **Starter code**: [`starter-code/ch06_mcp/`](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch06_mcp) — FastMCP server 3 tools (count_lines / search_in_file / list_files) + Claude Code 接法 + 10 條常見地雷。
 
 ---
 
