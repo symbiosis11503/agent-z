@@ -19,32 +19,38 @@ export default defineConfig({
   head: [
     ['meta', { name: 'theme-color', content: '#5b21b6' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'AgentZ — 從零到 AI Agent 構建者' }],
-    ['meta', { property: 'og:description', content: '繁中 first-class、vendor-neutral、Claude Code 生態深入的 AI Agent 學習系統' }],
-    ['meta', { property: 'og:url', content: 'https://symbiosis11503.github.io/agent-z/' }],
     ['meta', { property: 'og:image', content: 'https://symbiosis11503.github.io/agent-z/logo.svg' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: 'AgentZ — 從零到 AI Agent 構建者' }],
-    ['meta', { name: 'twitter:description', content: '繁中 first-class、vendor-neutral、Claude Code 生態深入的 AI Agent 學習系統' }],
     ['meta', { name: 'keywords', content: 'AI Agent, Claude Code, MCP, AgentZ, 繁體中文, AI 學習, LLM, ReAct, RAG, multi-agent, agentic-RL, TAIDE' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/agent-z/logo.svg' }],
   ],
 
   transformPageData(pageData) {
     const base = 'https://symbiosis11503.github.io/agent-z/'
-    // pageData.relativePath examples:
-    //   "glossary/foundation.md" → glossary/foundation
-    //   "index.md" → '' (root)
-    //   "chapters/ch00_setup/index.md" → chapters/ch00_setup/  (cleanUrls)
-    //   "../chapters/ch00_setup/README.md" → chapters/ch00_setup/  (rewrite for symlinked chapters/)
+    const defaultTitle = 'AgentZ — 從零到 AI Agent 構建者'
+    const defaultDesc = '繁中 first-class、vendor-neutral、Claude Code 生態深入的 AI Agent 學習系統'
+
     let rel = pageData.relativePath.replace(/\.md$/, '')
-    rel = rel.replace(/^\.\.\//, '')                  // strip leading ../ from symlink rewrite
-    rel = rel.replace(/\/README$/, '/')               // README in dir → directory index
+    rel = rel.replace(/^\.\.\//, '')
+    rel = rel.replace(/\/README$/, '/')
     if (rel === 'index') rel = ''
     if (rel.endsWith('/index')) rel = rel.slice(0, -'index'.length)
     const canonicalURL = base + rel
+
+    const pageTitle = pageData.frontmatter.title
+      ? `${pageData.frontmatter.title} · AgentZ`
+      : (pageData.title ? `${pageData.title} · AgentZ` : defaultTitle)
+    const pageDesc = pageData.frontmatter.description || pageData.description || defaultDesc
+
     pageData.frontmatter.head ??= []
-    pageData.frontmatter.head.push(['link', { rel: 'canonical', href: canonicalURL }])
+    pageData.frontmatter.head.push(
+      ['link', { rel: 'canonical', href: canonicalURL }],
+      ['meta', { property: 'og:url', content: canonicalURL }],
+      ['meta', { property: 'og:title', content: pageTitle }],
+      ['meta', { property: 'og:description', content: pageDesc }],
+      ['meta', { name: 'twitter:title', content: pageTitle }],
+      ['meta', { name: 'twitter:description', content: pageDesc }],
+    )
   },
 
   themeConfig: {
