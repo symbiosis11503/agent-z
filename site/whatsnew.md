@@ -1,6 +1,6 @@
 ---
 title: What's New — AgentZ 更新紀錄
-description: AgentZ 版本變動 high-signal 摘要：v1.0 initial / v1.1 章節深度補完 / v1.2 ralph-loop polish wave (新增 cheatsheet / troubleshooting / compare / 名詞表 60+ / nav 7-item dropdown / A4 print CSS)。
+description: AgentZ 版本變動 high-signal 摘要：v1.0 initial / v1.1 章節深度補完 / v1.2 ralph-loop polish wave / v1.3 三大長頁拆分 (cheatsheet 6 / glossary 5 / llm-providers 3 個分頁 + 各 all-in-one)。
 ---
 
 # What's New — 更新紀錄
@@ -10,6 +10,40 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 > **Watch the repo** 不定時 polish — [GitHub Watch](https://github.com/symbiosis11503/agent-z) → Releases-only 抓重大改版。
 
 [[toc]]
+
+---
+
+## 2026-05-12 — v1.3 三大長頁拆分（boss directive「分頁的方式，不要擠在一頁」）
+
+長頁面三個 (cheatsheet 465 行 / glossary 470 行 / llm-providers 447 行) 各自拆成獨立焦點分頁 + 一個 VitePress include 合成的「全本一頁」（給 Ctrl-F 搜全本或 A4 一次印的人）。
+
+### 拆分結構
+
+| 原單頁 | 拆後 | landing 保留 |
+|---|---|---|
+| `/cheatsheet` 465 行 | `cli` / `sdk` / `pricing` / `patterns` / `mcp` / `governance` 6 焦點分頁 + `/cheatsheet/all` 合成印刷版 | 6 category card + 15-row Quick lookup table + 卡關速查 |
+| `/glossary` 470 行 | `foundation` / `agent` / `practice` / `production` / `taiwan-misc` 5 分類分頁 + `/glossary/all` 合成搜尋版 | 5 category card + 4-field 結構說明 + 外部詞典清單 |
+| `/llm-providers` 447 行 | `commercial` / `opensource-aggregator` / `local-sovereign` 3 分類分頁 + `/llm-providers/all` 合成版 | 11-LLM 比較表 + 8-row 怎麼選矩陣 + 7 條安全守則 |
+
+### Sidebar 跟 nav 更新
+
+- 工具箱 dropdown 加 9 sub-link（速查卡 6 + 名詞表 5 + LLM 3，不展平太密用「— 子頁名」前綴）
+- 路徑 prefix sidebar：`/cheatsheet/` / `/glossary/` / `/llm-providers/` 各自顯示分頁列表 + 列印 / Ctrl-F 入口
+- 14 個 chapter cross-link 自動 anchor 遷移（Ch 7/10/13/14 footer 改點向 `glossary/taiwan-misc#_11-常被混淆的-pair-對比`）
+
+### 為什麼這樣拆
+
+- A4 列印需求保留：每個分頁可單獨 Cmd-P A4 印（focus 內容）；要印全本翻 `all` 頁
+- 內容同步零維護：`all.md` 用 VitePress `<!--@include: ./X.md-->` 自動 compose，分頁改、全本同步
+- discovery：landing 改 card + lookup table，比 465 行單頁更快找到「我要的那節」
+- mobile 友好：分頁短，sidebar 結構清楚不溢出
+
+### Iter 1-4 commits
+
+1. iter 1 [55c508b](https://github.com/symbiosis11503/agent-z/commit/55c508b) — cheatsheet 6-split
+2. iter 2 [f467df2](https://github.com/symbiosis11503/agent-z/commit/f467df2) — cheatsheet `all.md`
+3. iter 3 [8e6fb91](https://github.com/symbiosis11503/agent-z/commit/8e6fb91) — glossary 5-split + `all.md`
+4. iter 4 [8cc77ce](https://github.com/symbiosis11503/agent-z/commit/8cc77ce) — llm-providers 3-split + `all.md`
 
 ---
 

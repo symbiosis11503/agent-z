@@ -26,6 +26,29 @@ AgentZ 用詞 + 業界術語的繁中對照。**60+ 詞分 5 個焦點頁面**�
 
 ---
 
+## Quick lookup — 想找的詞在哪頁？
+
+| 找這個詞 | 翻這頁 |
+|---|---|
+| LLM / Token / Context Window / Temperature / Embedding | [基礎](./glossary/foundation) |
+| Prompt / System Prompt / Few-shot / CoT / Compaction / **Prompt Cache** | [基礎](./glossary/foundation) |
+| Agent / Tool Use / ReAct / Plan-and-Solve / Reflection / **stop_reason** | [Agent / CLI](./glossary/agent) |
+| **Computer Use** / **Subagent** / Deep Research / Headless Agent | [Agent / CLI](./glossary/agent) |
+| CLI Agent / MCP / Skill / Hook / **Plugin** / **Agent SDK** / **MCP Scope** | [Agent / CLI](./glossary/agent) |
+| Slash Command / Progressive Disclosure | [Agent / CLI](./glossary/agent) |
+| Vibe Coding / AI Pair / SDD / TDD / AFK / Delegation | [實務](./glossary/practice) |
+| Session Memory / Long-term Memory / RAG / Contextual Retrieval | [實務](./glossary/practice) |
+| Multi-agent / Pipeline / Supervisor / Handoff | [實務](./glossary/practice) |
+| Budget Cap / Intervention / Audit / Replay / Guardrails | [Production](./glossary/production) |
+| SFT / GRPO / Agentic-RL / DPO | [Production](./glossary/production) |
+| TAIDE / Sovereign AI / Local Inference | [台灣 AI / pair](./glossary/taiwan-misc) |
+| MCP vs Skill / ReAct vs Plan-and-Solve / Fine-tune vs RAG / Subagent vs Multi-agent | [台灣 AI / pair](./glossary/taiwan-misc) |
+| ai-dict / Anthropic Glossary（外部詞典） | [台灣 AI / pair](./glossary/taiwan-misc) |
+
+找不到？翻 **[全本一頁](./glossary/all)** 直接 Ctrl-F 搜。
+
+---
+
 ## 4-field 結構（每詞）
 
 - **專業介紹**（技術細節 + 引用 paper / spec）
