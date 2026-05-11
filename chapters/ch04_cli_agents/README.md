@@ -186,6 +186,15 @@ Claude Code 啟動時會：
 
 ---
 
+## 9b. 在這頁讓 LLM 幫你比較 CLI
+
+把你的需求貼進去，看 LLM 怎麼推薦 4 家裡的哪一家：
+
+<LLMTryout
+  title="Ch 4 in-page tryout — CLI agent 推薦"
+  defaultSystem="你是 CLI agent 顧問。看使用者需求，從 Claude Code / Codex CLI / OpenCode / Gemini CLI 4 家挑 1-2 家推薦，並給具體理由。最後給安裝指令。回繁中。"
+  defaultPrompt="我主要寫 Python 跟 TypeScript，會用 GitHub、想接 Notion。推薦哪一家？" />
+
 ## 10. 補充閱讀
 
 - [Claude Code 官方文件](https://docs.claude.com/en/docs/agents-and-tools/claude-code/overview)

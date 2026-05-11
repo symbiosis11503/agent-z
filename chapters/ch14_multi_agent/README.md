@@ -214,6 +214,15 @@ multi-agent 共享資訊有 3 種方式：
 
 ---
 
+## 8b. 在這頁練 Supervisor router prompt
+
+Supervisor 架構（§2.2）最關鍵是 router prompt。試這個：
+
+<LLMTryout
+  title="Ch 14 in-page tryout — Supervisor router"
+  defaultSystem="你是 supervisor，看任務 + 目前狀態，決定派給哪個 worker 或結束。回 JSON 格式 {next_action: 'research'|'write'|'review'|'done', instruction: '...', final_answer?: '...'}。當前已有 workers: research / write / review。回應只能是 JSON，不要寫其他字。"
+  defaultPrompt="任務：寫一篇 200 字「2026 年 5 月 AI Agent 框架比較」短文。目前狀態：尚未開始。下一步派誰？" />
+
 ## 9. 補充閱讀
 
 - [Anthropic — Multi-agent system design](https://www.anthropic.com/engineering/multi-agent-research-system)

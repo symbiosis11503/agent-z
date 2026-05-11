@@ -116,6 +116,16 @@ input：一篇 paper draft → output：4 個 agent reviewer 各從不同維度�
 
 ---
 
+## 6b. 在這頁練 paper summary prompt
+
+paper bot 的核心 prompt。試這個（不接 arxiv API，但能看 LLM 的摘要結構）：
+
+<LLMTryout
+  title="Ch 16 in-page tryout — paper summary"
+  defaultSystem="你是學術 paper 摘要助理。看 paper title + abstract，輸出：(1) 一段 200 字繁中摘要 (2) 3 個 key takeaway，每個一句話。標記不確定的事實用 [推測]。"
+  defaultPrompt="Title: ReAct: Synergizing Reasoning and Acting in Language Models.
+Abstract: While large language models (LLMs) have demonstrated impressive capabilities across tasks in language understanding and interactive decision making, their abilities for reasoning and acting have primarily been studied as separate topics. In this paper, we explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner..." />
+
 ## 7. 補充閱讀
 
 - [OpenAI Deep Research](https://openai.com/index/introducing-deep-research/)

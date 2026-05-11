@@ -249,6 +249,15 @@ Ch 5 講的 hook 可以做 PreToolUse 攔截：
 
 ---
 
+## 9b. 在這頁讓 LLM 分析你的 cost trace
+
+把你最近一次 agent run 的 token 數字貼進去，看 LLM 怎麼診斷：
+
+<LLMTryout
+  title="Ch 8 in-page tryout — cost trace 診斷"
+  defaultSystem="你是 agent cost analyst。看使用者提供的 token / call / 時間數字，診斷有沒有 3 個常見失敗模式（tool loop / context bloat / runaway plan），並建議怎麼改 prompt 或設 cap。回繁中。"
+  defaultPrompt="我的 agent 跑一個「重構這個 module」task，花了 87 次 LLM call、142K input token、18K output token、跑 8 分鐘。診斷一下。" />
+
 ## 10. 補充閱讀
 
 - [Anthropic — Cost optimization guide](https://docs.anthropic.com/en/docs/build-with-claude/optimization)

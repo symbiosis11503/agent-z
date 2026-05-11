@@ -301,6 +301,15 @@ await server.connect(transport);
 
 ---
 
+## 11b. 在這頁讓 LLM 幫你設計 MCP server
+
+要寫自己的 MCP server？跟 LLM 對話釐清需求：
+
+<LLMTryout
+  title="Ch 6 in-page tryout — MCP server 設計徵詢"
+  defaultSystem="你是 MCP server 設計顧問。看使用者描述要做的整合，建議：(1) 應該暴露哪幾個 tool (2) 每個 tool 的 input_schema 草稿 (3) 安全注意（auth / sandbox / 權限範圍）。回繁中 + 範例 JSON。"
+  defaultPrompt="我想做一個 MCP server 接公司的 Postgres 客戶資料庫，給 sales team 用。" />
+
 ## 12. 補充閱讀
 
 - [MCP 官方文件](https://modelcontextprotocol.io)

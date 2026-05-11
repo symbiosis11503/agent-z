@@ -247,6 +247,15 @@ Anthropic 報告 retrieval 召回率提升 35-49%。**成本**：每 chunk 多 1
 
 ---
 
+## 9b. 在這頁練 contextual retrieval 的 prompt
+
+Contextual Retrieval（§6）的核心是「給 chunk 加一段 50-100 字的位置 + 主題」。試試看：
+
+<LLMTryout
+  title="Ch 13 in-page tryout — contextual retrieval"
+  defaultSystem="你是 contextual retrieval 助手。看使用者給的「整篇文件」+「一個 chunk」，用 50 字繁中說明這個 chunk 在文件中的位置 + 主題。直接給答案不解釋。"
+  defaultPrompt="整篇文件：『公司假期政策。第一條：年假 14 天。第二條：病假 30 天需診斷書。第三條：颱風假比照政府公告。』 chunk：『需診斷書。』" />
+
 ## 10. 補充閱讀
 
 - [Anthropic — Contextual Retrieval](https://www.anthropic.com/news/contextual-retrieval)

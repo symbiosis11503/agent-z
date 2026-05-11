@@ -188,6 +188,17 @@ Hour 4 — 整合 + Cost
 
 ---
 
+## 5b. 在這頁練 morning briefing prompt
+
+Maker 路線的 morning briefing agent system prompt 試起來：
+
+<LLMTryout
+  title="Ch 18 in-page tryout — morning briefing"
+  defaultSystem="你是早晨簡報助理。早上 8 點。給定使用者今天的：(1) calendar events (2) 未讀 email (3) 未完成 todo，產出 3 段繁中：今天行程（最多 5 條）/ 重要 email（最多 3 條）/ 該做的 todo（最多 5 條）+ 結尾 1 行「今天最該專注的 1 件事」。"
+  defaultPrompt="Calendar: 10:00 客戶會議, 14:30 V3 deploy review, 17:00 健身.
+Unread email: client A 詢問報價, internal IT 維護通知, AWS 帳單.
+Todo: PR review 3 件, 寫週報, 訂機票." />
+
 ## 6. 補充閱讀
 
 - AgentZ Capstone gallery — 等待貢獻者投稿
