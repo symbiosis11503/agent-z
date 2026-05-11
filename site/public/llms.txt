@@ -49,9 +49,22 @@ AgentZ 解決中文圈兩大空缺：(1) 沒有繁中 first 的 curriculum (簡�
 ## 額外資源
 
 - [LLM / API 申請指南](https://symbiosis11503.github.io/agent-z/llm-providers): 11 家 LLM (Claude/GPT/Gemini/Groq/DeepSeek/Mistral/OpenRouter/Grok/Ollama/TAIDE/Qwen) 申請流程 + curl/Python 範例 + 費用 + 怎麼選決策矩陣
-- [速查卡 (Cheatsheet)](https://symbiosis11503.github.io/agent-z/cheatsheet): 單頁 A4 可印 — Claude Code CLI / Anthropic SDK / pricing / ReAct / cost cap / MCP boilerplate / SKILL.md / V3 governance 4 道閘門 / 模型路由建議
+- [速查卡 — 6 個分頁總覽](https://symbiosis11503.github.io/agent-z/cheatsheet): CLI/Git · SDK · Pricing · Patterns · MCP/Skills · Governance — 每頁可單獨印 A4
+  - [CLI / Git](https://symbiosis11503.github.io/agent-z/cheatsheet/cli) — Claude Code 指令 + CLAUDE.md 模板 + Git conventions
+  - [SDK](https://symbiosis11503.github.io/agent-z/cheatsheet/sdk) — Anthropic SDK basic / tool_use / streaming / Prompt Cache
+  - [Pricing](https://symbiosis11503.github.io/agent-z/cheatsheet/pricing) — 11 家 LLM pricing 2026-05 + 章節練習 cost 估算
+  - [Patterns](https://symbiosis11503.github.io/agent-z/cheatsheet/patterns) — ReAct / Plan-and-Solve / Reflection + Cost cap fail-closed
+  - [MCP / Skills](https://symbiosis11503.github.io/agent-z/cheatsheet/mcp) — FastMCP boilerplate + scope + Computer Use + Subagent + SKILL.md
+  - [Governance](https://symbiosis11503.github.io/agent-z/cheatsheet/governance) — V3 4 道閘門 + 模型路由建議 + Anti-hallucination 5 條
+  - [全本一頁 A4 印](https://symbiosis11503.github.io/agent-z/cheatsheet/all) — 6 分頁合成版（VitePress include 自動同步）
 - [故障排除](https://symbiosis11503.github.io/agent-z/troubleshooting): 12 大類常見錯誤 + 症狀 + 解法
-- [60+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary): 繁中+English 4 欄完整 (含 vibe coding / SDD / TDD / AFK 執行 / TAIDE / Computer Use / Subagent / Plugin / Agent SDK / MCP Scope / Prompt Cache / stop_reason)
+- [名詞表 60+ — 5 個分類總覽](https://symbiosis11503.github.io/agent-z/glossary): 基礎 · Agent 機制 · 實務 · Production · 台灣&pair — 每詞 4 欄完整解釋
+  - [基礎 (LLM/Prompt)](https://symbiosis11503.github.io/agent-z/glossary/foundation) — LLM / Token / Context / Role / Temperature / Embedding / Fine-tuning / Hallucination / Prompt / CoT / Prompt Cache
+  - [Agent 機制 + CLI / Claude Code](https://symbiosis11503.github.io/agent-z/glossary/agent) — Agent / Tool Use / ReAct / stop_reason / Computer Use / Subagent / Deep Research / MCP / Skill / Plugin / Agent SDK / MCP Scope
+  - [實務 (Memory/RAG)](https://symbiosis11503.github.io/agent-z/glossary/practice) — Vibe Coding / AI Pair / SDD / TDD / AFK / Memory / RAG / Multi-agent / Supervisor / Handoff
+  - [Production](https://symbiosis11503.github.io/agent-z/glossary/production) — Budget Cap / Intervention / Audit / Replay / Guardrails / SFT / GRPO / Agentic-RL
+  - [台灣 AI / pair 對比](https://symbiosis11503.github.io/agent-z/glossary/taiwan-misc) — TAIDE / Sovereign AI / Local Inference / 7 對 pair / ai-dict / Anthropic Glossary
+  - [全本一頁 Ctrl-F 搜尋](https://symbiosis11503.github.io/agent-z/glossary/all) — 5 分類合成版
 - [關於 AgentZ](https://symbiosis11503.github.io/agent-z/about): 5 個差異化定位 + 課程結構 + 維護者
 - [What's New / 更新紀錄](https://symbiosis11503.github.io/agent-z/whatsnew): 版本變動 high-signal 摘要 (v1.0 / v1.1 / v1.2)
 - [跟其他教程比較](https://symbiosis11503.github.io/agent-z/compare): AgentZ vs hello-agents / MS for Beginners / HF agents-course / OpenAI Cookbook 14 維度對照 + 路徑建議

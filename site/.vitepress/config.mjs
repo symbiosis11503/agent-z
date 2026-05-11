@@ -51,7 +51,12 @@ export default defineConfig({
           { text: '— MCP / Skills', link: '/cheatsheet/mcp' },
           { text: '— Governance', link: '/cheatsheet/governance' },
           { text: '故障排除', link: '/troubleshooting' },
-          { text: '名詞表 60+', link: '/glossary' },
+          { text: '名詞表 總覽', link: '/glossary' },
+          { text: '— 基礎 (LLM/Prompt)', link: '/glossary/foundation' },
+          { text: '— Agent + CLI / Claude Code', link: '/glossary/agent' },
+          { text: '— 實務 (Memory/RAG)', link: '/glossary/practice' },
+          { text: '— Production', link: '/glossary/production' },
+          { text: '— 台灣 AI / pair', link: '/glossary/taiwan-misc' },
           { text: 'LLM / API 申請', link: '/llm-providers' },
           { text: 'FAQ', link: '/faq' },
           { text: '跟其他教程比較', link: '/compare' },
@@ -89,6 +94,27 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '📄 全本一頁 (A4 印)', link: '/cheatsheet/all' },
+          ],
+        },
+      ],
+      '/glossary/': [
+        {
+          text: '名詞表 5 個分類',
+          collapsed: false,
+          items: [
+            { text: '🏠 總覽 / 索引', link: '/glossary' },
+            { text: '🧠 基礎 (LLM/Prompt)', link: '/glossary/foundation' },
+            { text: '🤖 Agent + CLI / Claude Code', link: '/glossary/agent' },
+            { text: '🛠 實務 (Memory/RAG)', link: '/glossary/practice' },
+            { text: '🛡 Production', link: '/glossary/production' },
+            { text: '🇹🇼 台灣 AI / pair', link: '/glossary/taiwan-misc' },
+          ],
+        },
+        {
+          text: 'Ctrl-F 搜尋',
+          collapsed: false,
+          items: [
+            { text: '📄 全本一頁', link: '/glossary/all' },
           ],
         },
       ],
