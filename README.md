@@ -126,6 +126,19 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 
 歡迎：bug / typo 修、章節 common pitfalls 補、starter code 投稿、翻譯（zh-CN / EN）、Capstone gallery 投稿。
 
+### 本地預覽（給投稿者）
+
+```bash
+git clone https://github.com/symbiosis11503/agent-z
+cd agent-z
+npm install                # 拉 VitePress
+npm run dev                # http://localhost:5173/agent-z/
+# 邊改 markdown 邊看，hot reload
+npm run build              # 產 site/.vitepress/dist（最終驗證）
+```
+
+Node 18+ 即可。沒 lint / test，但 PR 前請至少 `npm run build` 確認 build 不破。
+
 ## Status
 
 **v1 complete** (2026-05-11) — 20 章 / ~6,200 行繁中 / 60+ 動手練習 / 10 starter code dirs / 互動 Web App live + PDF release ✅
