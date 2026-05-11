@@ -152,3 +152,45 @@ input[type="checkbox"] { accent-color: var(--vp-c-brand-1); transform: scale(1.1
   font-size: 0.85rem;
   color: var(--vp-c-text-2);
 }
+
+/* print stylesheet — optimized for /cheatsheet A4 single-page-feel */
+@media print {
+  /* hide chrome */
+  .VPNav, .VPLocalNav, .VPSidebar, .VPDocAside, .VPDocFooter,
+  .VPFooter, .VPHomeFeatures, .VPNavBar, .VPNavBarTitle,
+  .VPDocAsideOutline, .vp-doc .table-of-contents,
+  .VPSocialLinks, .VPBackToTop,
+  .agentz-tryout, .agentz-progress, .agentz-progress-bar,
+  button.copy, .DocSearch-Button,
+  .edit-link, .last-updated, .pager,
+  .VPNavBarSearch, .VPNavScreenSocialLinks {
+    display: none !important;
+  }
+
+  /* full-width content */
+  .VPDoc, .VPDoc .container, .VPDoc .content, .VPDoc .content-container,
+  .vp-doc, main.main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  body, .vp-doc { font-size: 9.5pt; line-height: 1.4; color: #000; background: #fff; }
+  .vp-doc h1 { font-size: 16pt; margin: 0 0 0.4em; border-bottom: 2px solid #333; padding-bottom: 0.2em; }
+  .vp-doc h2 { font-size: 12pt; margin: 0.8em 0 0.3em; border-bottom: 1px solid #aaa; padding-bottom: 0.1em; page-break-after: avoid; }
+  .vp-doc h3 { font-size: 10pt; margin: 0.5em 0 0.2em; page-break-after: avoid; }
+  .vp-doc p, .vp-doc li, .vp-doc td, .vp-doc th { font-size: 8.8pt; }
+  .vp-doc pre, .vp-doc code { font-size: 7.8pt; }
+  .vp-doc pre { padding: 0.4em 0.6em; border: 1px solid #ccc; border-radius: 4px; page-break-inside: avoid; background: #f7f7f7 !important; }
+  .vp-doc pre code { color: #111 !important; }
+  .vp-doc table { font-size: 8.5pt; page-break-inside: avoid; }
+  .vp-doc th { background: #eee !important; }
+  .vp-doc blockquote { border-left: 3px solid #888; padding-left: 0.6em; color: #333; }
+  .vp-doc hr { page-break-after: avoid; border-top: 1px solid #ccc; }
+  .vp-doc a { color: #333; text-decoration: none; }
+
+  /* avoid orphan headings */
+  .vp-doc h2 + p, .vp-doc h2 + pre, .vp-doc h3 + p, .vp-doc h3 + pre { page-break-before: avoid; }
+
+  @page { size: A4; margin: 12mm 14mm; }
+}
