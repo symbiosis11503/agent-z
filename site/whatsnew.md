@@ -13,9 +13,9 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 
 ---
 
-## 2026-05-12 — v1.2 Ralph polish wave
+## 2026-05-12 — v1.2 Ralph polish wave ✅ sealed @ iter 50
 
-連續 ralph-loop session (iter 28-37) 把 v1.1 散落的 gap 收尾。
+連續 ralph-loop session (iter 28-49 + iter 50 closeout) 把 v1.1 散落的 gap 收尾。22 次 iteration，每次 commit push origin/main，build clean。Loop 達 max-iterations 50 自然 cap。
 
 ### 新頁
 
@@ -38,7 +38,20 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 ### Cross-link 補完
 
 - index / quickwin / roadmap / troubleshooting / 404 互指
-- `public/llms.txt` 補 cheatsheet + troubleshooting + whatsnew URL，AI agent 抓站更精準
+- `public/llms.txt` 補 cheatsheet + troubleshooting + whatsnew + compare URL，AI agent 抓站更精準
+
+### 章節內 cross-link
+
+- 11/20 章補「🛟 卡關時看這裡」 footer：Ch 4/5/6/7/8/9/10/12/13/14/15 各自連 troubleshooting + cheatsheet 章節 anchor + glossary
+- 中途抓到 2 個 self-introduced regression: `site/X.md` 相對路徑 / numeric-leading anchor 缺 `_` 前綴, 都修完
+
+### 新增頁
+
+- 📋 [速查卡](./cheatsheet) — Claude Code CLI / Anthropic SDK / pricing / ReAct / cost cap / MCP / Computer Use / Subagent / V3 governance / 章節 cost 估算
+- 🛠 [故障排除](./troubleshooting) — 12 大類常見錯誤
+- 📜 [What's New](./whatsnew) — 你正在看的這頁
+- 🔍 [跟其他教程比較](./compare) — AgentZ vs hello-agents / MS / HF / OpenAI Cookbook 14 維度誠實對照
+- 🤖 [404](./404) — friendly redirect 9 個主要入口
 
 ---
 

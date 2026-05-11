@@ -2,9 +2,9 @@
 
 All notable changes to AgentZ.
 
-## v1.2 — 2026-05-12 (Ralph loop polish wave)
+## v1.2 — 2026-05-12 (Ralph loop polish wave ✅ sealed @ iter 50/50)
 
-> 連續 ralph-loop session (`UltraThink持續迭代優化agnetZ`)：10 次 iteration (iter 28-37) 把 v1.1 散落的 gap 收尾。
+> 連續 ralph-loop session (`UltraThink持續迭代優化agnetZ`)：22 次 iteration (iter 28-49) + iter 50 closeout 把 v1.1 散落的 gap 收尾。Loop 達 max-iterations 50 自然 cap，每次 commit 都 push origin/main。
 
 ### 新頁
 - **`/cheatsheet`** — A4 可印單頁速查卡（465 行）：Claude Code CLI / Anthropic SDK / pricing / ReAct / cost cap / MCP boilerplate + scope / Computer Use / Subagent / Skill auto-load 順序 / SKILL.md / V3 governance 4 道閘門 / 模型路由 / SDK 速比較
@@ -31,7 +31,22 @@ All notable changes to AgentZ.
 ### 治理 / UX
 - nav 14 → 7 top-bar items + 2 dropdown (工具箱 / 進度&社群) — 解決 mobile / tablet 多列溢出
 - `@media print` A4 stylesheet — Cmd-P 就直接清爽 A4 出，不再要手動縮放
+- `@media (max-width: 768px)` table 水平 scroll + 緊密 code — 不爆版
+- 自訂 404 頁面引導 9 個主要入口
+- per-page SEO `description` 4 頁 (cheatsheet / troubleshooting / whatsnew / compare)
 - /chapters 符號鏈接 path resolve for editLink
+
+### 章節內 cross-link
+- 11/20 章新增「🛟 卡關時看這裡」 footer block — Ch 4/5/6/7/8/9/10/12/13/14/15 各自指 troubleshooting + cheatsheet + glossary chapter-specific anchor
+- 同時抓到並修兩個 self-introduced regression:
+  - `../../site/X.md` 路徑（GitHub readme OK 但 VitePress deployed broken）→ 絕對 URL
+  - VitePress 對 numeric-leading slug 加 `_` 前綴（`#11-...` → `#_11-...`）
+
+### Process notes
+- Loop pattern：每 iter 改 → build → commit → push，無 stash / 無 force-push / 無 rebase
+- 每個 iter 都單一明確意圖（new page / fix / extend）
+- 後半段（iter 47-49）發現自己引入的 regression 並修，比繼續加新功能更有 net value
+- Iter 50 為自然 cap（max-iterations 50 命中），DONE 不發 — 因為「持續迭代」directive open-ended 永不 unequivocally true。後續改良走 v1.3 / v2 規劃路線
 
 ## v1.1 — 2026-05-11 (持續迭代擴充)
 

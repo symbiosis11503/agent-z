@@ -143,7 +143,7 @@ Node 18+ 即可。沒 lint / test，但 PR 前請至少 `npm run build` 確認 b
 
 **v1 complete** (2026-05-11) — 20 章 / ~6,200 行繁中 / 60+ 動手練習 / 10 starter code dirs / 互動 Web App live + PDF release ✅
 **v1.1** (2026-05-11) — Ch 16/17/18 深度補完、starter code 全 coverage、5 分鐘 Quick Win + LLM API 指南 + glossary rewrite ✅
-**v1.2** (2026-05-12) — 速查卡 / 故障排除 / What's New / 自訂 404 + 名詞表 53→62 + nav 14→7 dropdown + A4 print stylesheet ✅
+**v1.2** (2026-05-12) — Ralph-loop polish wave (22 iter): 速查卡 / 故障排除 / What's New / 跟其他教程比較 / 自訂 404 + 名詞表 53→62 + nav 14→7 dropdown + A4/mobile responsive CSS + 11 章「🛟 卡關時看這裡」 footer + per-page SEO ✅
 **v2 規劃中** — 章節內動手練習串 Helix V3 sandbox 真跑 + portfolio leaderboard
 
 請查 [CHANGELOG.md](./CHANGELOG.md)。
