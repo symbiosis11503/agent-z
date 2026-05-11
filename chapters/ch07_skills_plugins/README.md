@@ -334,6 +334,6 @@ description: Review a PR / diff and produce structured feedback in 繁中
 ---
 
 > 🛟 **卡關時看這裡**：
-> - SKILL.md trigger 不起來 / Plugin 裝壞 → [故障排除 § 框架/Skills](../../site/troubleshooting.md)
-> - SKILL.md 標準格式 + auto-load 順序 → [速查卡 § Skill](../../site/cheatsheet.md#skill-auto-load-順序)
-> - MCP vs Skill 怎麼選 → [名詞表 § 常被混淆的 pair](../../site/glossary.md#11-常被混淆的-pair-對比)
+> - SKILL.md trigger 不起來 / Plugin 裝壞 → [故障排除 § 框架/Skills](https://symbiosis11503.github.io/agent-z/troubleshooting)
+> - SKILL.md 標準格式 + auto-load 順序 → [速查卡 § Skill](https://symbiosis11503.github.io/agent-z/cheatsheet#skill-auto-load-順序)
+> - MCP vs Skill 怎麼選 → [名詞表 § 常被混淆的 pair](https://symbiosis11503.github.io/agent-z/glossary#11-常被混淆的-pair-對比)

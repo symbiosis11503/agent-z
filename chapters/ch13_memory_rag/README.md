@@ -288,6 +288,6 @@ Contextual Retrieval（§6）的核心是「給 chunk 加一段 50-100 字的位
 ---
 
 > 🛟 **卡關時看這裡**：
-> - RAG retrieval 撈錯 / embedding dim mismatch → [故障排除 § Memory/RAG](../../site/troubleshooting.md)
-> - session memory + RAG 起手範式 → [速查卡](../../site/cheatsheet.md)
-> - Fine-tuning vs RAG 怎麼選 → [名詞表 § 常被混淆的 pair](../../site/glossary.md#11-常被混淆的-pair-對比)
+> - RAG retrieval 撈錯 / embedding dim mismatch → [故障排除 § Memory/RAG](https://symbiosis11503.github.io/agent-z/troubleshooting)
+> - session memory + RAG 起手範式 → [速查卡](https://symbiosis11503.github.io/agent-z/cheatsheet)
+> - Fine-tuning vs RAG 怎麼選 → [名詞表 § 常被混淆的 pair](https://symbiosis11503.github.io/agent-z/glossary#11-常被混淆的-pair-對比)

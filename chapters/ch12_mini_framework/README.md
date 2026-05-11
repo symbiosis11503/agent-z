@@ -378,6 +378,6 @@ def replay(path):
 ---
 
 > 🛟 **卡關時看這裡**：
-> - agent loop 失控 / tool loop → [故障排除 § Agent loop](../../site/troubleshooting.md)
-> - ReAct / Plan-and-Solve / Reflection 範式 snippet → [速查卡 § 範式](../../site/cheatsheet.md#react-loop-範式)
-> - 名詞看不懂 → [60+ 名詞表](../../site/glossary.md)
+> - agent loop 失控 / tool loop → [故障排除 § Agent loop](https://symbiosis11503.github.io/agent-z/troubleshooting)
+> - ReAct / Plan-and-Solve / Reflection 範式 snippet → [速查卡 § 範式](https://symbiosis11503.github.io/agent-z/cheatsheet#react-loop-範式)
+> - 名詞看不懂 → [60+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary)

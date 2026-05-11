@@ -254,6 +254,6 @@ Supervisor 架構（§2.2）最關鍵是 router prompt。試這個：
 ---
 
 > 🛟 **卡關時看這裡**：
-> - handoff 卡死 / context 傳錯 → [故障排除 § Multi-agent](../../site/troubleshooting.md)
+> - handoff 卡死 / context 傳錯 → [故障排除 § Multi-agent](https://symbiosis11503.github.io/agent-z/troubleshooting)
 > - Pipeline / Supervisor / Blackboard 3 架構 snippet → [`starter-code/ch14_multi_agent/`](https://github.com/symbiosis11503/agent-z/tree/main/starter-code/ch14_multi_agent)
-> - Subagent vs Multi-agent 差別 → [名詞表 § 常被混淆的 pair](../../site/glossary.md#11-常被混淆的-pair-對比)
+> - Subagent vs Multi-agent 差別 → [名詞表 § 常被混淆的 pair](https://symbiosis11503.github.io/agent-z/glossary#11-常被混淆的-pair-對比)

@@ -320,6 +320,6 @@ Claude Code 支援 hook——當 agent 要呼叫某個工具時（PreToolUse / P
 ---
 
 > 🛟 **卡關時看這裡**：
-> - hook / slash command 跑不起來 → [故障排除](../../site/troubleshooting.md)
-> - CLAUDE.md 結構模板 → [速查卡 § CLAUDE.md 推薦結構](../../site/cheatsheet.md#claude-md-推薦結構)
-> - 名詞看不懂 → [60+ 名詞表](../../site/glossary.md)
+> - hook / slash command 跑不起來 → [故障排除](https://symbiosis11503.github.io/agent-z/troubleshooting)
+> - CLAUDE.md 結構模板 → [速查卡 § CLAUDE.md 推薦結構](https://symbiosis11503.github.io/agent-z/cheatsheet#claude-md-推薦結構)
+> - 名詞看不懂 → [60+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary)
