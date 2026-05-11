@@ -1,0 +1,154 @@
+/* AgentZ — purple + slate brand */
+:root {
+  --vp-c-brand-1: #7c3aed;
+  --vp-c-brand-2: #6d28d9;
+  --vp-c-brand-3: #5b21b6;
+  --vp-c-brand-soft: rgba(124, 58, 237, 0.14);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #7c3aed 30%, #14b8a6 70%);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #7c3aed 40%, #14b8a6 80%);
+  --vp-home-hero-image-filter: blur(40px);
+
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+}
+
+.dark {
+  --vp-c-brand-1: #a78bfa;
+  --vp-c-brand-2: #c4b5fd;
+  --vp-c-brand-3: #ddd6fe;
+}
+
+/* 章節 reading progress (top thin bar) */
+html { scroll-behavior: smooth; }
+
+.agentz-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--vp-c-brand-1);
+  transform-origin: left;
+  transform: scaleX(var(--scroll-progress, 0));
+  z-index: 9999;
+  transition: transform 0.1s linear;
+}
+
+/* milestone evidence checkbox styling */
+input[type="checkbox"] { accent-color: var(--vp-c-brand-1); transform: scale(1.15); margin-right: 0.4em; }
+.vp-doc li.task-list-item { list-style: none; padding-left: 0; }
+
+/* tables responsive */
+.vp-doc table { display: table; width: 100%; }
+.vp-doc th, .vp-doc td { padding: 0.65em 0.9em; }
+.vp-doc thead th { background: var(--vp-c-bg-soft); font-weight: 600; }
+
+/* code block enhancements */
+.vp-doc div[class*="language-"] { border-radius: 8px; }
+.vp-doc pre { tab-size: 2; }
+
+/* hand-written exercise call-out */
+.vp-doc .custom-block.exercise {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+/* hero adjustments */
+.VPHome .VPFeature {
+  border: 1px solid var(--vp-c-divider);
+  transition: border-color 0.25s, transform 0.25s;
+}
+.VPHome .VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-3px);
+}
+
+/* nav highlight current section */
+.VPSidebarItem.is-active > .item .text { color: var(--vp-c-brand-1); font-weight: 600; }
+
+/* LLM Tryout component frame */
+.agentz-tryout {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  background: var(--vp-c-bg-soft);
+}
+.agentz-tryout h4 {
+  margin: 0 0 0.6rem 0;
+  display: flex; align-items: center; gap: 0.4rem;
+  font-size: 0.95rem;
+}
+.agentz-tryout h4::before { content: '🧪'; }
+.agentz-tryout select, .agentz-tryout input, .agentz-tryout textarea, .agentz-tryout button {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-size: 0.9rem;
+}
+.agentz-tryout button {
+  background: var(--vp-c-brand-1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.agentz-tryout button:hover { background: var(--vp-c-brand-2); }
+.agentz-tryout button:disabled { opacity: 0.5; cursor: not-allowed; }
+.agentz-tryout .out {
+  margin-top: 0.8rem;
+  padding: 0.8rem;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 360px;
+  overflow-y: auto;
+}
+.agentz-tryout .meta {
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--vp-c-text-2);
+}
+.agentz-tryout .row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.6rem;
+  margin: 0.5rem 0;
+  align-items: center;
+}
+.agentz-tryout label { font-size: 0.85rem; color: var(--vp-c-text-2); }
+
+/* progress tracker */
+.agentz-progress {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+}
+.agentz-progress h4 { margin: 0 0 0.5rem 0; }
+.agentz-progress .bar {
+  height: 8px;
+  background: var(--vp-c-divider);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.agentz-progress .bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--vp-c-brand-1), #14b8a6);
+  transition: width 0.4s ease;
+}
+.agentz-progress .stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--vp-c-text-2);
+}

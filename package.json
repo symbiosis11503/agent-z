@@ -1,0 +1,30 @@
+{
+  "name": "agent-z",
+  "version": "1.0.0",
+  "description": "> 從完全沒寫過 code 的零基礎開始，走到能自己構建 multi-agent 系統的熟練技術人員",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vitepress dev site",
+    "build": "vitepress build site",
+    "preview": "vitepress preview site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/symbiosis11503/agent-z.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/symbiosis11503/agent-z/issues"
+  },
+  "homepage": "https://github.com/symbiosis11503/agent-z#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
