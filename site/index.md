@@ -48,17 +48,17 @@ features:
     title: 動手練習不准跳
     details: 每章 1-3 個練習，題目 + 成功標準清楚。完成 milestone evidence 解鎖下章。v2 後串 Helix V3 sandbox 真自動驗證。
   - icon: 🔑
-    title: 11 家 LLM API 申請懶人包
-    details: <a href="/agent-z/llm-providers">Claude / GPT / Gemini / Groq / DeepSeek / Mistral / OpenRouter / TAIDE / Ollama</a> 申請流程 + curl/Python 範例 + 費用比較 + 怎麼選決策矩陣。
+    title: 11 家 LLM API 申請懶人包（3 分頁）
+    details: <a href="/agent-z/llm-providers">商業 / 開源聚合 / 本地主權</a> 三分類頁，每家 5 段（介紹 / 申請 / curl+Python 範例 / 費用 / AgentZ 章節）+ 決策矩陣 + 安全 7 條。
   - icon: 🇹🇼
     title: TAIDE 主權 LLM 整合
-    details: 台灣國科會 + 工研院 TAIDE 模型自架步驟，含 M3 Ultra Ollama recipe。AgentZ Ch 13 / Ch 17 用得到。
+    details: 台灣國科會 + 工研院 TAIDE 模型自架步驟，含 M3 Ultra Ollama recipe（<a href="/agent-z/llm-providers/local-sovereign">本地 / 主權頁</a>）。AgentZ Ch 13 / Ch 17 用得到。
   - icon: 📖
-    title: 60+ 名詞表（繁中 + English）
-    details: 每個專業名詞 4 欄完整解釋（專業介紹 / 白話解釋 / 應用範例 / 章節）。10 大類別包含 vibe coding、SDD、TDD、AFK 執行、delegation。
+    title: 60+ 名詞表 5 分類
+    details: <a href="/agent-z/glossary">基礎 / Agent / 實務 / Production / 台灣&pair</a> 五分類頁，每詞 4 欄（專業 / 白話 / 範例 / 章節）。含 vibe coding、SDD、TDD、AFK、Computer Use、Subagent、MCP Scope。
   - icon: 📋
-    title: 速查卡 A4 可印
-    details: <a href="/agent-z/cheatsheet">單頁濃縮</a> Claude Code CLI / Anthropic SDK / pricing / ReAct / cost cap / MCP boilerplate / V3 治理 4 道閘門 / 模型路由建議。學完後忘了哪個指令翻這頁。
+    title: 速查卡 6 個分頁 A4 可印
+    details: <a href="/agent-z/cheatsheet">CLI / SDK / Pricing / Patterns / MCP / Governance</a> 六焦點分頁，每頁 A4 可單獨印，要全本翻 <a href="/agent-z/cheatsheet/all">all-in-one</a>。學完忘了哪個指令翻這裡。
 ---
 
 ## 為什麼又一本？
@@ -85,12 +85,12 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 
 - 📋 [**5 分鐘 Quick Win**](./quickwin) — 不裝 Python 體驗 agent，了解你適合哪一章開始
 - 🗺 [**課程地圖**](./roadmap) — 20 章難度/時間/4 學習計畫對照
-- 🔑 [**LLM / API 申請指南**](./llm-providers) — 11 家 LLM 申請流程 + 範例 + 費用
-- 📖 [**60+ 名詞表**](./glossary) — 繁中 + English 4 欄完整解釋
+- 🔑 [**LLM / API 申請指南 (3 分頁)**](./llm-providers) — 11 家 LLM：商業 / 開源聚合 / 本地主權
+- 📖 [**60+ 名詞表 (5 分類)**](./glossary) — 基礎 / Agent / 實務 / Production / 台灣&pair
 - ❓ [**FAQ**](./faq) — 22 題 6 大類常見問題
 - ✅ [**學習進度檢核**](./progress) — milestone evidence + portfolio repo 模板
 - 🏆 [**Capstone Gallery**](./capstone) — 學員作品集 + 投稿入口
-- 📋 [**速查卡 Cheatsheet**](./cheatsheet) — A4 可印單頁速查 (CLI / SDK / pricing / patterns)
+- 📋 [**速查卡 (6 個分頁)**](./cheatsheet) — CLI / SDK / Pricing / Patterns / MCP / Governance，每頁 A4 可印
 - 🛠 [**故障排除**](./troubleshooting) — 12 大類常見錯誤 + 症狀 + 解法
 
 ## 規模 (v1.x, 2026-05)
