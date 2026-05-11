@@ -79,6 +79,28 @@ export default defineConfig({
       pageData.frontmatter.head.push(
         ['script', { type: 'application/ld+json' }, JSON.stringify(ldCourse)],
       )
+    } else {
+      // BreadcrumbList JSON-LD for non-home pages — Google SERP rich breadcrumbs
+      const segments = rel.replace(/\/$/, '').split('/').filter(Boolean)
+      const items = [{ '@type': 'ListItem', position: 1, name: 'AgentZ', item: base }]
+      let acc = ''
+      segments.forEach((seg, i) => {
+        acc += (acc ? '/' : '') + seg
+        items.push({
+          '@type': 'ListItem',
+          position: i + 2,
+          name: decodeURIComponent(seg).replace(/-/g, ' '),
+          item: base + acc + (rel.endsWith('/') && i === segments.length - 1 ? '/' : ''),
+        })
+      })
+      const ldBreadcrumbs = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      }
+      pageData.frontmatter.head.push(
+        ['script', { type: 'application/ld+json' }, JSON.stringify(ldBreadcrumbs)],
+      )
     }
   },
 
