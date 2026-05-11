@@ -45,6 +45,20 @@ input[type="checkbox"] { accent-color: var(--vp-c-brand-1); transform: scale(1.1
 .vp-doc th, .vp-doc td { padding: 0.65em 0.9em; }
 .vp-doc thead th { background: var(--vp-c-bg-soft); font-weight: 600; }
 
+/* tables: horizontal scroll on narrow viewports instead of breaking layout */
+@media (max-width: 768px) {
+  .vp-doc div.table-wrap,
+  .vp-doc table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+  .vp-doc th, .vp-doc td { white-space: normal; min-width: 5em; }
+  /* code blocks: shrink padding on mobile for density */
+  .vp-doc pre { padding: 0.5em 0.7em; font-size: 0.78rem; }
+}
+
 /* code block enhancements */
 .vp-doc div[class*="language-"] { border-radius: 8px; }
 .vp-doc pre { tab-size: 2; }
