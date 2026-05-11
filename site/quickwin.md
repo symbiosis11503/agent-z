@@ -155,6 +155,8 @@ V3 governance stack (Ch 15)
 | **想看 AgentZ 全景** | Ch -1 → Ch 0 → 一章章往下 |
 | **想申請 LLM API** | [LLM / API 申請指南](./llm-providers) |
 | **想理解專業名詞** | [50+ 名詞表](./glossary) |
+| **想要 A4 可印速查卡** | [速查卡 Cheatsheet](./cheatsheet) |
+| **跑 code 出錯不知怎修** | [故障排除](./troubleshooting) |
 
 ---
 

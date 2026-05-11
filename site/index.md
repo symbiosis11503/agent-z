@@ -56,6 +56,9 @@ features:
   - icon: 📖
     title: 50+ 名詞表（繁中 + English）
     details: 每個專業名詞 4 欄完整解釋（專業介紹 / 白話解釋 / 應用範例 / 章節）。10 大類別包含 vibe coding、SDD、TDD、AFK 執行、delegation。
+  - icon: 📋
+    title: 速查卡 A4 可印
+    details: <a href="/agent-z/cheatsheet">單頁濃縮</a> Claude Code CLI / Anthropic SDK / pricing / ReAct / cost cap / MCP boilerplate / V3 治理 4 道閘門 / 模型路由建議。學完後忘了哪個指令翻這頁。
 ---
 
 ## 為什麼又一本？
@@ -87,6 +90,8 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 - ❓ [**FAQ**](./faq) — 22 題 6 大類常見問題
 - ✅ [**學習進度檢核**](./progress) — milestone evidence + portfolio repo 模板
 - 🏆 [**Capstone Gallery**](./capstone) — 學員作品集 + 投稿入口
+- 📋 [**速查卡 Cheatsheet**](./cheatsheet) — A4 可印單頁速查 (CLI / SDK / pricing / patterns)
+- 🛠 [**故障排除**](./troubleshooting) — 12 大類常見錯誤 + 症狀 + 解法
 
 ## 規模 (v1.x, 2026-05)
 
