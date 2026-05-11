@@ -24,7 +24,17 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 - **Part 2 Operator（Ch 4-8）** — 操作：CLI agent / CLAUDE.md / MCP / Skills / Cost
 - **Part 3 Builder（Ch 9-15）** — 構建：tool use / 範式 / 框架 / memory / multi-agent / **deploy 用 V3 case study**
 - **Part 4 進階（Ch 16-18）** — Researcher / Builder 進階 / Maker / Educator 分流
-- **Capstone** — GitHub portfolio 作品集
+- **Capstone** — GitHub portfolio 作品集（[Gallery](./capstone)）
+
+## v1.x 規模
+
+- 20 章 / 6,700+ 行繁中
+- 60+ 動手練習
+- 10 個 starter-code dirs（Ch 6/7/8/9/10/11/12/13/14/15）— 全部可跑
+- 18/20 章「常見地雷」結構化 section
+- 5 個額外資源頁：[Quick Win](./quickwin) / [Roadmap](./roadmap) / [LLM / API](./llm-providers) / [FAQ](./faq) / [Capstone Gallery](./capstone)
+- 完整 [Progress 追蹤](./progress)、[50+ 名詞表](./glossary)
+- VitePress sitemap + editLink + SEO meta + `llms.txt`（AI agent 抓站友好）
 
 ## 關於 Symbiosis (SBS)
 

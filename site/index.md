@@ -78,10 +78,31 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 
 四層 ladder，**每層都有 milestone evidence**——做完該章節，你會有一個 GitHub repo / run ID / portfolio entry 證明你真的會了，不是看過。
 
+## 一頁看完
+
+- 📋 [**5 分鐘 Quick Win**](./quickwin) — 不裝 Python 體驗 agent，了解你適合哪一章開始
+- 🗺 [**課程地圖**](./roadmap) — 20 章難度/時間/4 學習計畫對照
+- 🔑 [**LLM / API 申請指南**](./llm-providers) — 11 家 LLM 申請流程 + 範例 + 費用
+- 📖 [**50+ 名詞表**](./glossary) — 繁中 + English 4 欄完整解釋
+- ❓ [**FAQ**](./faq) — 22 題 6 大類常見問題
+- ✅ [**學習進度檢核**](./progress) — milestone evidence + portfolio repo 模板
+- 🏆 [**Capstone Gallery**](./capstone) — 學員作品集 + 投稿入口
+
+## 規模 (v1.x, 2026-05)
+
+```
+20 章 / 6,700+ 行繁中 / 60+ 動手練習
+10 starter-code dirs (ch06-15) — 全部跑得起來
+18/20 章有「常見地雷」section
+5 個額外資源頁 (quickwin / roadmap / llm-providers / faq / capstone)
+全章 SEO sitemap / editLink / 在 GitHub 編輯本頁
+MIT 授權，章節 + code 都可商用
+```
+
 ## 課程版本
 
-**v1**（你正在看的）：完整 markdown + 互動式 site。10 章已上、Builder 階段持續產出中。
-**v2**（規劃中）：每章動手練習可在頁面內串 Helix V3 sandbox 真跑、貼自己 API key 立刻看結果。
-**v3**（規劃中）：自動 zh-CN / EN 翻譯、社群投稿、portfolio leaderboard。
+**v1.x**（你正在看的）：完整 markdown + 互動式 site + PDF release，持續迭代擴充中
+**v2**（規劃中）：每章動手練習可在頁面內串 Helix V3 sandbox 真跑、貼自己 API key 立刻看結果
+**v3**（規劃中）：自動 zh-CN / EN 翻譯、社群投稿、portfolio leaderboard
 
 [查 Changelog →](https://github.com/symbiosis11503/agent-z/blob/main/CHANGELOG.md)
