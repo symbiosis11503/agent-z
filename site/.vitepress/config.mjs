@@ -44,6 +44,7 @@ export default defineConfig({
       { text: '名詞表', link: '/glossary' },
       { text: 'LLM / API', link: '/llm-providers' },
       { text: 'FAQ', link: '/faq' },
+      { text: 'Capstone Gallery', link: '/capstone' },
       { text: '關於', link: '/about' },
       { text: 'GitHub', link: 'https://github.com/symbiosis11503/agent-z' },
     ],
