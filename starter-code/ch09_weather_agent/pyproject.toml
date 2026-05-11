@@ -1,0 +1,8 @@
+[project]
+name = "agentz-ch09-weather"
+version = "0.1.0"
+description = "AgentZ Ch 9 weather agent starter"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.45",
+]
