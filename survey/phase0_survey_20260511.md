@@ -71,7 +71,7 @@
 
 ## 3. 其他重點 reference
 
-| Repo | ⭐ | 性質 |
+| Repo / URL | ⭐ | 性質 |
 |---|---|---|
 | Shubhamsaboo/awesome-llm-apps | 109K | 100+ runnable agent apps |
 | e2b-dev/awesome-ai-agents | 27K | autonomous agents list |
@@ -81,6 +81,7 @@
 | WangRongsheng/awesome-LLM-resources | 8K | 簡中綜合資源大全 |
 | anxiong2025/25-Day-Agents-Course-by-Google | 225 | Google 25 天 agent 課程 |
 | wikit-ai/awesome-llm-courses | 268 | meta-list 課程目錄 |
+| `ai-dict.gh.miniasp.com` | n/a | Matt Pocock AI Coding Dictionary 繁中（保哥 community 翻譯）— 7 sections: Models / Sessions+Context / Tools+Environments / Failure Modes / Handoffs / Memory+Guidance / Work Modes（boss 5/11 加入素材）|
 
 ---
 
