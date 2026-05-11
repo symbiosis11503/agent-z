@@ -43,7 +43,13 @@ export default defineConfig({
       {
         text: '工具箱',
         items: [
-          { text: '速查卡 (A4 可印)', link: '/cheatsheet' },
+          { text: '速查卡 總覽', link: '/cheatsheet' },
+          { text: '— CLI / Git', link: '/cheatsheet/cli' },
+          { text: '— SDK', link: '/cheatsheet/sdk' },
+          { text: '— Pricing', link: '/cheatsheet/pricing' },
+          { text: '— Patterns', link: '/cheatsheet/patterns' },
+          { text: '— MCP / Skills', link: '/cheatsheet/mcp' },
+          { text: '— Governance', link: '/cheatsheet/governance' },
           { text: '故障排除', link: '/troubleshooting' },
           { text: '名詞表 60+', link: '/glossary' },
           { text: 'LLM / API 申請', link: '/llm-providers' },
@@ -64,6 +70,21 @@ export default defineConfig({
     ],
 
     sidebar: {
+      '/cheatsheet/': [
+        {
+          text: '速查卡 6 個分頁',
+          collapsed: false,
+          items: [
+            { text: '🏠 總覽 / 索引', link: '/cheatsheet' },
+            { text: '📟 CLI / Git', link: '/cheatsheet/cli' },
+            { text: '🧪 SDK', link: '/cheatsheet/sdk' },
+            { text: '💰 Pricing', link: '/cheatsheet/pricing' },
+            { text: '🔁 Patterns', link: '/cheatsheet/patterns' },
+            { text: '🧩 MCP / Skills', link: '/cheatsheet/mcp' },
+            { text: '🛡 Governance', link: '/cheatsheet/governance' },
+          ],
+        },
+      ],
       '/chapters/': [
         {
           text: '前言（真零基礎 onramp）',

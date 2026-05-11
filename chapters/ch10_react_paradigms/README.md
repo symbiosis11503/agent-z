@@ -305,5 +305,5 @@ def hybrid_agent(task):
 
 > 🛟 **卡關時看這裡**：
 > - ReAct loop 失控 / Reflection 死循環 → [故障排除 § Agent loop](https://symbiosis11503.github.io/agent-z/troubleshooting)
-> - 3 範式 snippet copy-paste → [速查卡 § ReAct / Plan / Reflection](https://symbiosis11503.github.io/agent-z/cheatsheet#react-loop-範式)
+> - 3 範式 snippet copy-paste → [速查卡 § ReAct / Plan / Reflection](https://symbiosis11503.github.io/agent-z/cheatsheet/patterns#react-loop-範式)
 > - ReAct vs Plan-and-Solve 怎麼選 → [名詞表 § 常被混淆的 pair](https://symbiosis11503.github.io/agent-z/glossary#_11-常被混淆的-pair-對比)

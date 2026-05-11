@@ -288,5 +288,5 @@ Ch 5 講的 hook 可以做 PreToolUse 攔截：
 
 > 🛟 **卡關時看這裡**：
 > - cost 燒太兇 / runaway loop → [故障排除 § Cost/預算](https://symbiosis11503.github.io/agent-z/troubleshooting)
-> - cost cap pattern fail-closed code + Prompt Cache (省 90%) → [速查卡 § Cost cap](https://symbiosis11503.github.io/agent-z/cheatsheet#cost-cap-pattern)
+> - cost cap pattern fail-closed code + Prompt Cache (省 90%) → [速查卡 § Cost cap](https://symbiosis11503.github.io/agent-z/cheatsheet/patterns#cost-cap-pattern)
 > - 名詞看不懂 → [60+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary)

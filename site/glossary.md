@@ -100,7 +100,7 @@ AgentZ 用詞 + 業界術語的繁中對照。每條 **4 欄**：專業介紹、
 - **專業**：在 messages / system / tools 上標 `cache_control: {type:"ephemeral"}`，相同 prefix 後續呼叫時 input cost 降至 1/10，cache TTL 1 小時（Anthropic）。
 - **白話**：「同一段長 system prompt 不要每次都收滿費」。LLM 把它快取住、第二次起便宜 90%。
 - **範例**：5K-token system prompt + 多輪對話：第一次寫入 1.25x cost、第二次起 0.1x cost。Ch 8 cost cap 配 cache 兩件事一起做。
-- **章節**：[Ch 8 §4](./chapters/ch08_cost_observability/) + [速查卡](./cheatsheet#prompt-cache-省-90-cost)
+- **章節**：[Ch 8 §4](./chapters/ch08_cost_observability/) + [速查卡 SDK](./cheatsheet/sdk#prompt-cache-省-90-cost)
 
 ---
 
@@ -146,7 +146,7 @@ AgentZ 用詞 + 業界術語的繁中對照。每條 **4 欄**：專業介紹、
 - **專業**：Anthropic API response 的終止狀態欄位：`end_turn`（自然結束）/ `tool_use`（要 call tool）/ `max_tokens`（超 token limit）/ `stop_sequence`（撞 stop_sequences）/ `pause_turn`（長 server-tool 暫停）/ `refusal`（safety reject）。
 - **白話**：LLM 為什麼停下來？分手對方說「我講完了」/「該你了去 call tool」/「字數爆了」/「碰到禁字」。寫 agent loop 必須對每種反應。
 - **範例**：`if resp.stop_reason == "tool_use": run tool 然後 append tool_result; elif "end_turn": done; elif "max_tokens": 提示 user / 縮 prompt 重試`。
-- **章節**：[Ch 9](./chapters/ch09_function_calling/) + [速查卡](./cheatsheet#anthropic-sdk-速查)
+- **章節**：[Ch 9](./chapters/ch09_function_calling/) + [速查卡 SDK](./cheatsheet/sdk#anthropic-sdk-速查)
 
 ### 電腦使用 / Computer Use
 - **專業**：2024-10 Anthropic 推出的 Claude 能力。Claude 透過 screenshot tool + mouse/keyboard tool 操作真實桌面 GUI（不是 API）。包在 `computer_20241022` tool type。

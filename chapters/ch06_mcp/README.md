@@ -341,5 +341,5 @@ await server.connect(transport);
 
 > 🛟 **卡關時看這裡**：
 > - MCP server 連不上 / stdout 噪音 / scope 錯 → [故障排除 § MCP](https://symbiosis11503.github.io/agent-z/troubleshooting)
-> - FastMCP boilerplate + claude.json 設定 + scope → [速查卡 § MCP](https://symbiosis11503.github.io/agent-z/cheatsheet#mcp-server-boilerplate-python-fastmcp)
+> - FastMCP boilerplate + claude.json 設定 + scope → [速查卡 § MCP](https://symbiosis11503.github.io/agent-z/cheatsheet/mcp#mcp-server-boilerplate-python-fastmcp)
 > - 名詞看不懂 → [60+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary)
