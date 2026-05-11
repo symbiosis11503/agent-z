@@ -6,6 +6,12 @@
 
 ---
 
+> 「AI 可以幫你寫腳本，但**『什麼叫好』，還是要人來定義**。」——[@kojenchieh](https://www.threads.com/@kojenchieh/post/DYNwkBekqVz) 在效能測試領域講的，整本書都這樣。
+>
+> 工具（Claude / Cursor / Agent SDK）只佔 10%；定義你要的結果、判斷答案對不對、決定哪些 edge case 必過——這 90% 永遠是你。AgentZ 從第一章到最後一章都在練這 90%。
+
+---
+
 ## 1. 30 秒摘要
 
 **ChatGPT 是 LLM**——你問一句、它答一句，對話結束就忘了。

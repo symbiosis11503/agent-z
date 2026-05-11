@@ -111,3 +111,11 @@ MIT 授權，章節 + code 都可商用
 **v3**（規劃中）：自動 zh-CN / EN 翻譯、社群投稿、portfolio leaderboard
 
 [查 Changelog →](https://github.com/symbiosis11503/agent-z/blob/main/CHANGELOG.md)
+
+## 哲學
+
+> 「Don't build smarter LLMs—build smarter integrations.」
+>
+> 「AI 可以幫你寫腳本，但**『什麼叫好』，還是要人來定義**。」 — [@kojenchieh](https://www.threads.com/@kojenchieh/post/DYNwkBekqVz)
+>
+> 工具進步快、整合永遠是瓶頸；工具寫 code 容易、定義「好」永遠是你。AgentZ 訓練的是這兩條。

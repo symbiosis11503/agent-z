@@ -270,6 +270,12 @@ model = FastLanguageModel.get_peft_model(
 
 ### Reward function 設計（**最容易踩坑的地方**）
 
+> 💡 **延伸閱讀**（[@kojenchieh on Threads](https://www.threads.com/@kojenchieh/post/DYNwkBekqVz)）講效能測試精神，跟 RL reward 設計是同一句話：
+>
+> > 「AI 可以幫你寫腳本，但**『什麼叫好的效能』，還是要人來定義**。」
+>
+> 工具 (TRL / GRPOTrainer) 寫 reward function 只佔 10%；剩下 90% 是**你要先定義「好的 agent 行為長什麼樣」**——什麼算成功、什麼算 reward hacking、哪些 edge case 必過。寫不清楚這 90%，AI 跑出來的就只是「會考試但不解決問題」的 agent。
+
 | Reward 類型 | 例子 | 風險 |
 |---|---|---|
 | **Outcome-based** | 任務完成 = 1, 失敗 = 0 | 太 sparse，初期梯度都接近 0 |
