@@ -1,3 +1,8 @@
+---
+title: Ch 6 — MCP (Model Context Protocol)
+description: 2024-11 Anthropic 開放標準。Tools / Resources / Prompts 三類能力 + FastMCP 寫第一支 server + Claude Code 接法。
+---
+
 # Ch 6 — MCP (Model Context Protocol)
 
 > **75-90 分鐘**。讀完你會懂：MCP 是什麼、為何 2024-2026 變主流、stdio vs SSE 兩種傳輸、怎麼裝 Notion / GitHub / 其他 MCP server、自己寫一個 MCP server。

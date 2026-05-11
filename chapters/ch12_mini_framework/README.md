@@ -1,3 +1,8 @@
+---
+title: Ch 12 — 從零造輪 Mini Agent Framework
+description: 200 行 Python 自己寫 agent harness — Tool registry + ReAct loop + memory + 中斷 + cost log。
+---
+
 # Ch 12 — 從零造輪：寫一個 Mini Agent Framework
 
 > **90-120 分鐘**。讀完你會懂：怎麼把 Ch 9-10 的 raw API 包成一個重用 framework，~200 行 Python。

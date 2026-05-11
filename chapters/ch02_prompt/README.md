@@ -1,3 +1,8 @@
+---
+title: Ch 2 — Prompt 設計
+description: System Prompt 4 個欄位 / Few-shot vs Zero-shot / Chain-of-Thought / 結構化輸出 (JSON mode / tool schema)。Prompt 是 specification 不是 chat。
+---
+
 # Ch 2 — Prompt 設計
 
 > **45-60 分鐘**。讀完你會懂：system prompt 怎麼寫 / few-shot / Chain-of-Thought / 結構化輸出 / 5 個 prompt 通病怎麼修。

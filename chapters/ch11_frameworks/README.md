@@ -1,3 +1,8 @@
+---
+title: Ch 11 — Agent 框架比較
+description: vanilla SDK / LangGraph / CrewAI / Smolagents / Pydantic AI 五家對照 + 同一個 task 五家寫法 + 怎麼選。
+---
+
 # Ch 11 — Agent 框架比較
 
 > **75-90 分鐘**。讀完你會懂：4 個主流 agent framework 的設計哲學、什麼任務該用 framework / 什麼任務直接寫 raw API、怎麼選。

@@ -1,3 +1,8 @@
+---
+title: Ch 13 — Memory & RAG
+description: Session memory / 長期 memory / RAG 第一原理 / Contextual Retrieval / Chroma / pgvector 範例。
+---
+
 # Ch 13 — Memory & RAG
 
 > **75-90 分鐘**。讀完你會懂：LLM 為什麼沒記憶、session memory / long-term memory / RAG / contextual retrieval 各是什麼、怎麼選 vector DB、實作一個個人助理 agent 有記憶。

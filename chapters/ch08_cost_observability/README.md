@@ -1,3 +1,8 @@
+---
+title: Ch 8 — Cost 觀測 / 介入
+description: Token 預算 / 三個常見燒錢 pattern / cost cap fail-closed pattern / 介入機制。
+---
+
 # Ch 8 — Cost 觀測 / token 預算 / 介入
 
 > **45-60 分鐘**。讀完你會懂：怎麼追蹤 agent 花多少錢、設預算上限、看失敗模式、長 task 怎麼中斷、預防爆炸。

@@ -1,3 +1,8 @@
+---
+title: Ch 18 — Maker / Educator 路線
+description: 個人助理（morning briefing 等） + workshop syllabus 設計 + Capstone Rubric。
+---
+
 # Ch 18 — Maker / Educator 路線（進階分流）
 
 > **60-75 分鐘**。讀完你會懂：怎麼把 agent 變成「個人助理 / 桌面 app / 家庭自動化」、或者怎麼當老師教別人學 agent。

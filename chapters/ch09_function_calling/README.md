@@ -1,3 +1,8 @@
+---
+title: Ch 9 — Function Calling / Tool Use 第一原理
+description: tools schema / tool_use / tool_result / stop_reason 6 種處理 / parallel tool use / 從零寫 weather agent。
+---
+
 # Ch 9 — Function Calling / Tool Use 第一原理
 
 > **75-90 分鐘**。讀完你會懂：tool use 完整 protocol、Anthropic vs OpenAI tool schema、手寫 tool-use loop、parallel tools、error recovery。

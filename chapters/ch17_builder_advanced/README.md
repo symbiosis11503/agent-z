@@ -1,3 +1,8 @@
+---
+title: Ch 17 — Builder 進階 (Agentic-RL)
+description: SFT / DPO / GRPO / DeepSeek-R1 復現 / reward function 設計 / 三大 fine-tune framework 對照。
+---
+
 # Ch 17 — Builder 進階：Agentic-RL 入門
 
 > **90-120 分鐘**。讀完你會懂：agentic-RL 是什麼、SFT / DPO / GRPO / PPO 怎麼用在 agent fine-tune、什麼時候訓 agent 比 prompt 更划算、TRL/Unsloth/Axolotl 三大 framework 差異、本地 vs cloud 訓練成本對照、常見地雷。

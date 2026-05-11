@@ -1,3 +1,8 @@
+---
+title: Ch 14 — Multi-Agent 系統
+description: Subagent / Pipeline / Supervisor + worker / Handoff / 何時拆 multi-agent 何時不拆。
+---
+
 # Ch 14 — Multi-Agent 系統
 
 > **75-90 分鐘**。讀完你會懂：multi-agent 三大架構（Pipeline / Supervisor / Blackboard）、handoff 機制、什麼時候用 multi-agent / 什麼時候單 agent 比較好。

@@ -1,3 +1,8 @@
+---
+title: Ch 1 — LLM 是什麼
+description: Token / Context Window / Role / Temperature / Embedding / Tokenizer / 三大廠 (Claude/GPT/Gemini) 對照。
+---
+
 # Ch 1 — LLM 是什麼
 
 > **45-60 分鐘**。讀完你會懂：token / context window / role / temperature / 各家 LLM 怎麼選。

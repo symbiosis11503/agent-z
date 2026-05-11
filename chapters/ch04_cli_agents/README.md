@@ -1,3 +1,8 @@
+---
+title: Ch 4 — CLI Agent 入門
+description: Claude Code / Codex CLI / OpenCode 三家對照 + 第一支 agent 跑起來 + 各家 model 綁定差別。
+---
+
 # Ch 4 — CLI Agent 入門
 
 > **45-60 分鐘**。讀完你會懂：4 家主流 CLI agent 的差異、怎麼選、怎麼裝 Claude Code、跑出第一個真實 task。

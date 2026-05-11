@@ -1,3 +1,8 @@
+---
+title: Ch 7 — Skills / Plugins / Marketplace
+description: Skill 跟 MCP 差別 / Progressive Disclosure 設計 pattern / 寫第一個 Skill / 從 Marketplace 裝 / Plugin 跟 Marketplace 怎麼運作。
+---
+
 # Ch 7 — Skills / Plugins / Marketplace
 
 > **60-75 分鐘**。讀完你會懂：Skill 是什麼、跟 MCP 差在哪、為什麼 2025 變熱、寫第一個 Skill、Plugin / Marketplace 怎麼運作。

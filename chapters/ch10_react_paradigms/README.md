@@ -1,3 +1,8 @@
+---
+title: Ch 10 — ReAct / Plan-and-Solve / Reflection 範式
+description: 三大 agent 範式對照 + 完整 code + 何時用 ReAct 何時 Plan-and-Solve 何時 Reflection。
+---
+
 # Ch 10 — ReAct / Plan-and-Solve / Reflection 範式
 
 > **75-90 分鐘**。讀完你會懂：三個經典 agentic 範式怎麼手寫、token / latency / quality 對比、什麼任務用哪個。

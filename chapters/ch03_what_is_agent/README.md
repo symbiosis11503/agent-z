@@ -1,3 +1,8 @@
+---
+title: Ch 3 — 什麼是 Agent
+description: Tool use 怎麼運作 / ReAct (Reason + Act) 循環 / Agent vs LLM vs ChatGPT 關鍵差別 / 為什麼需要 agent harness。
+---
+
 # Ch 3 — 什麼是 Agent（工具呼叫 / ReAct / 為何需要）
 
 > **45-60 分鐘**。讀完你會懂：tool use 機制、ReAct 循環、為何需要 agent、什麼時候**不**該用 agent。

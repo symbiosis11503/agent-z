@@ -1,3 +1,8 @@
+---
+title: Ch 16 — Researcher 路線
+description: paper bot / deep research agent / DOI 驗證 / peer review / anti-hallucination 5 條規則。
+---
+
 # Ch 16 — Researcher 路線（進階分流）
 
 > **75-90 分鐘**。讀完你會懂：怎麼把 agent 用在學術 / 研究情境—paper 整理、文獻比較、deep research、multi-agent peer review、citation 驗證、anti-hallucination 模板。

@@ -1,3 +1,8 @@
+---
+title: Ch -1 — 完全沒寫過 code 也能讀的 AI Agent 全景
+description: 30 分鐘從沙發讀完。AI Agent 是什麼、跟 ChatGPT 差別、為什麼 2025 年後變熱、自己學要走什麼路。沒有 code 沒有 API。
+---
+
 # Ch-1 完全沒寫過 code 也能讀的 AI Agent 全景
 
 > **30 分鐘讀完。本章不用打開任何工具，從沙發上就能讀完。** 讀完你會知道：AI Agent 是什麼、為什麼 2025 年之後變熱、跟你天天用的 ChatGPT 差在哪、自己學要走什麼路。

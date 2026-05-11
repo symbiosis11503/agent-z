@@ -1,3 +1,8 @@
+---
+title: Ch 15 — Deploy + Audit + Replay + Cost Cap (V3 Case Study)
+description: Production-ready agent 4 道閘門 — cost cap / tool sandbox / audit log / replay。Helix V3 完整 case study。
+---
+
 # Ch 15 — Deploy + Audit + Replay + Cost Cap：Helix V3 完整 Case Study
 
 > **90-120 分鐘**。Builder 階段壓軸。讀完你會懂：production-grade agent 必備的 4 個 governance pillar（audit / replay / cost cap / observability），跟 Helix V3 怎麼做的。

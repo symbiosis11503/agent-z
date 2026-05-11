@@ -1,3 +1,8 @@
+---
+title: Ch 0 — 把工具裝好
+description: 從 Terminal 開起、裝 Python / git、申請 LLM API key、設環境變數、跑第一支 hello.py。10-15 分鐘真零基礎 setup。
+---
+
 # Ch 0 — 把工具裝好
 
 > **30-45 分鐘**。本章結束你會跑出你的第一個「LLM Hello-World」（你打字 → LLM 回你 → 在 Terminal 看到回答）。

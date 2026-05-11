@@ -1,3 +1,8 @@
+---
+title: Ch 5 — CLI Workflow
+description: CLAUDE.md 設計 / Slash command 自製 / Hook (PreToolUse / PostToolUse) / 多步驟任務拆解。
+---
+
 # Ch 5 — CLI Workflow（CLAUDE.md / slash commands / 多步驟拆解）
 
 > **60-75 分鐘**。讀完你會懂：怎麼讓 CLI agent 真正高效——CLAUDE.md 寫法、slash command 自製、多步驟任務拆解、agent vs sub-agent 怎麼用。
