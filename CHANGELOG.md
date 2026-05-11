@@ -4,11 +4,13 @@ All notable changes to AgentZ.
 
 ## v1.2 — 2026-05-12 (Ralph loop polish wave)
 
-> 連續 ralph-loop session (`UltraThink持續迭代優化agnetZ`)：5 次 iteration 把 v1.1 散落的 gap 收尾。
+> 連續 ralph-loop session (`UltraThink持續迭代優化agnetZ`)：10 次 iteration (iter 28-37) 把 v1.1 散落的 gap 收尾。
 
 ### 新頁
-- **`/cheatsheet`** — A4 可印單頁速查卡（Claude Code CLI / Anthropic SDK / pricing / ReAct / cost cap / MCP boilerplate / SKILL.md / V3 governance 4 道閘門 / 模型路由 / SDK 速比較）
+- **`/cheatsheet`** — A4 可印單頁速查卡（465 行）：Claude Code CLI / Anthropic SDK / pricing / ReAct / cost cap / MCP boilerplate + scope / Computer Use / Subagent / Skill auto-load 順序 / SKILL.md / V3 governance 4 道閘門 / 模型路由 / SDK 速比較
 - **`/troubleshooting`** — 12 大類故障排除指南（環境/安裝、API/金鑰、Cost/預算、Agent loop、Tool use、MCP、Memory/RAG、Multi-agent、Production deploy、框架/Skills、Researcher/RL、Web/VitePress）
+- **`/whatsnew`** — site-side 版本變動 high-signal 摘要（互指 GitHub CHANGELOG）
+- **`/404`** — friendly 找不到頁面 redirect 9 個主要入口
 
 ### 章節常見地雷補完
 - 18/20 章補完「常見地雷」結構化 section（Ch -1, 18 by design 不適用）
@@ -23,8 +25,13 @@ All notable changes to AgentZ.
 
 ### Cross-link 補完
 - index.md feature card + 「一頁看完」加 速查卡 / 故障排除
-- quickwin / roadmap / troubleshooting 互指
-- `public/llms.txt` AI-agent 抓站友好的「額外資源」段補 cheatsheet + troubleshooting
+- quickwin / roadmap / troubleshooting / 404 互指
+- `public/llms.txt` AI-agent 抓站友好的「額外資源」段補 cheatsheet + troubleshooting + whatsnew
+
+### 治理 / UX
+- nav 14 → 7 top-bar items + 2 dropdown (工具箱 / 進度&社群) — 解決 mobile / tablet 多列溢出
+- `@media print` A4 stylesheet — Cmd-P 就直接清爽 A4 出，不再要手動縮放
+- /chapters 符號鏈接 path resolve for editLink
 
 ## v1.1 — 2026-05-11 (持續迭代擴充)
 

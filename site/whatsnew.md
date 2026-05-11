@@ -10,12 +10,13 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 
 ## 2026-05-12 — v1.2 Ralph polish wave
 
-連續 ralph-loop session 把 v1.1 散落的 gap 收尾。
+連續 ralph-loop session (iter 28-37) 把 v1.1 散落的 gap 收尾。
 
 ### 新頁
 
-- 📋 [**速查卡 Cheatsheet**](./cheatsheet) — A4 可印單頁濃縮。學完忘了哪個指令、模型 ID、cost 公式時翻這頁。
-- 🛠 [**故障排除 Troubleshooting**](./troubleshooting) — 12 大類常見錯誤 + 症狀 + 解法，瀏覽器 Ctrl-F 友好。
+- 📋 [**速查卡 Cheatsheet**](./cheatsheet) — A4 可印單頁濃縮 (465 行)，含 Claude Code CLI / Anthropic SDK / pricing / ReAct / cost cap / MCP boilerplate + scope / Computer Use / Subagent / Skill 載入順序 / V3 治理 4 道閘門 / 模型路由 / SDK 速比較
+- 🛠 [**故障排除 Troubleshooting**](./troubleshooting) — 12 大類常見錯誤 + 症狀 + 解法，瀏覽器 Ctrl-F 友好
+- 📜 [**更新紀錄 What's New**](./whatsnew) — 你正在看的這頁
 
 ### 章節補完
 
@@ -23,10 +24,16 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 - **Starter code discovery** — 10 章加 🛠 callout 直連 `starter-code/` 對應 dir，避免孤兒
 - **名詞表 53 → 62 條** — 補 2025-2026 emerging 詞：Prompt Cache / stop_reason / Computer Use / Subagent / Deep Research / Headless Agent / Plugin / Agent SDK / MCP Scope
 
+### 治理 / UX
+
+- nav 14 → 7 top items + 2 dropdown — 解決 mobile / tablet 溢出
+- `@media print` A4 stylesheet — Cmd-P 直接清爽 A4，不用手動縮放
+- 自訂 404 頁面引導 9 個主要入口（不再「PAGE NOT FOUND」裸頁）
+
 ### Cross-link 補完
 
-- index / quickwin / roadmap / troubleshooting 互指
-- `public/llms.txt` 補 cheatsheet + troubleshooting URL，AI agent 抓站更精準
+- index / quickwin / roadmap / troubleshooting / 404 互指
+- `public/llms.txt` 補 cheatsheet + troubleshooting + whatsnew URL，AI agent 抓站更精準
 
 ---
 
