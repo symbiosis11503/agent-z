@@ -2,6 +2,30 @@
 
 All notable changes to AgentZ.
 
+## v1.2 — 2026-05-12 (Ralph loop polish wave)
+
+> 連續 ralph-loop session (`UltraThink持續迭代優化agnetZ`)：5 次 iteration 把 v1.1 散落的 gap 收尾。
+
+### 新頁
+- **`/cheatsheet`** — A4 可印單頁速查卡（Claude Code CLI / Anthropic SDK / pricing / ReAct / cost cap / MCP boilerplate / SKILL.md / V3 governance 4 道閘門 / 模型路由 / SDK 速比較）
+- **`/troubleshooting`** — 12 大類故障排除指南（環境/安裝、API/金鑰、Cost/預算、Agent loop、Tool use、MCP、Memory/RAG、Multi-agent、Production deploy、框架/Skills、Researcher/RL、Web/VitePress）
+
+### 章節常見地雷補完
+- 18/20 章補完「常見地雷」結構化 section（Ch -1, 18 by design 不適用）
+- 全本「症狀 → 原因 → 解法」格式統一
+
+### Starter code discovery
+- 10 章 starter-code 加 🛠 callout 連結，避免 starter dir 成為孤兒
+- 修 `pyproject.toml` optional-deps 對齊 5 framework
+
+### 名詞表擴充
+- 53 → 62 條（Prompt Cache / stop_reason / Computer Use / Subagent / Deep Research / Headless Agent / Plugin / Agent SDK / MCP Scope）
+
+### Cross-link 補完
+- index.md feature card + 「一頁看完」加 速查卡 / 故障排除
+- quickwin / roadmap / troubleshooting 互指
+- `public/llms.txt` AI-agent 抓站友好的「額外資源」段補 cheatsheet + troubleshooting
+
 ## v1.1 — 2026-05-11 (持續迭代擴充)
 
 ### 章節深度補完

@@ -53,6 +53,7 @@ AgentZ 解決中文圈兩大空缺：(1) 沒有繁中 first 的 curriculum (簡�
 - [故障排除](https://symbiosis11503.github.io/agent-z/troubleshooting): 12 大類常見錯誤 + 症狀 + 解法
 - [60+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary): 繁中+English 4 欄完整 (含 vibe coding / SDD / TDD / AFK 執行 / TAIDE / Computer Use / Subagent / Plugin / Agent SDK / MCP Scope / Prompt Cache / stop_reason)
 - [關於 AgentZ](https://symbiosis11503.github.io/agent-z/about): 5 個差異化定位 + 課程結構 + 維護者
+- [What's New / 更新紀錄](https://symbiosis11503.github.io/agent-z/whatsnew): 版本變動 high-signal 摘要 (v1.0 / v1.1 / v1.2)
 - [CONTRIBUTING](https://github.com/symbiosis11503/agent-z/blob/main/CONTRIBUTING.md): 5 條投稿路徑 + Style guide
 
 ## Starter code (10 dirs, GitHub)
