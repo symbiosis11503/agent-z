@@ -28,8 +28,24 @@ export default defineConfig({
     ['meta', { name: 'twitter:description', content: '繁中 first-class、vendor-neutral、Claude Code 生態深入的 AI Agent 學習系統' }],
     ['meta', { name: 'keywords', content: 'AI Agent, Claude Code, MCP, AgentZ, 繁體中文, AI 學習, LLM, ReAct, RAG, multi-agent, agentic-RL, TAIDE' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/agent-z/logo.svg' }],
-    ['link', { rel: 'canonical', href: 'https://symbiosis11503.github.io/agent-z/' }],
   ],
+
+  transformPageData(pageData) {
+    const base = 'https://symbiosis11503.github.io/agent-z/'
+    // pageData.relativePath examples:
+    //   "glossary/foundation.md" → glossary/foundation
+    //   "index.md" → '' (root)
+    //   "chapters/ch00_setup/index.md" → chapters/ch00_setup/  (cleanUrls)
+    //   "../chapters/ch00_setup/README.md" → chapters/ch00_setup/  (rewrite for symlinked chapters/)
+    let rel = pageData.relativePath.replace(/\.md$/, '')
+    rel = rel.replace(/^\.\.\//, '')                  // strip leading ../ from symlink rewrite
+    rel = rel.replace(/\/README$/, '/')               // README in dir → directory index
+    if (rel === 'index') rel = ''
+    if (rel.endsWith('/index')) rel = rel.slice(0, -'index'.length)
+    const canonicalURL = base + rel
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push(['link', { rel: 'canonical', href: canonicalURL }])
+  },
 
   themeConfig: {
     logo: '/logo.svg',
