@@ -216,6 +216,23 @@ multi-agent 共享資訊有 3 種方式：
 
 ---
 
+## 8a. 常見地雷
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **過度 multi-agent** | 簡單任務拆 5 agent debug 變難 | prompt 能解就別拆；只在「角色 / 權限 / 並行 / 重用」場景才用 |
+| **Supervisor 自己做事** | supervisor 直接寫文章不派 worker | system prompt 寫死「不能自己做、只能 delegate」 |
+| **Pipeline 無 retry** | stage 失敗整條斷 | 每階段 try/except + retry 1 次再 fail-out |
+| **Handoff 訊息太大** | agent A 傳給 B 50K token 含全 history | 抽 summary 而不是傳原文 |
+| **deadlock**（blackboard）| agent 互等對方先動 | 設輪流順序或 round-robin、不靠「誰先說話」 |
+| **共享 state 競態** | multi-agent 同寫一個 dict | 用 lock 或 single-writer pattern |
+| **role 訊息混用** | researcher 收到 writer 的 prompt | 嚴格隔離 system prompt 跟 context, 不要 leak |
+| **cost 爆炸** | 4 agent 平行 + Sonnet 燒 $1/run | summarizer 用 Haiku、final 才用 Sonnet/Opus |
+| **沒 trace** | 出錯找不到誰漏掉 | 每 agent call 寫 step trace（[Ch 15 audit](../ch15_deploy_audit_replay/)）|
+| **JSON 解析失敗** | supervisor 回非 JSON | system prompt 強制 + parse fail fallback to 「ask user」 |
+
+---
+
 ## 8b. 在這頁練 Supervisor router prompt
 
 Supervisor 架構（§2.2）最關鍵是 router prompt。試這個：

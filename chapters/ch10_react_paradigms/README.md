@@ -268,6 +268,22 @@ def hybrid_agent(task):
 
 ---
 
+## 9a. 常見地雷
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **ReAct loop 跑無限** | 同一個 thought 重複 N 次 | 設 max_steps + 偵測「重複 thought」直接 break |
+| **Plan 階段太樂觀** | plan 列 10 步但 step 3 就卡 | plan 允許 mid-way revise；每完成一步再 review plan |
+| **Reflection 無限循環** | reviewer 永遠說「不夠好」 | reflection max iterations 設 2-3，超過 accept 即可 |
+| **每範式都用全 model** | cost 翻倍 | Researcher 用 Haiku, Reviewer 用 Sonnet, Final 用 Opus — 分工 |
+| **plan 內容沒 grounding** | LLM 編出不存在的工具 | plan 階段給工具 list，要 plan 只能 reference 這 list |
+| **ReAct 沒 thought visible** | debug 看不到推理 | tool_use 前強制 LLM 先輸出一段 thought（用 prompt 強制） |
+| **Reflection 太苛刻 reject** | 一直改不停 | reviewer rubric 列 3-5 條 measurable criteria, 不用主觀「好不好」 |
+| **混 ReAct + Plan 沒分清** | agent 不知道現在在哪階段 | 顯式 state machine: `PLANNING / EXECUTING / REFLECTING` |
+| **沒 fallback** | 範式跑爛沒備案 | 設 fallback：3 次 fail 改 prompt + retry，再 fail 給人 |
+
+---
+
 ## 9b. 在這頁直接練 CoT prompt
 
 問同一個邏輯題、比較有 / 沒有 CoT 兩種寫法。System prompt 切換 CoT 風格、看答案結構差別。

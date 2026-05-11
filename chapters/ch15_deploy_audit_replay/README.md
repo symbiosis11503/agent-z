@@ -338,6 +338,25 @@ clone https://github.com/symbiosis11503/helix-framework，讀：
 
 ---
 
+## 9a. 常見地雷（production agent 最坑）
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **沒設 daily cost cap** | 一個 bug 燒 $100 | `cost_tracker.py` 包 SDK call、超 cap fail-closed（[Ch 8 starter](../../starter-code/ch08_cost_observability/)） |
+| **audit log 沒寫就上線** | 出事不知道發生啥 | 每 LLM call / tool call 寫 SQLite，至少 7 欄: ts/run_id/event/payload/cost/error/duration |
+| **API key 進 git** | key 外洩、信用卡被刷光 | `.env` 進 `.gitignore`、trufflehog scan、外洩立刻 rotate |
+| **agent loop 無限** | 一個 run 跑 3 小時 | 每 run 設 max_steps + timeout + cost_cap，超就 fail-closed |
+| **replay 不能 reproduce** | log 缺關鍵欄位 | replay record 含 input_data + output_data + model + temperature + seed |
+| **HTTP /run 同步阻塞** | request 等 60s 才回 | 用 `background_task` + run_id polling 或 SSE streaming |
+| **多 process 寫 SQLite** | `database is locked` | 升級 PostgreSQL，或開 WAL mode (sqlite WAL 多 reader 1 writer) |
+| **沒 cancellation** | runaway agent 無法 abort | `/runs/{id}/abort` endpoint + agent loop 每 tick check abort flag |
+| **streaming SSE 不關 connection** | nginx hold 連線爆 | 設 keepalive timeout + heartbeat ping 每 15s |
+| **secret 寫 audit log** | log 含 API key 外洩 | redact pattern 過 log（mask `sk-*` `sk-ant-*` `key=*`） |
+| **prod 跟 staging 共用 DB** | staging 寫壞 prod | 每環境獨立 DB + 不同 connection string |
+| **PII 沒 mask** | 客戶 email / 電話進 log | indexer 先 mask，記憶體內 raw, 寫 disk 前 redact |
+
+---
+
 ## Builder 階段（Ch 9-15）回顧
 
 你現在會什麼：

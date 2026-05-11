@@ -284,6 +284,22 @@ Claude Code 支援 hook——當 agent 要呼叫某個工具時（PreToolUse / P
 
 ---
 
+## 9a. 常見地雷
+
+| 地雷 | 症狀 | 解法 |
+|---|---|---|
+| **CLAUDE.md 寫太長** | Claude 不照規則 | 砍到 < 200 行；長 SOP 寫成 SKILL 而不是塞 CLAUDE.md |
+| **規則互相矛盾** | Claude 亂跳 | 同一檔案內規則 audit; project / user / global CLAUDE.md 衝突要 reconcile |
+| **slash command 太複雜** | command 跑出來爛 | 一個 command 做一件事；多步驟用 plan mode 拆 |
+| **hook 阻塞主流程** | Claude 卡住等 hook | hook 用 background 或 fast-fail，重 work 放 task tool |
+| **CLAUDE.md 不在 cwd** | 規則沒生效 | Claude Code 從 cwd 開始往上找；確認 `pwd` 在對的目錄 |
+| **重複寫 SOP 在 prompt** | 每次都要貼一遍 | 寫進 CLAUDE.md 或 SKILL，一次到位 |
+| **跨 session 假設記得** | 重啟後 Claude 忘了 | 把不變的 context 寫進 CLAUDE.md，會話內變動寫 `/memorize` 或 memory MCP |
+| **直接給工具不教情境** | Claude 用得不對 | SKILL 用 progressive disclosure，給「何時用 + 怎麼用」不只 schema |
+| **沒寫 anti-pattern** | Claude 重犯老錯 | CLAUDE.md「不要 X」section, 用反例教 |
+
+---
+
 ## 9b. 在這頁直接練 slash command 的 prompt
 
 把你想做的「常用工作流程」貼進 User prompt，把 system prompt 想像成 slash command 的內容。
