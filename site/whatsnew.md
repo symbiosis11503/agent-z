@@ -1,6 +1,6 @@
 ---
 title: What's New — AgentZ 更新紀錄
-description: AgentZ 版本變動 high-signal 摘要：v1.0 initial / v1.1 章節深度補完 / v1.2 ralph-loop polish / v1.3 三大長頁拆分 / v1.4 SEO canonical 修復 + @kojenchieh 哲學金句並入。
+description: AgentZ 版本變動 high-signal 摘要：v1.0 initial / v1.1 章節深度補完 / v1.2 ralph-loop polish / v1.3 三大長頁拆分 / v1.4 SEO canonical + 哲學金句 / v1.5 結構化資料 + 章節索引 + 20 章 frontmatter。
 ---
 
 # What's New — 更新紀錄
@@ -10,6 +10,44 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 > **Watch the repo** 不定時 polish — [GitHub Watch](https://github.com/symbiosis11503/agent-z) → Releases-only 抓重大改版。
 
 [[toc]]
+
+---
+
+## 2026-05-12 — v1.5 結構化資料 + 章節索引 + 章節 SEO 補齊
+
+延續 v1.4 SEO 路線，把剩下的 gap 一次清掉。
+
+### JSON-LD 結構化資料
+
+- **首頁加 schema.org/Course** — Google 把 AgentZ 當「Online Course / Curriculum」識別，含 inLanguage / educationalLevel / teaches / license / courseInstance 完整欄位。Knowledge Graph 友好。
+- **所有 subpage 加 BreadcrumbList** — Google SERP 結果顯示 `AgentZ > glossary > foundation` 麵包屑而非裸 URL。所有 50+ subpage 自動產出，從 URL segment 動態解構。
+
+### 20 章 chapter SEO 補齊
+
+iter 11 加 per-page og/twitter 後發現所有 chapter README 沒 frontmatter description, 社群 share 還是顯示 fallback。
+- **Ch -1 / Ch 0 / Ch 1-18 全部加 YAML frontmatter** (title + description), 每章 60-100 字描述核心內容。
+- Share 任何 chapter 到 Twitter / Discord / Slack 都顯示 per-chapter 標題 + 描述。
+
+### [章節索引](./chapters) 新 landing page
+
+iter 16 BreadcrumbList 對 chapter 頁面產的中間段 URL `/chapters` 是 404（沒 landing）。Fix:
+- 新建 [/chapters](./chapters) — 20 章索引，按前言 / Watcher / Operator / Builder / 進階分流 5 層分組，每章帶時長 + 核心關鍵字
+- nav「章節」改指 /chapters landing（之前直接跳 Ch -1）
+- sidebar /chapters/ 加「🏠 章節索引」入口
+
+### 404 page truth-sync
+
+- 加章節索引 entry
+- 速查卡 / 名詞表 / LLM-providers 補「6 分頁 / 5 分類 / 3 分頁」標記
+- 加底部 callout 提醒打字 URL 必含 `/agent-z/` base path（boss 5/11 23:07 撞 GitHub.io 預設 404 incident 教訓內化）
+
+### Iter 14-18 commits
+
+5. iter 14 [0d7a4a5](https://github.com/symbiosis11503/agent-z/commit/0d7a4a5) — JSON-LD Course schema 首頁
+6. iter 15 [be48dfd](https://github.com/symbiosis11503/agent-z/commit/be48dfd) — 20 章 frontmatter title + description
+7. iter 16 [e24053a](https://github.com/symbiosis11503/agent-z/commit/e24053a) — BreadcrumbList JSON-LD 所有 subpage
+8. iter 17 [0302611](https://github.com/symbiosis11503/agent-z/commit/0302611) — /chapters 索引 landing
+9. iter 18 [7401ce8](https://github.com/symbiosis11503/agent-z/commit/7401ce8) — 404 truth-sync + base-path hint
 
 ---
 
