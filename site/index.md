@@ -54,7 +54,7 @@ features:
     title: TAIDE 主權 LLM 整合
     details: 台灣國科會 + 工研院 TAIDE 模型自架步驟，含 M3 Ultra Ollama recipe。AgentZ Ch 13 / Ch 17 用得到。
   - icon: 📖
-    title: 50+ 名詞表（繁中 + English）
+    title: 60+ 名詞表（繁中 + English）
     details: 每個專業名詞 4 欄完整解釋（專業介紹 / 白話解釋 / 應用範例 / 章節）。10 大類別包含 vibe coding、SDD、TDD、AFK 執行、delegation。
   - icon: 📋
     title: 速查卡 A4 可印
@@ -86,7 +86,7 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 - 📋 [**5 分鐘 Quick Win**](./quickwin) — 不裝 Python 體驗 agent，了解你適合哪一章開始
 - 🗺 [**課程地圖**](./roadmap) — 20 章難度/時間/4 學習計畫對照
 - 🔑 [**LLM / API 申請指南**](./llm-providers) — 11 家 LLM 申請流程 + 範例 + 費用
-- 📖 [**50+ 名詞表**](./glossary) — 繁中 + English 4 欄完整解釋
+- 📖 [**60+ 名詞表**](./glossary) — 繁中 + English 4 欄完整解釋
 - ❓ [**FAQ**](./faq) — 22 題 6 大類常見問題
 - ✅ [**學習進度檢核**](./progress) — milestone evidence + portfolio repo 模板
 - 🏆 [**Capstone Gallery**](./capstone) — 學員作品集 + 投稿入口

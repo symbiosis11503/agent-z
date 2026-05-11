@@ -96,6 +96,12 @@ AgentZ 用詞 + 業界術語的繁中對照。每條 **4 欄**：專業介紹、
 - **範例**：Claude Code 內建 `/compact` 指令；自己寫 agent 在 messages.length > 20 時觸發 LLM 摘要 messages[:10]。
 - **章節**：[Ch 13 §3](./chapters/ch13_memory_rag/#3-session-memory-累積--摘要)
 
+### 提示快取 / Prompt Cache
+- **專業**：在 messages / system / tools 上標 `cache_control: {type:"ephemeral"}`，相同 prefix 後續呼叫時 input cost 降至 1/10，cache TTL 1 小時（Anthropic）。
+- **白話**：「同一段長 system prompt 不要每次都收滿費」。LLM 把它快取住、第二次起便宜 90%。
+- **範例**：5K-token system prompt + 多輪對話：第一次寫入 1.25x cost、第二次起 0.1x cost。Ch 8 cost cap 配 cache 兩件事一起做。
+- **章節**：[Ch 8 §4](./chapters/ch08_cost_observability/) + [速查卡](./cheatsheet#prompt-cache-省-90-cost)
+
 ---
 
 ## 3. Agent 機制
@@ -136,6 +142,36 @@ AgentZ 用詞 + 業界術語的繁中對照。每條 **4 欄**：專業介紹、
 - **範例**：你說「修這個 bug」、它變「修 bug + 重構 module + 加 test + 寫 doc」——一個 task 燒 $20。Ch 8 §3 教 3 個 pattern 怎麼防。
 - **章節**：[Ch 8 §3](./chapters/ch08_cost_observability/#3-三個常見-燒錢失敗模式)
 
+### 停止原因 / stop_reason
+- **專業**：Anthropic API response 的終止狀態欄位：`end_turn`（自然結束）/ `tool_use`（要 call tool）/ `max_tokens`（超 token limit）/ `stop_sequence`（撞 stop_sequences）/ `pause_turn`（長 server-tool 暫停）/ `refusal`（safety reject）。
+- **白話**：LLM 為什麼停下來？分手對方說「我講完了」/「該你了去 call tool」/「字數爆了」/「碰到禁字」。寫 agent loop 必須對每種反應。
+- **範例**：`if resp.stop_reason == "tool_use": run tool 然後 append tool_result; elif "end_turn": done; elif "max_tokens": 提示 user / 縮 prompt 重試`。
+- **章節**：[Ch 9](./chapters/ch09_function_calling/) + [速查卡](./cheatsheet#anthropic-sdk-速查)
+
+### 電腦使用 / Computer Use
+- **專業**：2024-10 Anthropic 推出的 Claude 能力。Claude 透過 screenshot tool + mouse/keyboard tool 操作真實桌面 GUI（不是 API）。包在 `computer_20241022` tool type。
+- **白話**：讓 Claude 真的看你螢幕、移動滑鼠、打字。可以填網頁表單、跑沒 API 的軟體。
+- **範例**：Claude in Chrome / claude-in-chrome MCP / Anthropic computer-use demo container。要 sandbox 跑（不然它真的會點你的 email）。**Ch 18 Maker 路線會用到**。
+- **章節**：[Ch 18](./chapters/ch18_maker_educator/)
+
+### 子代理 / Subagent
+- **專業**：透過 Task / Agent tool 由主 agent 啟動的隔離子 conversation。子 agent 有自己 context / system prompt / tool 集，跑完只回傳結果給主 agent，原始 trace 不污染主 context。
+- **白話**：「派下去做的小弟」。主 agent 把「搜尋 codebase 30 個檔」這種大任務外包給 subagent、自己保持乾淨 context。
+- **範例**：Claude Code 的 Task tool / Explore agent / Plan agent；自己寫 agent 用 sub-LLM 處理子任務。**節省 context 是 multi-agent 的入門用法**。
+- **章節**：[Ch 14](./chapters/ch14_multi_agent/)
+
+### 深度研究 / Deep Research
+- **專業**：長 horizon agent，跨 10-50 個 web search / paper read / cross-reference 後產出研究報告。需要 cost cap + DOI 驗證 + reflection critique 防幻覺。
+- **白話**：「丟一個問題、讓 agent 跑半小時、給我一份報告」的研究模式。ChatGPT / Claude / Gemini 都有 Deep Research mode。
+- **範例**：OpenAI Deep Research、Gemini Deep Research、Claude Research、ChatGPT Atlas Agentic Search。AgentZ Ch 16 教你自己寫一個。
+- **章節**：[Ch 16](./chapters/ch16_researcher/)
+
+### 後台 / 排程代理 / Headless / Scheduled Agent
+- **專業**：無人盯著、由 cron / launchd / systemd timer 觸發的 agent，跑完寫 log / 發通知。架構必含 cost cap、retry policy、failure alert。
+- **白話**：「不開電腦也會自己跑的 agent」。例：每天早上 6:00 抓新聞重點寄你 mailbox。
+- **範例**：morning briefing agent（Ch 18）、夜跑 deep research、定時 codebase audit。AFK 執行的具體實作形式。
+- **章節**：[Ch 18 §3](./chapters/ch18_maker_educator/) + [Ch 8](./chapters/ch08_cost_observability/)
+
 ---
 
 ## 4. CLI Agent / Claude Code 生態系
@@ -175,6 +211,24 @@ AgentZ 用詞 + 業界術語的繁中對照。每條 **4 欄**：專業介紹、
 - **白話**：「agent 動之前 / 之後幫我跑這個」的自動化規則。
 - **範例**：PostToolUse 配 `Write|Edit` → 自動 `npm run lint --fix`；PreToolUse 配 `Bash` → 看到 `rm -rf` 直接擋。
 - **章節**：[Ch 5 §6](./chapters/ch05_cli_workflow/#6-hook-在工具呼叫前後跑你的-code)
+
+### 插件 / Plugin
+- **專業**：Claude Code 的擴充封裝單位。一個 plugin 可以同時帶 commands / agents / hooks / MCP server / skills，透過 marketplace.json 散發。比起單純 Skill / MCP，是更完整的「功能套件」。
+- **白話**：「一包裝好的功能」。裝一個 plugin 等於同時加幾個 slash command、subagent、hook、MCP server。
+- **範例**：`claude-config plugin install @anthropic/example-plugin`；公司內部 marketplace 散發部門通用工具集。
+- **章節**：[Ch 7](./chapters/ch07_skills_plugins/)
+
+### Agent SDK / Claude Agent SDK
+- **專業**：Anthropic 官方的 Python / TypeScript SDK（npm `@anthropic-ai/claude-agent-sdk`），把 Claude Code 內部 agent loop 抽出來給開發者直接用：載 system prompt / 工具集 / hooks / subagent 等。
+- **白話**：「把 Claude Code 變成你 app 的一部分」的 SDK。不只 API call，是完整 agent loop。
+- **範例**：用 Agent SDK 寫一個只跑你公司 SOP 的內部 agent、嵌入 Slack bot 或 web app。
+- **章節**：[Ch 12](./chapters/ch12_mini_framework/) + [Ch 18](./chapters/ch18_maker_educator/)
+
+### MCP 範圍 / MCP Scope
+- **專業**：Claude Code 註冊 MCP server 的層級，影響可見性：`user` 範圍寫到 `~/.config/claude/claude.json`（全域）/ `project` 範圍寫到 `.mcp.json`（per-repo）/ `local` 範圍寫到 `.claude/claude.json`（per-repo 隱私）。
+- **白話**：「這個 MCP server 哪些 session 看得到」。個人工具放 user；公司 repo 共用放 project；不想 git commit 的私人 key 放 local。
+- **範例**：`claude mcp add notion-mcp ... --scope user` vs `--scope project`；專案內 mcp.json 進 git，個人 key 用 user-scope。
+- **章節**：[Ch 6](./chapters/ch06_mcp/)
 
 ---
 
