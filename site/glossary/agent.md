@@ -141,19 +141,19 @@ description: Agent / Tool Use / ReAct / Plan-and-Solve / Reflection / Runaway / 
 - **專業**：跨 LLM ensemble 方法。讓 3 個（或 N 個）獨立 LLM 各自產出 → 互相 critique 一輪 → 收斂到 consensus。2025 醫療 benchmark 顯示 +7-15 點 accuracy（無 fine-tune），GPQA-diamond 從 46.9% → 68.2%。Agenvoy 用 4-CLI × ≤3 輪是同一家族。
 - **白話**：「3 個 AI 互相吵架直到吵出一致答案」。比單一 LLM 更可靠，但成本 × 3-9。
 - **範例**：critical action（金錢 / 不可逆 / 對外發布）強制走 ICE — 三家 LLM 一致 vote 通過才執行；任一家反對就 escalate 給人。
-- **章節**：[Ch 14 multi_agent](../chapters/ch14_multi_agent/) + [Ch 15 §3](../chapters/ch15_deploy_audit_replay/)
+- **章節**：[Ch 14 §8c 2026 multi-agent 新興安全](../chapters/ch14_multi_agent/#8c-2026-multi-agent-新興安全議題) — Handoff 機制 § 防禦 + [Ch 15 §3](../chapters/ch15_deploy_audit_replay/)（critical-action ICE 4 道閘門）
 
 ### 共識陷阱 / Consensus Trap
 - **專業**：response-level voting 的數學漏洞 — 當 corrupted agents 形成 local majority 時，傳統「投票決勝」會 collapse（多數決變成多數錯）。2026 arXiv 2604.17139 點出 + 提出 token-level collaboration 作為解。
 - **白話**：「3 個 AI 投票，如果其中 2 個被偷偷植入後門，多數決就被綁架」。要改成 token 層級對齊不是 response 層級。
 - **範例**：multi-agent 系統用 majority-vote 決定執行 → 攻擊者只要污染 2/3 agent prompt 即可改變決策。防護：token-level aggregation + Byzantine-resilient consensus (HDETM / DDHR)。
-- **章節**：[Ch 14 §6](../chapters/ch14_multi_agent/) + [Ch 15 §3](../chapters/ch15_deploy_audit_replay/)
+- **章節**：[Ch 14 §8c 防禦表](../chapters/ch14_multi_agent/#8c-2026-multi-agent-新興安全議題) — Supervisor / Blackboard § 強制設批判 agent + [Ch 15 §3](../chapters/ch15_deploy_audit_replay/)
 
 ### 幻覺搶註 / Slopsquatting
 - **專業**：供應鏈攻擊變體。LLM 約 20% 建議的 package 名實際不存在於 npm / PyPI；攻擊者監測 LLM 輸出，搶註那些 hallucinated 名稱、放上惡意 payload。Stanford AI Index 列 2026 三大新攻面之一（與 agent identity / orchestration layer 並列）。命名 by Seth Larson (Python Software Foundation) 2025。
 - **白話**：「AI 推薦的包名可能是它自己編的，攻擊者就去搶註那個假名等你裝」。比傳統 typosquatting 更狠 — typo 至少還是真名打錯，slopsquat 是 AI 編的「不存在的名」。
 - **範例**：Copilot 建議 `pip install awesome-llm-helper` → 那 package 不存在 → 攻擊者註冊它 → 含 wallet stealer → 用戶照 LLM 建議裝 → 中招。防護：① 不直 install LLM 推薦包 ② pin registry source of truth ③ 隔離 container 內測 install ④ Aikido SafeChain / Socket 等掃工具。
-- **章節**：[Ch 15 §3](../chapters/ch15_deploy_audit_replay/) + [Ch 6 §8](../chapters/ch06_mcp/#8-mcp-server-的安全性)
+- **章節**：[Ch 14 §8c Pipeline 防禦](../chapters/ch14_multi_agent/#8c-2026-multi-agent-新興安全議題) — code-gen worker 必查 PyPI/npm 真實存在 + [Ch 6 §8](../chapters/ch06_mcp/#8-mcp-server-的安全性)
 
 ---
 

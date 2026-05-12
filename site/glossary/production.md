@@ -69,25 +69,25 @@ description: Budget Cap / Intervention / Audit / Replay / Guardrails + SFT / GRP
 - **專業**：2023-12 ISO + IEC 共同發布的第一個國際 AI Management System 標準。Plan-Do-Check-Act 框架（模仿 ISO 9001 / 27001）。對「develop / provide / use AI 產品 / 服務」組織 voluntary 認證。Stage 1 audit（review scope / inventory / policy / risk）+ Stage 2 audit（test 運作 + sample use case）+ 年度 surveillance。
 - **白話**：「AI 管理系統」的國際 ISO 認證，類似 ISO 9001 之於品管。組織想證明自己負責任做 AI 就申請。
 - **範例**：2026 中 EU enterprise AI 供應商 RFP <strong>40% 詢問 ISO 42001 certified</strong>、NA 25%。AWS / Microsoft Azure 已取得；Anthropic / OpenAI 走 SOC 2 + 自家 RSP 為主。約 6-12 月全程。
-- **章節**：[Ch 15 §3](../chapters/ch15_deploy_audit_replay/)（與 Audit / Replay 同層）
+- **章節**：[Ch 15 §5b 合規對照](../chapters/ch15_deploy_audit_replay/#5b-合規--iso-42001--nist-ai-rmf--eu-ai-act) — V3 4 pillar 對映 ISO 42001 各條 + [Ch 15 §3](../chapters/ch15_deploy_audit_replay/)（pillar 實作）+ [速查卡 Compliance](../cheatsheet/compliance)
 
 ### NIST AI RMF + GenAI Profile（NIST-AI-600-1）
 - **專業**：美國 NIST 2023 發布 AI Risk Management Framework，含 4 core function — <strong>GOVERN / MAP / MEASURE / MANAGE</strong>。2024-07-26 補 NIST-AI-600-1 GenAI Profile 加 200+ actions 對應 LLM/GenAI，涵蓋 12 specific risks（CBRN information / Confabulation / Data privacy / Information security / IP / Toxicity-bias / Value chain 等）。聚焦 4 主題：Governance / Content Provenance / Pre-deployment Testing / Incident Disclosure。
 - **白話**：美國政府版「AI 風險管理 4 步流程」+「LLM 補丁手冊」。voluntary 但是美國公部門 / 大企業 procurement de facto 要求。
 - **範例**：CSA（Cloud Security Alliance）2026 在發展 NIST AI RMF Agentic Profile v1，把 agent 場景的 risk 對映到 4 function。
-- **章節**：[Ch 15 §3](../chapters/ch15_deploy_audit_replay/) + [Ch 8](../chapters/ch08_cost_observability/)
+- **章節**：[Ch 15 §5b](../chapters/ch15_deploy_audit_replay/#5b-合規--iso-42001--nist-ai-rmf--eu-ai-act) + [Ch 15 §3](../chapters/ch15_deploy_audit_replay/) + [Ch 8 §5.1](../chapters/ch08_cost_observability/#51-2026-05-多-vendor-token-單價對照)
 
 ### EU AI Act
 - **專業**：歐盟 2024 通過，<strong>2026-08-02</strong> Annex III high-risk system enforcement 生效（trilogue 2026 進行中可能延至 2027-12）。4 個獨立 compliance check（不是互斥 tier）：Prohibited / High-risk Annex III 8 domain（biometric / critical infra / education / employment / credit / law enforcement / migration / justice）/ Transparency / GPAI。罰款上限：prohibited €35M 或 7% 全球年營業；high-risk €15M 或 3%；透明度違規 £17M 或 4%。
 - **白話**：歐盟版「AI 法律」，2026 中開始強制。沒做合規 = 全球營業 3-7% 罰款。Annex III 8 領域（招聘、信用、教育…）門檻最高。
 - **範例**：用 agent 做 resume scanner → 自動 promote 為 high-risk → 開 audit trail + risk assessment + EU database 註冊 + 強制 human oversight。若 agent 對外用必加「[AI-bot]」標籤（transparency check）。
-- **章節**：[Ch 15 §3](../chapters/ch15_deploy_audit_replay/)
+- **章節**：[Ch 15 §5b](../chapters/ch15_deploy_audit_replay/#5b-合規--iso-42001--nist-ai-rmf--eu-ai-act) — EU AI Act 8 high-risk domain + V3 對映 + [速查卡 Compliance §EU AI Act](../cheatsheet/compliance#eu-ai-act-—-2026-08-02-強制)
 
 ### OpenTelemetry GenAI Semantic Conventions
 - **專業**：CNCF OpenTelemetry 為 GenAI / agent 標準化的 span / metric 命名規約。Span：`invoke_agent {gen_ai.agent.name}` / `chat {model}` / `embeddings`。Metric：`gen_ai.client.token.usage`（histogram by direction）/ `gen_ai.client.operation.duration`。2026-03 仍 experimental，多 agent system convention 在 SIG 發展中。
 - **白話**：「agent 跑出來的監控資料」業界統一格式 — Datadog / Grafana / Uptrace 看 agent trace 不用各自寫 parser。
 - **範例**：Datadog LLM Observability / Uptrace / OpenLLMetry 已實作；agent code 加 OTel SDK，metric 直接 ship 出去 dashboard 自動顯示。AgentZ 教學選 OTel 作為標準 observability backend。
-- **章節**：[Ch 8 §3](../chapters/ch08_cost_observability/) + [Ch 15](../chapters/ch15_deploy_audit_replay/)
+- **章節**：[Ch 15 §5a 完整 OTel 整合](../chapters/ch15_deploy_audit_replay/#5a-opentelemetry-genai--業界標準-observability) — span/metric 表 + OpenLLMetry Python 5 分鐘上手範例 + [Ch 8 §3](../chapters/ch08_cost_observability/)
 
 ---
 
