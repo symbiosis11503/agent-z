@@ -34,7 +34,17 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 - 新建 **[/cheatsheet/compliance](./cheatsheet/compliance)** — ISO 42001 / NIST AI RMF / EU AI Act / OpenTelemetry GenAI 4 大標準速查 + 何時該做哪個決策樹 + 罰款 + 時程
 - 從速查卡「6 個分頁」→「**7 個分頁**」全站 sync (cheatsheet index / all.md / index hero / quickwin / roadmap / about / 404 / llms.txt / sidebar)
 
-### Iter 21-29 commits
+### Glossary 新詞反向 cross-link 進章節（iter 30-32）
+
+新加的詞光在名詞表看不夠，讀者翻章節要在原生 context 遇得到。iter 30-32 把新詞下放到對應章節：
+
+- **[Ch 14 §8c](./chapters/ch14_multi_agent/#8c-2026-multi-agent-新興安全議題)** — 加 ICE / Consensus Trap / Slopsquatting 3 個 multi-agent 安全議題 + 影響 Ch 14 哪段 + 防禦方式
+- **[Ch 15 §5b](./chapters/ch15_deploy_audit_replay/#5b-合規--iso-42001--nist-ai-rmf--eu-ai-act)** — 加合規對照：ISO 42001 / NIST RMF / EU AI Act 三大標準 → V3 四 pillar 映射 + 風險分級 + incident reporting
+- **[Ch 6 §5a](./chapters/ch06_mcp/#5a-mcp-scope--server-放哪一層作用範圍不同)** — 加 MCP Scope (user/project/local) 3 層作用範圍 + 敏感 token 安全準則
+- **[Ch 9 §4a](./chapters/ch09_function_calling/#4a-computer-use--anthropic-的特殊-tool-use-模式)** — 加 Computer Use Anthropic 特殊 tool-use 模式 + sandbox 安全
+- **[Ch 5 §6a](./chapters/ch05_cli_workflow/#6a-headless-agent--claude-code-進-cron--ci--shell-pipe)** — 加 Headless Agent (`claude -p`) + cron / CI / shell pipe 用法 + 不問 permission 的安全提醒
+
+### Iter 21-32 commits
 
 11. iter 21 [4f09afd](https://github.com/symbiosis11503/agent-z/commit/4f09afd) — glossary/production 加合規 4 詞
 12. iter 22 [0e91588](https://github.com/symbiosis11503/agent-z/commit/0e91588) + iter 23 [1aeaaf6](https://github.com/symbiosis11503/agent-z/commit/1aeaaf6) — glossary/agent 加 multi-agent 安全 3 詞
@@ -43,6 +53,12 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 15. iter 27 [e6ce812](https://github.com/symbiosis11503/agent-z/commit/e6ce812) — ch15 §5a OpenTelemetry GenAI
 16. iter 28 [cfa3a7b](https://github.com/symbiosis11503/agent-z/commit/cfa3a7b) — 速查卡 7th page · Compliance
 17. iter 29 [2f5eda6](https://github.com/symbiosis11503/agent-z/commit/2f5eda6) — 全站「6 → 7 個分頁」sync
+18. iter 27 (v1.6 cycle 2) [d2db5e5](https://github.com/symbiosis11503/agent-z/commit/d2db5e5) — 60+ → 70+ 名詞表 truth-sync (4 files)
+19. iter 28 [f824b37](https://github.com/symbiosis11503/agent-z/commit/f824b37) — ch14 加 §8c multi-agent 安全 (ICE / Consensus Trap / Slopsquatting)
+20. iter 29 (cycle 2) [57a9e08](https://github.com/symbiosis11503/agent-z/commit/57a9e08) — ch15 加 §5b 合規對照 (ISO 42001 / NIST RMF / EU AI Act → V3 四 pillar)
+21. iter 30 [0a3c732](https://github.com/symbiosis11503/agent-z/commit/0a3c732) — ch06 加 §5a MCP Scope (user/project/local)
+22. iter 31 [d3d58a1](https://github.com/symbiosis11503/agent-z/commit/d3d58a1) — ch09 加 §4a Computer Use + sandbox 安全
+23. iter 32 [87d8da6](https://github.com/symbiosis11503/agent-z/commit/87d8da6) — ch05 加 §6a Headless Agent + cron/CI 安全提醒
 
 ---
 
