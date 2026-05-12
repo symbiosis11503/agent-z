@@ -60,6 +60,20 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 22. iter 31 [d3d58a1](https://github.com/symbiosis11503/agent-z/commit/d3d58a1) — ch09 加 §4a Computer Use + sandbox 安全
 23. iter 32 [87d8da6](https://github.com/symbiosis11503/agent-z/commit/87d8da6) — ch05 加 §6a Headless Agent + cron/CI 安全提醒
 
+### v1.6 收尾 polish（iter 33-41）
+
+兩 cycle 完工後又連推 9 次收尾 polish，把零散的 truth-sync / cross-link / 版本一致性全清掉：
+
+- **iter 33** — whatsnew cycle 2 entry
+- **iter 34** — CHANGELOG v1.6 entry 加 cycle 2 部分（之前只列 cycle 1）
+- **iter 35** — README.md Status 段加 v1.3 / v1.4 / v1.5 / v1.6 完整描述 + 70+ 名詞 + 7 個分頁
+- **iter 36** — INDEX.md Phase 7 加 + 額外頁 list 完整化
+- **iter 37** — Gemini 2.0 Flash → 2.5 Flash truth-sync (4 files: llm-providers / cheatsheet/pricing / glossary/foundation / ch01)
+- **iter 38** — compliance 速查卡 cross-link 到 cycle 2 章節 (ch14 §8c / ch15 §5b)
+- **iter 39** — chapters landing 7 章「核心」column 加 v1.6 新內容標記
+- **iter 40** — glossary 7 新詞「章節」連結指向具體 §5b/§5a/§8c 而非 generic Ch 15 §3
+- **iter 41** — ch16 §4 加 ICE 進階 anti-hallucination + Consensus Trap 注意
+
 ---
 
 ## 2026-05-12 — v1.5 結構化資料 + 章節索引 + 章節 SEO 補齊
