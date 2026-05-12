@@ -93,9 +93,13 @@ AnthropicInstrumentor().instrument()
 
 ## 完整講解
 
-- ISO 42001 / NIST AI RMF / EU AI Act → [Ch 15 §3](../chapters/ch15_deploy_audit_replay/) + [名詞表 · Production](../glossary/production)
-- OpenTelemetry GenAI → [Ch 8 §3](../chapters/ch08_cost_observability/) + [Ch 15 §5a](../chapters/ch15_deploy_audit_replay/)
-- EU AI Act 倒數 → [Ch 15 §3](../chapters/ch15_deploy_audit_replay/)（2026-08-02 deadline）
+- **3 大標準對 V3 / agentz_mini 影響** → [Ch 15 §5b 合規對照](../chapters/ch15_deploy_audit_replay/#5b-合規--iso-42001--nist-ai-rmf--eu-ai-act) — V3 audit / replay / cost cap / intervention 4 pillar 怎麼對映 ISO/NIST/EU AI Act
+- **OpenTelemetry GenAI 5 分鐘上手** → [Ch 15 §5a](../chapters/ch15_deploy_audit_replay/#5a-opentelemetry-genai--業界標準-observability) + [Ch 8 §3](../chapters/ch08_cost_observability/)
+- **Multi-agent 新興安全** → [Ch 14 §8c](../chapters/ch14_multi_agent/#8c-2026-multi-agent-新興安全議題) — ICE / Consensus Trap / Slopsquatting 在 multi-agent 場景下的防禦（合規 audit 要看的 risk）
+- **詞條深入** → [名詞表 · Production](../glossary/production)（4 個合規詞 4 欄解釋）+ [名詞表 · Agent §5](../glossary/agent#_5-multi-agent-verification--安全2026-新加)（3 個 multi-agent 安全詞）
+- **EU AI Act 倒數** → 2026-08-02 deadline，[Ch 15 §3](../chapters/ch15_deploy_audit_replay/)
+
+> ⚠️ **不是法律建議**。production 導入合規前找律師 / 顧問。台灣國科會 AI 基本法草案 2025-11 已公布、跟 EU AI Act 對齊（[Ch 15 §5b.3](../chapters/ch15_deploy_audit_replay/#5b-3-注意)）。
 
 ---
 
