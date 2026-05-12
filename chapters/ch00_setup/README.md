@@ -326,4 +326,19 @@ $ git commit -m "Ch 0 hello-world"
 | **環境變數**（`ANTHROPIC_API_KEY` 等） | 安全存 API key | 全書 |
 | **anthropic / openai / groq SDK** | 呼叫 LLM API | Ch 1 起 |
 
+## 11. 想要 ChatGPT 風 GUI？open-webui
+
+不想每次都 Python script？[`open-webui/open-webui`](https://github.com/open-webui/open-webui)（136K★, Python）是 self-host 版 ChatGPT 介面，**支援 Anthropic / OpenAI / Ollama / 任何 OpenAI-compatible API**——一個 Web UI 跨所有家。
+
+```bash
+# Docker 起一個本機 instance
+docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \
+  -v open-webui:/app/backend/data --name open-webui --restart always \
+  ghcr.io/open-webui/open-webui:main
+
+# 開 http://localhost:3000 → 設 API key → 開聊
+```
+
+**何時用**：純聊天 / 比較不同 model 同一個 prompt / 給家人朋友用（架家用）。**寫 agent 還是要回 Python 走 SDK / Ch 4 起 CLI agent**——GUI 沒有 tool use / hook / 自動化。
+
 下一章 [Ch 1](../ch01_llm_basics/) 會把「LLM 是什麼」真正講清楚——你接下來會問的所有問題（token、context、cost、model 怎麼選）都會在 Ch 1 找到答案。

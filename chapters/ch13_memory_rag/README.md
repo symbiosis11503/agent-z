@@ -136,6 +136,8 @@ system_prompt = "User facts:\n" + "\n".join(f"- {k}: {v}" for k, v in facts)
 5. 把 top-K chunk 塞進 prompt 給 LLM
 ```
 
+> 💡 **步驟 1 的隱形坑**：你的「文件」可能是 PDF / docx / pptx / xlsx / image。**直接餵 raw bytes 不行**——LLM 看不到 binary。推薦 [`microsoft/markitdown`](https://github.com/microsoft/markitdown)（122K★, MIT）一鍵把 17 種格式（PDF / Office / image / audio / HTML）轉成乾淨的 markdown，再切 chunk。`pip install markitdown && markitdown report.pdf > report.md`
+
 ### 簡化範例（chromadb）
 
 ```python
@@ -219,6 +221,7 @@ Anthropic 報告 retrieval 召回率提升 35-49%。**成本**：每 chunk 多 1
 | **[mem0](https://github.com/mem0ai/mem0)** | Memory layer API | Vector + Graph | 53K★ | 簡潔 API、cloud / self-host 都行 |
 | **[Letta / MemGPT](https://github.com/letta-ai/letta)** | Full agent runtime（自帶 memory） | Vector | 22K★ | OS-style agent + archival memory + agent runtime 一體 |
 | **[agentmemory](https://github.com/rohitg00/agentmemory)** | Cross-agent MCP memory server | **BM25 + Vector + Graph (RRF fusion)** | 4.9K★（2026-02 起） | 16+ agent 共用一個 memory server (Claude Code / Cursor / Hermes / OpenClaw...)、Session Replay |
+| **[cocoindex](https://github.com/cocoindex-io/cocoindex)** | Long-horizon agent 增量 indexing engine | Incremental embedding refresh | 9.6K★ | 大型 codebase / doc corpus 加 file 不用全 reindex；適合 agent 連續跑幾天的場景 |
 | **Helix Memory** | Project-aware persistent memory（本書 V3 case study 用） | PG JSONB + pgvector + FTS5 (CJK) | 自家 | 跟 V3 audit / replay / project boundary 整合 |
 
 ### 怎麼選

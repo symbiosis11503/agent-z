@@ -183,6 +183,15 @@ LLM 看到這串，會接著 `assistant` 角色回應「早安」。
 
 本地 model 適合「我不想付 API、隱私敏感、或想自己 fine-tune」的情境。後面 Ch 17 會展開。
 
+### 開源 fine-tuned 模型家族
+
+商業 model（Claude / GPT / Gemini）之外，社群會基於 Llama / Mistral / Qwen 等 base 做專項 fine-tune。值得認識的：
+
+- **[NousResearch/Hermes-Function-Calling](https://github.com/NousResearch/Hermes-Function-Calling)** — Nous Research 把 Llama-3 / Mistral 之類 base 專門 fine-tune 強化 function calling 能力的家族（Hermes-2-Pro / Hermes-3）。如果 Ch 9 你想用開源 model 做 tool use 練習但 base Llama tool use 不穩，這條是首選 SFT model。
+- **HuggingFace** [`huggingface/transformers`](https://github.com/huggingface/transformers)（160K★）— 開源 model 生態系本體；Ch 17 進階 fine-tune 時是 default 框架。
+
+> 💡 **不在 Ch 1 範圍**：圖像 / 影片 / 音訊 AI（[`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) 163K★ 是該領域代表）跟 LLM 是平行領域；agent 偶爾會 call image API 但本書專注 LLM 路線。
+
 ### 怎麼選的決策樹
 
 ```

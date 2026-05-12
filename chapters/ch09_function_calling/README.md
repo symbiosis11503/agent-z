@@ -252,6 +252,23 @@ response = client.beta.messages.create(
 
 > ⚠️ **危險程度高**：LLM 看 screenshot 點滑鼠、可能誤點 `刪除` `提交` `付款`。**永遠跑在 sandbox container**（Docker / VM），絕不在 host machine 直接給 root 權限。Anthropic 官方 sample 用 Docker。詳細白話：[名詞表 § Computer Use](https://symbiosis11503.github.io/agent-z/glossary/agent)。
 
+### Computer Use 的替代路線：browser-use
+
+如果你只需要操作**網頁**（不需要桌面應用），更輕量的選擇是 [`browser-use/browser-use`](https://github.com/browser-use/browser-use)（93K★, MIT, Python）。它把 Playwright 包成 agent-friendly API，**LLM 看 DOM tree 而不是看 screenshot**——比 Computer Use 快 10-100×，token 用量少 5-10×。
+
+```python
+from browser_use import Agent
+from langchain_anthropic import ChatAnthropic
+
+agent = Agent(
+    task="找台北 5/15 飛東京最便宜的機票",
+    llm=ChatAnthropic(model="claude-haiku-4-5"),
+)
+await agent.run()
+```
+
+選擇準則：**能用 DOM 不要用 screenshot**。Computer Use 只在沒 DOM（PDF / 古老 GUI / 桌面應用）才用。
+
 ---
 
 ## 5. Error Recovery

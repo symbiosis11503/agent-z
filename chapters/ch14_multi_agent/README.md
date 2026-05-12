@@ -270,6 +270,7 @@ Supervisor 架構（§2.2）最關鍵是 router prompt。試這個：
 - `datawhalechina/hugging-multi-agent`（1.4K⭐）— MetaGPT 中文教程
 - ai-dict Handoffs 段
 - [Slopsquatting research（USENIX 2025）](https://arxiv.org/abs/2406.10279) — 16% of LLM-generated package names don't exist; 攻擊者搶註可植入惡意 code
+- [**TauricResearch/TradingAgents**](https://github.com/TauricResearch/TradingAgents)（74K⭐, Apache）— 真實場景 multi-agent: analyst / researcher / trader / risk-manager 分工跑金融交易；§2.2 supervisor 跟 §3 handoff 的 production 級範例
 
 ---
 

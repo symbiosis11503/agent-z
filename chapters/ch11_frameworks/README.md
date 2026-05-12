@@ -236,6 +236,29 @@ print(result.data.temp)  # 26.0
 
 ---
 
+## 5a. Visual / Low-code 路線 — 不寫 code 也想拼 agent workflow
+
+§2-5 都假設你會寫 Python / TS。如果你**完全不寫 code**（PM / 設計 / 業務），或想用拖拉式快速 prototype，2026 三個主流 visual builder：
+
+| 工具 | ★ | 性質 | 適合 |
+|---|---|---|---|
+| **[n8n](https://github.com/n8n-io/n8n)** | 187K | Workflow automation（類 Zapier）+ native AI node | 業務自動化、整合 300+ SaaS service、cron 任務 |
+| **[Langflow](https://github.com/langflow-ai/langflow)** | 148K | 拖拉 RAG / agent pipeline（基於 LangChain） | 不寫 code 拼 RAG / agent flow、demo 給客戶看 |
+| **[Lobe Chat](https://github.com/lobehub/lobe-chat)** | 76K | Visual multi-agent platform | 想要美的 UI 跑 multi-agent，社群 plugin 多 |
+
+也加上**程式碼路線跟 visual 路線間**的：
+
+- **[Dify](https://github.com/langgenius/dify)** — visual workflow + agent + RAG 三合一, BaaS + 自架都行（中國團隊強推）
+
+### 何時 visual / 何時 code
+
+- **Visual**: 一次性 demo / 給非工程師看 / SaaS 整合主導的場景
+- **Code**: production agent / 自訂業務邏輯 / 需要 audit / replay / cost cap
+
+> 💡 **常見坑**：visual builder 開發爽，但**rerun production agent 換 LLM / 改 prompt** 沒 git diff 看，version control 差。**進 Ch 15** production governance 後你會懂為什麼自家寫 framework + audit trace 是必要的。
+
+---
+
 ## 6. 對齊 ai-dict 名詞
 
 本章相關 ai-dict 詞條（[繁中版](https://ai-dict.gh.miniasp.com/)）：
