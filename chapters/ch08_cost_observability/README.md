@@ -175,21 +175,21 @@ Ch 5 講的 hook 可以做 PreToolUse 攔截：
 | Gemini 2.5 Flash | $0.30 | $2.50 | Google | high-volume / 多模態 routine |
 | Claude Haiku 4.5 | $1.00 | $5.00 | Anthropic | 大量 routine action / read-only / lint |
 | Gemini 2.5 Pro | $1.25-2.50 | $10-15 | Google | 跨模態 reasoning |
-| Claude Sonnet 4.5 | $3.00 | $15.00 | Anthropic | agent coding 主力（Claude Code 預設） |
+| Claude Sonnet 4.6 | $3.00 | $15.00 | Anthropic | agent coding 主力（Claude Code 預設） |
 | GPT-4o | $5.00 | $15.00 | OpenAI | 與 Sonnet 同 tier，OpenAI 生態 |
 | GPT-4 (legacy) | $30.00 | $60.00 | OpenAI | 已老化、不建議新案 |
-| Claude Opus 4 | $15.00 | $75.00 | Anthropic | critical reasoning / cross-check 用 |
+| Claude Opus 4.7 | $15.00 | $75.00 | Anthropic | critical reasoning / cross-check / 1M context 用 |
 
 **快速估算公式**：`月成本 ≈ 月 task 數 × 平均 token/task × (input_price × 80% + output_price × 20%) / 1M`
 
-範例：每月 1000 task、平均 100K token、用 Sonnet 4.5（$3/$15）：`1000 × 100,000 × (3×0.8 + 15×0.2)/1,000,000 = 1000 × 0.1 × 5.4 = $540/月`
+範例：每月 1000 task、平均 100K token、用 Sonnet 4.6（$3/$15）：`1000 × 100,000 × (3×0.8 + 15×0.2)/1,000,000 = 1000 × 0.1 × 5.4 = $540/月`
 
 **省錢三招**：
-1. **路由不同 tier** — routine（lint / format / read）走 Haiku 4.5；critical reasoning 走 Sonnet 4.5；cross-check 才用 Opus 4。同任務可省 60-80%。
+1. **路由不同 tier** — routine（lint / format / read）走 Haiku 4.5；critical reasoning 走 Sonnet 4.6；cross-check 才用 Opus 4.7。同任務可省 60-80%。
 2. **Prompt Cache** — 重複 system prompt 用 Anthropic cache_control（4 個 break point）+ OpenAI prompt cache、命中折扣 50-90%（依 vendor）。
 3. **不要 hard-code 單價** — 寫 `MODEL_PRICING` 設定檔，每月對 vendor pricing page 校（[Anthropic](https://www.anthropic.com/pricing) / [OpenAI](https://openai.com/api/pricing) / [Google](https://ai.google.dev/pricing)）— 單價變動就改設定不改 code。
 
-⚠️ 上表為 2026-05-12 snapshot — 單價變動快，**部署前必查官方 pricing page**。
+⚠️ 上表為 2026-05-12 snapshot — 單價變動快，**部署前必查官方 pricing page**。完整 11 家對照（含 OpenRouter aggregator + DeepSeek / Groq / Mistral / Llama 自架）見 [LLM Providers · 商業 API](../../site/llm-providers/commercial.md) 與 [Cheatsheet · Pricing](../../site/cheatsheet/pricing.md)。
 
 ---
 
