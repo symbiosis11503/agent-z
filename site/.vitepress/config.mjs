@@ -145,6 +145,7 @@ export default defineConfig({
           { text: '進度檢核', link: '/progress' },
           { text: 'Capstone Gallery', link: '/capstone' },
           { text: '更新紀錄', link: '/whatsnew' },
+          { text: '引用 AgentZ', link: '/cite' },
           { text: '關於 AgentZ', link: '/about' },
         ],
       },
