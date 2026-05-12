@@ -267,6 +267,21 @@ def verify_doi(doi: str) -> dict | None:
 違反任一條請拒絕回答並說明原因。
 ```
 
+### 進階：跨 LLM 投票（ICE — Iterative Consensus Ensemble）
+
+對於 critical research claims（醫療 / 法律 / 安全），單一 LLM 自我 critique 不夠 — 用 [**ICE**](../../site/glossary/agent#迭代共識集成--ice-iterative-consensus-ensemble) 多家 LLM 互相 cross-check：
+
+```python
+def ice_consensus(claim: str, models=("claude-sonnet-4-6", "gpt-4o", "gemini-2.5-pro")) -> dict:
+    """3 家 LLM 各自 verify claim、互相 critique 一輪、收斂到 consensus。"""
+    drafts = [llm_verify(model, claim) for model in models]
+    critiques = [llm_critique(model, drafts) for model in models]  # 每家 critique 別家
+    final = synthesize(drafts, critiques)
+    return {"claim": claim, "verified": final.unanimous, "dissent": final.dissent}
+```
+
+2025 醫療 benchmark 顯示 +7-15 點 accuracy、GPQA-diamond 46.9% → 68.2%（無 fine-tune）；但成本 × 3-9。**只對 high-stakes claim 用、routine 摘要還是單 LLM 就好**。注意 [Consensus Trap](../../site/glossary/agent#共識陷阱--consensus-trap) — corrupted majority 會 hijack 投票，token-level aggregation 比 response-level voting 安全。
+
 ---
 
 ## 5. 常見地雷（**讀過比沒讀過省 5 小時 debug**）
