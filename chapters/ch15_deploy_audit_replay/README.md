@@ -480,4 +480,4 @@ clone https://github.com/symbiosis11503/helix-framework，讀：
 > 🛟 **卡關時看這裡**：
 > - deploy / replay 重現失敗 → [故障排除 § Production deploy](https://symbiosis11503.github.io/agent-z/troubleshooting)
 > - V3 4 道閘門 governance pattern + Cost cap fail-closed code → [速查卡 § V3 Governance](https://symbiosis11503.github.io/agent-z/cheatsheet/governance#v3-governance-pattern-production-agent)
-> - 名詞看不懂 → [60+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary)
+> - 名詞看不懂 → [70+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary)

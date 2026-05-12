@@ -409,4 +409,4 @@ Ch 15 會在 V3 case study 看完整 production-grade 實作。
 > 🛟 **卡關時看這裡**：
 > - tool_use 報錯 / 流程不對 → [故障排除 § Tool use](https://symbiosis11503.github.io/agent-z/troubleshooting)
 > - tool_use 完整 schema + stop_reason 處理 → [速查卡 § Anthropic SDK](https://symbiosis11503.github.io/agent-z/cheatsheet/sdk#anthropic-sdk-速查)
-> - 名詞看不懂 → [60+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary)
+> - 名詞看不懂 → [70+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary)

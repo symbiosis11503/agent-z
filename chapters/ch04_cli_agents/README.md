@@ -228,4 +228,4 @@ Claude Code 啟動時會：
 > 🛟 **卡關時看這裡**：
 > - 報錯 / 跑不起來 → [故障排除](https://symbiosis11503.github.io/agent-z/troubleshooting)
 > - 忘了指令 → [速查卡 Cheatsheet](https://symbiosis11503.github.io/agent-z/cheatsheet)
-> - 名詞看不懂 → [60+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary)
+> - 名詞看不懂 → [70+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary)

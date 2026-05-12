@@ -354,4 +354,4 @@ $ claude -p "review diff for security issues" < diff.patch
 > 🛟 **卡關時看這裡**：
 > - hook / slash command 跑不起來 → [故障排除](https://symbiosis11503.github.io/agent-z/troubleshooting)
 > - CLAUDE.md 結構模板 → [速查卡 § CLAUDE.md 推薦結構](https://symbiosis11503.github.io/agent-z/cheatsheet/cli#claude-md-推薦結構)
-> - 名詞看不懂 → [60+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary)
+> - 名詞看不懂 → [70+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary)
