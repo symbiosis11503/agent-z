@@ -10,6 +10,13 @@ AgentZ 用詞 + 業界術語的繁中對照。**70+ 詞分 5 個焦點頁面**�
 > 找不到的詞？[GitHub Issue](https://github.com/symbiosis11503/agent-z/issues) 告訴我們補進來。
 > 想要 Ctrl-F 一次搜全本？翻 **[全本一頁](./glossary/all)**（自動合成，內容跟 5 分頁同步）。
 
+::: tip 🆕 v1.6 (2026-05) 新增 7 個 2026 業界詞
+- **Multi-agent 安全 ([Agent §5](./glossary/agent#_5-multi-agent-verification--安全2026-新加))**：[ICE](./glossary/agent#迭代共識集成--ice-iterative-consensus-ensemble) — Iterative Consensus Ensemble / [Consensus Trap](./glossary/agent#共識陷阱--consensus-trap)（arXiv 2604.17139）/ [Slopsquatting](./glossary/agent#幻覺搶註--slopsquatting)（Stanford AI Index 2026 三大新攻面之一）
+- **合規 / 國際標準 ([Production §10](./glossary/production#_10-合規--國際標準2026-新加))**：[ISO/IEC 42001](./glossary/production#isoiec-42001--aimsai-management-system)（AI Management System）/ [NIST AI RMF + GenAI Profile](./glossary/production#nist-ai-rmf--genai-profilenist-ai-600-1) / [EU AI Act](./glossary/production#eu-ai-act)（2026-08-02 enforcement）/ [OpenTelemetry GenAI](./glossary/production#opentelemetry-genai-semantic-conventions)
+
+[速查卡 · Compliance](./cheatsheet/compliance) 給 A4 可印 1 頁 cheat。
+:::
+
 [[toc]]
 
 ---
