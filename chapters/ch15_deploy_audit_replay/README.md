@@ -206,6 +206,54 @@ User browser →  │ Cloudflare Tunnel                │
 
 ---
 
+## 5a. OpenTelemetry GenAI — 業界標準 observability
+
+V3 自家的 `audit_events` table 是 internal log，**外部 monitoring 用 [OpenTelemetry GenAI Semantic Conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/)**——CNCF 為 LLM / agent 標準化的 span 跟 metric 命名規約。Datadog / Grafana / Uptrace 不用各自寫 parser、`gen_ai.*` namespace 直接 dashboard 顯示。
+
+### 5a.1 標準 span / metric
+
+| 種類 | 名稱 | 場景 |
+|---|---|---|
+| **Span** | `invoke_agent {gen_ai.agent.name}` | 整個 agent run |
+| **Span** | `chat {model}` | 單次 LLM call |
+| **Span** | `embeddings {model}` | RAG 索引 / 查詢 |
+| **Metric** | `gen_ai.client.token.usage` (histogram by direction) | input / output token 分布 |
+| **Metric** | `gen_ai.client.operation.duration` (histogram) | LLM call 延遲分布 |
+
+**標準 attribute**：`gen_ai.system` (anthropic / openai / google) / `gen_ai.request.model` / `gen_ai.response.model` / `gen_ai.usage.input_tokens` / `gen_ai.usage.output_tokens` / `gen_ai.response.finish_reasons[]`。
+
+### 5a.2 自己加 OTel 到 agent
+
+Python 範例（OpenLLMetry SDK 自動 instrument Anthropic / OpenAI client）：
+
+```python
+# pip install opentelemetry-sdk opentelemetry-instrumentation-anthropic
+from opentelemetry import trace
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import BatchSpanProcessor, OTLPSpanExporter
+from opentelemetry.instrumentation.anthropic import AnthropicInstrumentor
+
+trace.set_tracer_provider(TracerProvider())
+trace.get_tracer_provider().add_span_processor(
+    BatchSpanProcessor(OTLPSpanExporter(endpoint="http://localhost:4318/v1/traces"))
+)
+AnthropicInstrumentor().instrument()  # ← 自動產生 gen_ai.* span
+
+# 後面寫 agent code 就一切自動 export 到 OTel collector
+```
+
+跑完 agent loop、Datadog LLM Observability / Uptrace / Grafana Tempo dashboard 看到 trace、span 自動 link 起來——**不用改 agent code 一行**。
+
+### 5a.3 注意
+
+- **2026-03 OTel GenAI 仍 experimental**——multi-agent system convention 還在 CNCF SIG 發展中。spec 可能微調。
+- **不要 log full prompt content**（PII / 安全）——OTel 留 metadata level（model / token / latency / cost），content 走自家 audit table 加加密。
+- **AgentZ Ch 8 跟本章** 都把 OTel 當預設 backend——學完這章你的 agentz_mini 就能 ship trace。
+
+→ 詳細 spec 跟 attribute 表查 [OTel GenAI conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/)、實作範例看 [OpenLLMetry GitHub](https://github.com/traceloop/openllmetry)。
+
+---
+
 ## 6. 自己升級你的 agentz_mini → production
 
 ### 6.1 加 audit log
