@@ -2,26 +2,39 @@
 
 All notable changes to AgentZ.
 
-## v1.6 — 2026-05 (Ralph loop iter 21-30: 合規 + 框架校準 + 標準觀測性)
+## v1.6 — 2026-05 (Ralph loop 雙 cycle: 合規 + 框架校準 + 標準觀測性 + 章節 cross-link)
 
-> 第三輪 ralph-loop (`UltraThink持續迭代優化agnetZ`) — 把 2026 業界三大缺口補上：合規標準 / 框架地位變動 / OpenTelemetry GenAI 業界 observability。10 commit 連推 origin/main，每 commit 都 GitHub Actions auto-deploy 到 Pages。
+> 第三輪 ralph-loop (`UltraThink持續迭代優化agnetZ`) — 兩 agent 平行跑：cycle 1 把 2026 業界三大缺口補上（合規 / 框架 / OTel），cycle 2 把新詞反向 cross-link 進章節原生 context。約 17 commit 連推 origin/main，每 commit 都 GitHub Actions auto-deploy 到 Pages。
 
-### 名詞表 加 7 個 2026 新詞
+### Cycle 1 — 名詞表 + 章節 §補強 + Compliance 速查卡 (iter 21-31)
+
+**名詞表 加 7 個 2026 新詞**
 - **glossary/agent §5「Multi-Agent Verification / 安全」** — ICE (Iterative Consensus Ensemble) / Consensus Trap (arXiv 2604.17139) / Slopsquatting (Stanford 2026 三大新攻面之一)
 - **glossary/production §10「合規 / 國際標準」** — ISO/IEC 42001:2023 / NIST AI RMF + GenAI Profile (NIST-AI-600-1) / EU AI Act 2026-08-02 / OpenTelemetry GenAI Semantic Conventions
 - 60+ → **70+ 詞** 標記全站同步
 
-### 章節內容補強
+**章節內容補強**
 - **Ch 8 §5.1** — 2026-05 多 vendor token 單價對照表 (8 model: DeepSeek V3 / Gemini Flash / Haiku 4.5 / Sonnet 4.6 / GPT-4o / Opus 4.7 …) + 快速估算公式 + 省錢三招
 - **Ch 11 §4a** — 2026-05 採用度快照: LangGraph / CrewAI 45.9k★ / AutoGen v0.4 / OpenAI Agents SDK / Smolagents / Pydantic AI + **A2A 協議介紹** (Google + 150+ orgs)
 - **Ch 15 §5a** — OpenTelemetry GenAI 業界標準 observability: 標準 span/metric 表 + OpenLLMetry Python SDK 5 分鐘上手範例
 
-### 速查卡新 7th page · Compliance
+**速查卡新 7th page · Compliance**
 - **`/cheatsheet/compliance`** — ISO 42001 / NIST AI RMF / EU AI Act / OpenTelemetry GenAI 4 大標準速查 + 何時該做哪個決策樹 + 罰款 + 時程
 - 從速查卡「6 個分頁」→「**7 個分頁**」全站 sync (cheatsheet/all include + index hero + quickwin + roadmap + about + 404 + llms.txt + VitePress navbar/sidebar)
 
-### Iter 21-30 commits
+### Cycle 2 — 新詞反向 cross-link 進章節 (iter 27-33 平行)
 
+把名詞表新詞跟既有舊詞下放到原生章節 context，讀者翻章節就遇得到、不用 jump 名詞表：
+
+- **Ch 14 §8c** — 2026 multi-agent 新興安全議題（ICE / Consensus Trap / Slopsquatting 在 Ch 14 multi-agent 場景下的影響 + 防禦）
+- **Ch 15 §5b** — 合規對照（ISO 42001 / NIST RMF / EU AI Act → V3 四 pillar 映射 + 風險分級 + incident reporting）
+- **Ch 6 §5a** — MCP Scope（user/project/local 3 層作用範圍 + 敏感 token 安全準則）
+- **Ch 9 §4a** — Computer Use（Anthropic 特殊 tool-use 模式 + sandbox 安全）
+- **Ch 5 §6a** — Headless Agent（`claude -p` cron / CI / shell pipe 用法 + 不問 permission 的安全提醒）
+
+### 全部 commits
+
+**Cycle 1**:
 | iter | commit | 主題 |
 |---|---|---|
 | 21 | [4f09afd](https://github.com/symbiosis11503/agent-z/commit/4f09afd) | glossary/production 加合規 4 詞 |
@@ -31,7 +44,19 @@ All notable changes to AgentZ.
 | 27 | [e6ce812](https://github.com/symbiosis11503/agent-z/commit/e6ce812) | ch15 §5a OpenTelemetry GenAI |
 | 28 | [cfa3a7b](https://github.com/symbiosis11503/agent-z/commit/cfa3a7b) | 速查卡 7th page · Compliance 新建 |
 | 29 | [2f5eda6](https://github.com/symbiosis11503/agent-z/commit/2f5eda6) | 全站「6 → 7 個分頁」sync |
-| 30 | [7126bc7](https://github.com/symbiosis11503/agent-z/commit/7126bc7) | whatsnew v1.6 entry |
+| 30 | [7126bc7](https://github.com/symbiosis11503/agent-z/commit/7126bc7) | whatsnew v1.6 entry (cycle 1) |
+| 31 | [ac4ebb5](https://github.com/symbiosis11503/agent-z/commit/ac4ebb5) | CHANGELOG v1.6 entry |
+
+**Cycle 2** (平行 agent):
+| iter | commit | 主題 |
+|---|---|---|
+| 27 (cycle 2) | [d2db5e5](https://github.com/symbiosis11503/agent-z/commit/d2db5e5) | 60+ → 70+ 名詞表 truth-sync (4 files) |
+| 28 (cycle 2) | [f824b37](https://github.com/symbiosis11503/agent-z/commit/f824b37) | ch14 §8c multi-agent 新興安全 |
+| 29 (cycle 2) | [57a9e08](https://github.com/symbiosis11503/agent-z/commit/57a9e08) | ch15 §5b 合規對照 → V3 四 pillar 映射 |
+| 30 (cycle 2) | [0a3c732](https://github.com/symbiosis11503/agent-z/commit/0a3c732) | ch06 §5a MCP Scope |
+| 31 (cycle 2) | [d3d58a1](https://github.com/symbiosis11503/agent-z/commit/d3d58a1) | ch09 §4a Computer Use |
+| 32 | [87d8da6](https://github.com/symbiosis11503/agent-z/commit/87d8da6) | ch05 §6a Headless Agent |
+| 33 | [a6651e4](https://github.com/symbiosis11503/agent-z/commit/a6651e4) | whatsnew v1.6 cycle 2 |
 
 ---
 
