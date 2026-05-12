@@ -93,13 +93,14 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 - 📋 [**速查卡 (7 個分頁)**](./cheatsheet) — CLI / SDK / Pricing / Patterns / MCP / Governance / Compliance，每頁 A4 可印
 - 🛠 [**故障排除**](./troubleshooting) — 12 大類常見錯誤 + 症狀 + 解法
 
-## 規模 (v1.x, 2026-05)
+## 規模 (v1.6, 2026-05)
 
 ```
 20 章 / 6,700+ 行繁中 / 60+ 動手練習
 10 starter-code dirs (ch06-15) — 全部跑得起來
 18/20 章有「常見地雷」section
-5 個額外資源頁 (quickwin / roadmap / llm-providers / faq / capstone)
+70+ 名詞表 (5 分類) / 7 個 A4 速查卡 (含合規 ISO/NIST/EU AI Act)
+2026 議題：A2A 協議 / OTel GenAI / ICE / Consensus Trap / Slopsquatting
 全章 SEO sitemap / editLink / 在 GitHub 編輯本頁
 MIT 授權，章節 + code 都可商用
 ```
