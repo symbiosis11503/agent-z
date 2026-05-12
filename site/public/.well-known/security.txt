@@ -1,0 +1,9 @@
+Contact: mailto:symbiosis11503@gmail.com
+Expires: 2027-05-13T00:00:00.000Z
+Preferred-Languages: zh-TW, en
+Canonical: https://symbiosis11503.github.io/agent-z/.well-known/security.txt
+Policy: https://github.com/symbiosis11503/agent-z/blob/main/SECURITY.md
+
+# AgentZ 是 AI Agent 教學內容專案（非生產服務）。
+# 若你在「教程內容」或「starter code 範例」中發現安全議題（資訊洩漏 / 不安全範例 / 連結到惡意網站等），
+# 請依此聯絡資訊回報。我們會在 5 個工作天內回覆。

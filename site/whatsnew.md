@@ -13,9 +13,9 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 
 ---
 
-## 2026-05-13 — v1.7 cycle 1 社群與分享化
+## 2026-05-13 — v1.7 cycle 1 社群與分享化 ✅ sealed (12 iter)
 
-第一波「讓人引用、加好友、分享 link」基建。重點不是補章節，是讓 AgentZ 從「自閉好內容」升級成「真的能 spread 的開源教程」。
+第一波「讓人引用、加好友、分享 link」基建。重點不是補章節，是讓 AgentZ 從「自閉好內容」升級成「真的能 spread 的開源教程」。**iter 39-50 共 12 commits**, 12 hr 內推完 + GH Pages auto-deploy。
 
 ### 引用 / 學術可用化
 
@@ -38,6 +38,15 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 
 - **[manifest.json](https://symbiosis11503.github.io/agent-z/manifest.json)** — Chrome / Edge / iOS Safari 可「Add to Home Screen」把 AgentZ 變 standalone web app
 - Apple meta 4 條 (mobile-web-app-capable / status-bar-style / title `AgentZ` / theme-color #5b21b6)
+
+### 後續 iter (45-50) — 全站 truth-sync + 社群正式化
+
+- **CHANGELOG.md v1.7 entry** (iter 45) — 結構化 4 段 + 6 commit table + NOT-in-cycle 列表
+- **llms.txt v1.7 sync** (iter 46) — top blurb + 加 /cite + CoC 入口 + 行數 6,500→6,700
+- **README.md v1.7 entry** (iter 47) — 6 iter 摘要 + toolbox 加 cite
+- **GitHub Issue/PR templates** (iter 48) — bug + content_request + config.yml 路由 4 個外部連結 + PR template
+- **FAQ 加「安裝/分享」章** (iter 49) — 3 新題 (cite / PWA Add to Home Screen iOS+Android+desktop / og:image link preview) + 22→30 題 6→7 類
+- **SECURITY.md + security.txt** (iter 50) — `.well-known/security.txt` + 「哪些算/不算 security」邊界
 
 ### 不一樣的精神
 
