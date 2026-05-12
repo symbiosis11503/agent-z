@@ -1,6 +1,6 @@
 ---
 title: 名詞表 — 全本一頁 (Ctrl-F 搜尋用)
-description: AgentZ 60+ 名詞 4 欄完整解釋全本合一頁，給想 Ctrl-F 一次找完所有詞的人。瀏覽用分頁版（左 sidebar）。
+description: AgentZ 70+ 名詞 4 欄完整解釋全本合一頁，給想 Ctrl-F 一次找完所有詞的人。瀏覽用分頁版（左 sidebar）。
 ---
 
 # 名詞表 · 全本一頁
