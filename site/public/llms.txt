@@ -1,6 +1,6 @@
 # AgentZ — 繁中 AI Agent 學習系統
 
-> 從零基礎到 AI Agent 構建者的繁體中文 first-class、vendor-neutral、Claude Code 生態深入的漸進式學習教材。20 章 / 6,500+ 行 / 10 個 starter-code dirs / 60+ 動手練習，MIT 授權。
+> 從零基礎到 AI Agent 構建者的繁體中文 first-class、vendor-neutral、Claude Code 生態深入的漸進式學習教材。20 章 / 6,700+ 行 / 10 個 starter-code dirs / 60+ 動手練習，MIT 授權。v1.7 加：學術引用 (/cite) / Code of Conduct / og:image link preview / PWA installable。
 
 AgentZ 解決中文圈兩大空缺：(1) 沒有繁中 first 的 curriculum (簡中圈有 hello-agents 47K⭐，繁中只有學習地圖)；(2) 多數教程綁特定 vendor (Azure / HF)。AgentZ 是繁中 first-class curriculum + Claude / OpenAI / Gemini / Groq / OpenRouter / DeepSeek vendor-neutral + Claude Code 生態系 (MCP / Skills / Plugins) 當一級題材深入。
 
@@ -72,10 +72,12 @@ AgentZ 解決中文圈兩大空缺：(1) 沒有繁中 first 的 curriculum (簡�
   - [Production](https://symbiosis11503.github.io/agent-z/glossary/production) — Budget Cap / Intervention / Audit / Replay / Guardrails / SFT / GRPO / Agentic-RL / **ISO 42001 / NIST AI RMF / EU AI Act / OpenTelemetry GenAI**
   - [台灣 AI / pair 對比](https://symbiosis11503.github.io/agent-z/glossary/taiwan-misc) — TAIDE / Sovereign AI / Local Inference / 7 對 pair / ai-dict / Anthropic Glossary
   - [全本一頁 Ctrl-F 搜尋](https://symbiosis11503.github.io/agent-z/glossary/all) — 5 分類合成版
-- [關於 AgentZ](https://symbiosis11503.github.io/agent-z/about): 6 個差異化定位（含 v1.6 2026 業界對齊）+ 課程結構 + 維護者
-- [What's New / 更新紀錄](https://symbiosis11503.github.io/agent-z/whatsnew): 版本變動 high-signal 摘要 (v1.0 / v1.1 / v1.2)
+- [關於 AgentZ](https://symbiosis11503.github.io/agent-z/about): 6 個差異化定位（含 v1.6 2026 業界對齊）+ 課程結構 + 維護者 + 社群場合對照表
+- [What's New / 更新紀錄](https://symbiosis11503.github.io/agent-z/whatsnew): 版本變動 high-signal 摘要 (v1.0–v1.7 全收錄)
+- [引用 AgentZ](https://symbiosis11503.github.io/agent-z/cite): BibTeX / APA / Chicago / CITATION.cff / Markdown 5 格式引用範本 — paper / blog / talk 都用得到
 - [跟其他教程比較](https://symbiosis11503.github.io/agent-z/compare): AgentZ vs hello-agents / MS for Beginners / HF agents-course / OpenAI Cookbook 14 維度對照 + 路徑建議
 - [CONTRIBUTING](https://github.com/symbiosis11503/agent-z/blob/main/CONTRIBUTING.md): 5 條投稿路徑 + Style guide
+- [CODE_OF_CONDUCT](https://github.com/symbiosis11503/agent-z/blob/main/CODE_OF_CONDUCT.md): Covenant 2.1 改寫繁中版 — 24h 通報窗口 + 5 級處理
 
 ## Starter code (10 dirs, GitHub)
 
