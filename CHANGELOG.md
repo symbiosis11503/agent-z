@@ -2,6 +2,51 @@
 
 All notable changes to AgentZ.
 
+## v1.7 — 2026-05-12-13 (Ralph loop cycle 1: 讓人帶走它)
+
+> 第四輪 ralph-loop. 主軸不是補章節，是讓 AgentZ 從「自閉好內容」→「真能 spread 的開源教程」。v1.6 = 內容變強；v1.7 cycle 1 = **外帶 surface**. 6 commits push origin/main, GH Pages auto-deploy.
+
+### Cycle 1 — 引用 / 社群 / 分享 / 安裝 (iter 39-44)
+
+**引用化（學術可用）**
+- **`/cite`** — BibTeX / APA 7th / Chicago 17th / CITATION.cff / Markdown 5 格式 — researcher / 教材作者 / blog 一鍵 copy
+- CC-BY-4.0 內容 + MIT code 授權明白標註，避免引用時不確定
+- 提示用 Wayback Machine 防 link rot
+
+**社群正式邊界**
+- **CODE_OF_CONDUCT.md** — 改寫 Contributor Covenant 2.1，繁中口語化，24h 通報窗口 + 5 級處理 + 範圍說明
+- **about.md「社群」章節** — 6 行對照表（bug / Discussion / PR / Capstone / cite / CoC）每場合一個入口不混
+- **全站 nav 加 💬 Discussions + Issues** 兩個外部入口
+
+**分享 / Link preview 化**
+- **og-image.png** 1200×630 — Twitter / FB / LinkedIn / Slack / Discord 貼 AgentZ URL 終於有正式 link preview
+- 4 chip 標：20 章 / Vendor-neutral / Claude Code 一級 / v1.6 · 2026
+- VitePress `transformPageData` per-page meta inject — 每頁 og:title / og:description / og:url / twitter:image 都自動帶當前頁面
+
+**PWA installable**
+- **manifest.json** — Chrome / Edge / iOS Safari 可「Add to Home Screen」標準 PWA
+- Apple meta 4 條 (mobile-web-app-capable / status-bar-style / title `AgentZ` / theme-color #5b21b6)
+
+### commits
+
+| iter | commit | 主題 |
+|---|---|---|
+| 39 | [eda7975](https://github.com/symbiosis11503/agent-z/commit/eda7975) | `/cite` page (BibTeX/APA/Chicago/CITATION.cff) |
+| 40 | [2579fc3](https://github.com/symbiosis11503/agent-z/commit/2579fc3) | CODE_OF_CONDUCT.md + nav Discussions/Issues + about.md 社群對照表 |
+| 41 | [c21d110](https://github.com/symbiosis11503/agent-z/commit/c21d110) | og-image 1200×630 PNG (sips SVG→PNG) + per-page meta inject |
+| 42 | [95dcc4e](https://github.com/symbiosis11503/agent-z/commit/95dcc4e) | PWA manifest.json + Apple meta |
+| 43 | [0a505af](https://github.com/symbiosis11503/agent-z/commit/0a505af) | whatsnew v1.7 cycle 1 entry |
+| 44 | [fc336c5](https://github.com/symbiosis11503/agent-z/commit/fc336c5) | index.md 規模 v1.6→v1.7 cycle 1 + 一頁看完加 /cite |
+
+### NOT in v1.7 cycle 1
+
+- 沒做 service worker / offline mode
+- 沒做 i18n (EN / 簡中) — 留 v1.8+
+- 沒做 self-check quiz per chapter — 留 cycle 2
+- 沒做 skill tree visualization — 留 cycle 2
+
+---
+
 ## v1.6 — 2026-05 (Ralph loop 雙 cycle: 合規 + 框架校準 + 標準觀測性 + 章節 cross-link)
 
 > 第三輪 ralph-loop (`UltraThink持續迭代優化agnetZ`) — 兩 agent 平行跑：cycle 1 把 2026 業界三大缺口補上（合規 / 框架 / OTel），cycle 2 把新詞反向 cross-link 進章節原生 context。約 17 commit 連推 origin/main，每 commit 都 GitHub Actions auto-deploy 到 Pages。
