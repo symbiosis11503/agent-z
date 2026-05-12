@@ -204,4 +204,4 @@ AgentZ 持續迭代中（v1.x），每週可能會：
 - 想先試試味道 → [5 分鐘 Quick Win](./quickwin)
 - 已會 Python → [Ch 0 把工具裝好](./chapters/ch00_setup/)
 - 已會 Claude Code → [Ch 9 Function calling](./chapters/ch09_function_calling/)
-- 已走完一輪、找速查 → [速查卡 Cheatsheet (6 個分頁)](./cheatsheet) — 每頁 A4 可單獨印
+- 已走完一輪、找速查 → [速查卡 Cheatsheet (7 個分頁)](./cheatsheet) — 每頁 A4 可單獨印

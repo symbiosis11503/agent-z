@@ -33,7 +33,7 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 - 10 個 starter-code dirs（Ch 6/7/8/9/10/11/12/13/14/15）— 全部可跑
 - 18/20 章「常見地雷」結構化 section
 - 5 個額外資源頁：[Quick Win](./quickwin) / [Roadmap](./roadmap) / [LLM / API (3 分頁)](./llm-providers) / [FAQ](./faq) / [Capstone Gallery](./capstone)
-- 完整 [Progress 追蹤](./progress)、[70+ 名詞表 (5 分類)](./glossary)、[速查卡 (6 個分頁)](./cheatsheet) — 全部 A4 可印
+- 完整 [Progress 追蹤](./progress)、[70+ 名詞表 (5 分類)](./glossary)、[速查卡 (7 個分頁)](./cheatsheet) — 全部 A4 可印
 - VitePress sitemap + editLink + SEO meta + `llms.txt`（AI agent 抓站友好）
 
 ## 關於 Symbiosis (SBS)

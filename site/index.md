@@ -57,8 +57,8 @@ features:
     title: 70+ 名詞表 5 分類
     details: <a href="/agent-z/glossary">基礎 / Agent / 實務 / Production / 台灣&pair</a> 五分類頁，每詞 4 欄（專業 / 白話 / 範例 / 章節）。含 vibe coding、SDD、TDD、AFK、Computer Use、Subagent、MCP Scope。
   - icon: 📋
-    title: 速查卡 6 個分頁 A4 可印
-    details: <a href="/agent-z/cheatsheet">CLI / SDK / Pricing / Patterns / MCP / Governance</a> 六焦點分頁，每頁 A4 可單獨印，要全本翻 <a href="/agent-z/cheatsheet/all">all-in-one</a>。學完忘了哪個指令翻這裡。
+    title: 速查卡 7 個分頁 A4 可印
+    details: <a href="/agent-z/cheatsheet">CLI / SDK / Pricing / Patterns / MCP / Governance / Compliance</a> 七焦點分頁，每頁 A4 可單獨印，要全本翻 <a href="/agent-z/cheatsheet/all">all-in-one</a>。學完忘了哪個指令翻這裡。
 ---
 
 ## 為什麼又一本？
@@ -90,7 +90,7 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 - ❓ [**FAQ**](./faq) — 22 題 6 大類常見問題
 - ✅ [**學習進度檢核**](./progress) — milestone evidence + portfolio repo 模板
 - 🏆 [**Capstone Gallery**](./capstone) — 學員作品集 + 投稿入口
-- 📋 [**速查卡 (6 個分頁)**](./cheatsheet) — CLI / SDK / Pricing / Patterns / MCP / Governance，每頁 A4 可印
+- 📋 [**速查卡 (7 個分頁)**](./cheatsheet) — CLI / SDK / Pricing / Patterns / MCP / Governance / Compliance，每頁 A4 可印
 - 🛠 [**故障排除**](./troubleshooting) — 12 大類常見錯誤 + 症狀 + 解法
 
 ## 規模 (v1.x, 2026-05)
