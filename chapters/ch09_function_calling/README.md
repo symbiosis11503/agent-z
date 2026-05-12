@@ -221,6 +221,39 @@ results = await asyncio.gather(*[
 
 ---
 
+## 4a. Computer Use — Anthropic 的特殊 tool use 模式
+
+`computer use` 是 Anthropic 在 2024 Q4 推的特殊 tool-use type。**API 結構長一樣，差別在「工具」不是你寫的 function，而是 Anthropic 內建的虛擬桌面操作**——LLM 可以 screenshot、click、type、scroll，把整台電腦當 tool。
+
+```python
+# 跟一般 tool_use 同一個 API，只是 tools 用 type: computer_20241022
+response = client.beta.messages.create(
+    model="claude-sonnet-4-6",  # 或 claude-opus-4-7
+    max_tokens=4096,
+    tools=[{
+        "type": "computer_20241022",
+        "name": "computer",
+        "display_width_px": 1920,
+        "display_height_px": 1080,
+        "display_number": 1,
+    }],
+    messages=[{"role": "user", "content": "幫我打開瀏覽器找天氣"}],
+    betas=["computer-use-2024-10-22"],
+)
+```
+
+回應裡 `tool_use` 的 `input` 會是 `{"action": "screenshot"}` 或 `{"action": "left_click", "coordinate": [x, y]}` 等，**你的執行端要實作這些 action**（通常用 Docker container 跑 VNC + xdotool）。
+
+| 何時用 | 何時不用 |
+|---|---|
+| 沒 API / 沒 MCP / 沒 CLI 的舊系統（古老 GUI 應用） | 已有 API / MCP / CLI（永遠優先 structured tool） |
+| 跨應用程式自動化（一邊 Excel 一邊瀏覽器） | 速度敏感（screenshot 很慢，per-step 1-3 秒） |
+| Workflow 教學 / demo | 高頻交易 / production critical path |
+
+> ⚠️ **危險程度高**：LLM 看 screenshot 點滑鼠、可能誤點 `刪除` `提交` `付款`。**永遠跑在 sandbox container**（Docker / VM），絕不在 host machine 直接給 root 權限。Anthropic 官方 sample 用 Docker。詳細白話：[名詞表 § Computer Use](https://symbiosis11503.github.io/agent-z/glossary/agent)。
+
+---
+
 ## 5. Error Recovery
 
 工具會失敗：API 502、檔案不存在、權限被拒。怎麼讓 LLM 處理？
