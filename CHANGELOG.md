@@ -58,6 +58,31 @@ All notable changes to AgentZ.
 | 32 | [87d8da6](https://github.com/symbiosis11503/agent-z/commit/87d8da6) | ch05 §6a Headless Agent |
 | 33 | [a6651e4](https://github.com/symbiosis11503/agent-z/commit/a6651e4) | whatsnew v1.6 cycle 2 |
 
+### v1.6 收尾 polish (iter 34-49)
+
+兩 cycle 完工後 16 次 polish 把零散 truth-sync 收乾淨：
+
+| iter | commit | 主題 |
+|---|---|---|
+| 34 | [b11e669](https://github.com/symbiosis11503/agent-z/commit/b11e669) | CHANGELOG v1.6 entry 擴充 cycle 2 |
+| 35 | [bc7f98b](https://github.com/symbiosis11503/agent-z/commit/bc7f98b) | README.md Status v1.3-1.6 完整化 + 70+ 名詞 + 7 個分頁 |
+| 36 | [188b697](https://github.com/symbiosis11503/agent-z/commit/188b697) | INDEX.md Phase 7 + 額外頁列表 |
+| 37 | [0e03087](https://github.com/symbiosis11503/agent-z/commit/0e03087) | Gemini 2.0 Flash → 2.5 Flash (4 files) |
+| 38 | [9289da9](https://github.com/symbiosis11503/agent-z/commit/9289da9) | compliance 速查卡 cross-link 到 cycle 2 (ch14 §8c / ch15 §5b) |
+| 39 | [ae82098](https://github.com/symbiosis11503/agent-z/commit/ae82098) | chapters landing 7 章「核心」加 v1.6 標記 |
+| 40 | [cdc8267](https://github.com/symbiosis11503/agent-z/commit/cdc8267) | glossary 7 新詞「章節」連結升級到具體 §5a/§5b/§8c |
+| 41 | [2669f97](https://github.com/symbiosis11503/agent-z/commit/2669f97) | ch16 §4 加 ICE 進階 anti-hallucination |
+| 42 | [6d70c07](https://github.com/symbiosis11503/agent-z/commit/6d70c07) | whatsnew v1.6 收尾 polish 段 |
+| 43 | [aad3e30](https://github.com/symbiosis11503/agent-z/commit/aad3e30) | 首頁 規模 段 truth-sync v1.6 |
+| 44 | [a55078c](https://github.com/symbiosis11503/agent-z/commit/a55078c) | about 加第 6 條差異化定位「2026 業界對齊」 |
+| 45 | [8429f07](https://github.com/symbiosis11503/agent-z/commit/8429f07) | compare 14 → 16 維度 + 2 行新維度 |
+| 46 | [86c2e89](https://github.com/symbiosis11503/agent-z/commit/86c2e89) | FAQ 加 2 條 v1.6 Q&A |
+| 47 | [e24f6c8](https://github.com/symbiosis11503/agent-z/commit/e24f6c8) | llms.txt truth-sync v1.6 (4 條 stale) |
+| 48 | [7222a69](https://github.com/symbiosis11503/agent-z/commit/7222a69) | 7 章「卡關時看這裡」footer 60+ → 70+ |
+| 49 | [01dc69b](https://github.com/symbiosis11503/agent-z/commit/01dc69b) | glossary index 加 🆕 v1.6 新詞 tip 框 |
+
+**v1.6 總計**：~33 commit 連推（cycle 1 + cycle 2 + 收尾），每 commit 都 GitHub Actions auto-deploy 到 Pages。Ralph loop max-iter 50 自然 cap @ iter 50。
+
 ---
 
 ## v1.2 — 2026-05-12 (Ralph loop polish wave ✅ sealed @ iter 50/50)
