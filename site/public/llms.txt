@@ -65,14 +65,14 @@ AgentZ 解決中文圈兩大空缺：(1) 沒有繁中 first 的 curriculum (簡�
   - [Compliance](https://symbiosis11503.github.io/agent-z/cheatsheet/compliance) — ISO 42001 / NIST AI RMF / EU AI Act 2026-08-02 / OpenTelemetry GenAI
   - [全本一頁 A4 印](https://symbiosis11503.github.io/agent-z/cheatsheet/all) — 7 分頁合成版（VitePress include 自動同步）
 - [故障排除](https://symbiosis11503.github.io/agent-z/troubleshooting): 12 大類常見錯誤 + 症狀 + 解法
-- [名詞表 60+ — 5 個分類總覽](https://symbiosis11503.github.io/agent-z/glossary): 基礎 · Agent 機制 · 實務 · Production · 台灣&pair — 每詞 4 欄完整解釋
+- [名詞表 70+ — 5 個分類總覽](https://symbiosis11503.github.io/agent-z/glossary): 基礎 · Agent 機制 · 實務 · Production · 台灣&pair — 每詞 4 欄完整解釋
   - [基礎 (LLM/Prompt)](https://symbiosis11503.github.io/agent-z/glossary/foundation) — LLM / Token / Context / Role / Temperature / Embedding / Fine-tuning / Hallucination / Prompt / CoT / Prompt Cache
-  - [Agent 機制 + CLI / Claude Code](https://symbiosis11503.github.io/agent-z/glossary/agent) — Agent / Tool Use / ReAct / stop_reason / Computer Use / Subagent / Deep Research / MCP / Skill / Plugin / Agent SDK / MCP Scope
+  - [Agent 機制 + CLI / Claude Code](https://symbiosis11503.github.io/agent-z/glossary/agent) — Agent / Tool Use / ReAct / stop_reason / Computer Use / Subagent / Deep Research / Headless Agent / MCP / Skill / Plugin / Agent SDK / MCP Scope / **ICE / Consensus Trap / Slopsquatting**
   - [實務 (Memory/RAG)](https://symbiosis11503.github.io/agent-z/glossary/practice) — Vibe Coding / AI Pair / SDD / TDD / AFK / Memory / RAG / Multi-agent / Supervisor / Handoff
-  - [Production](https://symbiosis11503.github.io/agent-z/glossary/production) — Budget Cap / Intervention / Audit / Replay / Guardrails / SFT / GRPO / Agentic-RL
+  - [Production](https://symbiosis11503.github.io/agent-z/glossary/production) — Budget Cap / Intervention / Audit / Replay / Guardrails / SFT / GRPO / Agentic-RL / **ISO 42001 / NIST AI RMF / EU AI Act / OpenTelemetry GenAI**
   - [台灣 AI / pair 對比](https://symbiosis11503.github.io/agent-z/glossary/taiwan-misc) — TAIDE / Sovereign AI / Local Inference / 7 對 pair / ai-dict / Anthropic Glossary
   - [全本一頁 Ctrl-F 搜尋](https://symbiosis11503.github.io/agent-z/glossary/all) — 5 分類合成版
-- [關於 AgentZ](https://symbiosis11503.github.io/agent-z/about): 5 個差異化定位 + 課程結構 + 維護者
+- [關於 AgentZ](https://symbiosis11503.github.io/agent-z/about): 6 個差異化定位（含 v1.6 2026 業界對齊）+ 課程結構 + 維護者
 - [What's New / 更新紀錄](https://symbiosis11503.github.io/agent-z/whatsnew): 版本變動 high-signal 摘要 (v1.0 / v1.1 / v1.2)
 - [跟其他教程比較](https://symbiosis11503.github.io/agent-z/compare): AgentZ vs hello-agents / MS for Beginners / HF agents-course / OpenAI Cookbook 14 維度對照 + 路徑建議
 - [CONTRIBUTING](https://github.com/symbiosis11503/agent-z/blob/main/CONTRIBUTING.md): 5 條投稿路徑 + Style guide
