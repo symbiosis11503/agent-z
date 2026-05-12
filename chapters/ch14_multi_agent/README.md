@@ -247,6 +247,20 @@ Supervisor 架構（§2.2）最關鍵是 router prompt。試這個：
   defaultSystem="你是 supervisor，看任務 + 目前狀態，決定派給哪個 worker 或結束。回 JSON 格式 {next_action: 'research'|'write'|'review'|'done', instruction: '...', final_answer?: '...'}。當前已有 workers: research / write / review。回應只能是 JSON，不要寫其他字。"
   defaultPrompt="任務：寫一篇 200 字「2026 年 5 月 AI Agent 框架比較」短文。目前狀態：尚未開始。下一步派誰？" />
 
+## 8c. 2026 multi-agent 新興安全議題
+
+學界跟業界 2025 H2-2026 開始系統化關注的三個 multi-agent 特有風險。Ch 14 設計時你要知道有這些，[Ch 15 deploy + audit](../ch15_deploy_audit_replay/) 會回到怎麼防。
+
+| 風險 | 一句話 | 影響 Ch 14 哪段 | 怎麼防 |
+|---|---|---|---|
+| **ICE**（Inter-agent Communication Exploitation） | 攻擊者把 prompt injection 塞進 agent A 給 agent B 的 handoff 訊息 | §3 Handoff 機制 / §4 共享 memory | handoff payload schema 化 + 對外來 string 預設不信、走 verification subagent |
+| **Consensus Trap** | 多 agent 都同意一個錯誤答案（沒人扮演反方）→ 比單一 agent 還危險 | §2.2 Supervisor / §2.3 Blackboard | 強制設「批判 agent」角色、最終決策階段引入溫度高的 dissenter |
+| **Slopsquatting** | LLM 幻想出根本不存在的 package 名稱 → 攻擊者搶註後植入惡意 code | §2.1 Pipeline 的 code-gen worker | 每一個 install 前查 PyPI / npm 真實存在 + 對齊 lockfile |
+
+> 詳細白話 + 範例：[名詞表 § Agent 機制](https://symbiosis11503.github.io/agent-z/glossary/agent) → ICE / Consensus Trap / Slopsquatting 三條。
+
+---
+
 ## 9. 補充閱讀
 
 - [Anthropic — Multi-agent system design](https://www.anthropic.com/engineering/multi-agent-research-system)
@@ -255,6 +269,7 @@ Supervisor 架構（§2.2）最關鍵是 router prompt。試這個：
 - [MetaGPT paper](https://arxiv.org/abs/2308.00352)
 - `datawhalechina/hugging-multi-agent`（1.4K⭐）— MetaGPT 中文教程
 - ai-dict Handoffs 段
+- [Slopsquatting research（USENIX 2025）](https://arxiv.org/abs/2406.10279) — 16% of LLM-generated package names don't exist; 攻擊者搶註可植入惡意 code
 
 ---
 
