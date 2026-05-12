@@ -37,10 +37,10 @@ AgentZ 全本 20 章，4 個學習層。每章獨立、有 milestone evidence、
 | 章 | 標題 | 時長 | 核心 |
 |---|---|---|---|
 | [**Ch 4**](./chapters/ch04_cli_agents/) | CLI Agent 入門 | 75 min | Claude Code / Codex CLI / OpenCode 三家對照 |
-| [**Ch 5**](./chapters/ch05_cli_workflow/) | CLI Workflow | 90 min | CLAUDE.md / Slash command / Hook |
-| [**Ch 6**](./chapters/ch06_mcp/) | MCP (Model Context Protocol) | 90 min | FastMCP + Tools / Resources / Prompts |
+| [**Ch 5**](./chapters/ch05_cli_workflow/) | CLI Workflow | 90 min | CLAUDE.md / Slash command / Hook / Headless Agent |
+| [**Ch 6**](./chapters/ch06_mcp/) | MCP (Model Context Protocol) | 90 min | FastMCP + Tools / Resources / Prompts / MCP Scope |
 | [**Ch 7**](./chapters/ch07_skills_plugins/) | Skills / Plugins / Marketplace | 75 min | Skill vs MCP / Progressive Disclosure |
-| [**Ch 8**](./chapters/ch08_cost_observability/) | Cost 觀測 / 介入 | 60 min | Token 預算 / cost cap fail-closed |
+| [**Ch 8**](./chapters/ch08_cost_observability/) | Cost 觀測 / 介入 | 60 min | Token 預算 / cost cap fail-closed / 2026-05 多 vendor 單價 |
 
 ---
 
@@ -48,13 +48,13 @@ AgentZ 全本 20 章，4 個學習層。每章獨立、有 milestone evidence、
 
 | 章 | 標題 | 時長 | 核心 |
 |---|---|---|---|
-| [**Ch 9**](./chapters/ch09_function_calling/) | Function Calling / Tool Use 第一原理 | 90 min | tools schema / stop_reason 6 種 / parallel tool use |
+| [**Ch 9**](./chapters/ch09_function_calling/) | Function Calling / Tool Use 第一原理 | 90 min | tools schema / stop_reason 6 種 / parallel tool use / Computer Use |
 | [**Ch 10**](./chapters/ch10_react_paradigms/) | ReAct / Plan-and-Solve / Reflection | 90 min | 三大 agent 範式 + code |
-| [**Ch 11**](./chapters/ch11_frameworks/) | Agent 框架比較 | 75 min | vanilla / LangGraph / CrewAI / Smolagents / Pydantic AI |
+| [**Ch 11**](./chapters/ch11_frameworks/) | Agent 框架比較 | 75 min | vanilla / LangGraph / CrewAI / Smolagents / Pydantic AI / **A2A 協議** |
 | [**Ch 12**](./chapters/ch12_mini_framework/) | 從零造輪 Mini Agent Framework | 120 min | 200 行 Python 自己寫 harness |
 | [**Ch 13**](./chapters/ch13_memory_rag/) | Memory & RAG | 90 min | Session / 長期 / RAG / Chroma / pgvector |
-| [**Ch 14**](./chapters/ch14_multi_agent/) | Multi-Agent 系統 | 75 min | Subagent / Pipeline / Supervisor / Handoff |
-| [**Ch 15**](./chapters/ch15_deploy_audit_replay/) | Deploy + Audit + Replay + Cost Cap | 120 min | V3 case study — 4 道閘門 production agent |
+| [**Ch 14**](./chapters/ch14_multi_agent/) | Multi-Agent 系統 | 75 min | Subagent / Pipeline / Supervisor / Handoff / 2026 安全 (ICE / Consensus Trap / Slopsquatting) |
+| [**Ch 15**](./chapters/ch15_deploy_audit_replay/) | Deploy + Audit + Replay + Cost Cap | 120 min | V3 case study — 4 道閘門 / **OTel GenAI** / 合規 (ISO 42001 / NIST RMF / EU AI Act) |
 
 ---
 
