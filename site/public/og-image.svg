@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="halo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#14b8a6" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <circle cx="950" cy="315" r="280" fill="url(#halo)"/>
+  <circle cx="950" cy="315" r="180" fill="url(#brand)" opacity="0.4"/>
+  <circle cx="950" cy="315" r="100" fill="url(#brand)"/>
+  <text x="950" y="345" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system" font-size="90" font-weight="800" fill="white">Z</text>
+
+  <text x="80" y="180" font-family="ui-sans-serif, system-ui, -apple-system, 'PingFang TC'" font-size="88" font-weight="800" fill="white">AgentZ</text>
+  <text x="80" y="240" font-family="ui-sans-serif, system-ui, -apple-system, 'PingFang TC'" font-size="32" font-weight="500" fill="#94a3b8">繁體中文 AI Agent 工程師</text>
+  <text x="80" y="282" font-family="ui-sans-serif, system-ui, -apple-system, 'PingFang TC'" font-size="32" font-weight="500" fill="#94a3b8">學習地圖 · 零基礎到生產級</text>
+
+  <g transform="translate(80, 360)">
+    <rect x="0" y="0" width="120" height="36" rx="18" fill="#1e293b" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="60" y="24" text-anchor="middle" font-family="ui-sans-serif" font-size="16" fill="#a5b4fc" font-weight="600">20 章</text>
+
+    <rect x="135" y="0" width="160" height="36" rx="18" fill="#1e293b" stroke="#14b8a6" stroke-width="1.5"/>
+    <text x="215" y="24" text-anchor="middle" font-family="ui-sans-serif" font-size="16" fill="#5eead4" font-weight="600">Vendor-neutral</text>
+
+    <rect x="305" y="0" width="180" height="36" rx="18" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="395" y="24" text-anchor="middle" font-family="ui-sans-serif" font-size="16" fill="#fcd34d" font-weight="600">Claude Code 一級</text>
+
+    <rect x="495" y="0" width="140" height="36" rx="18" fill="#1e293b" stroke="#ec4899" stroke-width="1.5"/>
+    <text x="565" y="24" text-anchor="middle" font-family="ui-sans-serif" font-size="16" fill="#f9a8d4" font-weight="600">v1.6 · 2026</text>
+  </g>
+
+  <text x="80" y="540" font-family="ui-monospace, monospace" font-size="22" fill="#64748b">symbiosis11503.github.io/agent-z</text>
+  <text x="80" y="575" font-family="ui-sans-serif, system-ui, 'PingFang TC'" font-size="20" fill="#94a3b8">Operator / Builder / Researcher / Maker · 4 條路徑</text>
+</svg>

@@ -19,8 +19,12 @@ export default defineConfig({
   head: [
     ['meta', { name: 'theme-color', content: '#5b21b6' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:image', content: 'https://symbiosis11503.github.io/agent-z/logo.svg' }],
+    ['meta', { property: 'og:image', content: 'https://symbiosis11503.github.io/agent-z/og-image.png' }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    ['meta', { property: 'og:image:alt', content: 'AgentZ — 繁體中文 AI Agent 工程師學習地圖 v1.6' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:image', content: 'https://symbiosis11503.github.io/agent-z/og-image.png' }],
     ['meta', { name: 'keywords', content: 'AI Agent, Claude Code, MCP, AgentZ, 繁體中文, AI 學習, LLM, ReAct, RAG, multi-agent, agentic-RL, TAIDE' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/agent-z/logo.svg' }],
   ],
@@ -48,8 +52,10 @@ export default defineConfig({
       ['meta', { property: 'og:url', content: canonicalURL }],
       ['meta', { property: 'og:title', content: pageTitle }],
       ['meta', { property: 'og:description', content: pageDesc }],
+      ['meta', { property: 'og:image', content: base + 'og-image.png' }],
       ['meta', { name: 'twitter:title', content: pageTitle }],
       ['meta', { name: 'twitter:description', content: pageDesc }],
+      ['meta', { name: 'twitter:image', content: base + 'og-image.png' }],
     )
 
     // JSON-LD on home page: Course schema for SEO rich results / Knowledge Graph
