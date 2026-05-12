@@ -2,7 +2,7 @@
 
 老闆 directive 2026-05-11: 「專案：ai agent學習系統」+ 路線 C + AgentZ / learn.symbiosis.tw / monorepo / MIT / 隨時 public / 做 PDF / Web App + CSS + 互動式 / 做到成品先不用問
 
-## v1.x 狀態：持續迭代擴充 (2026-05-11)
+## v1.x 狀態：持續迭代擴充 (2026-05 v1.6 cycle)
 
 **Live**: https://symbiosis11503.github.io/agent-z/
 **Repo**: https://github.com/symbiosis11503/agent-z
@@ -16,6 +16,8 @@
 - ✅ Phase 3 v1 內容生產：20 章 / 5280 行 / 60+ 動手練習
 - ✅ Phase 4 v1 載體：VitePress 互動站 + GitHub Pages auto-deploy
 - ✅ Phase 5 v1.1 迭代：章節深度補完 + 新頁 + 治理 UX + starter-code 全 coverage
+- ✅ Phase 6 v1.2-1.5 ralph-loop polish: 速查卡 / 故障排除 / 三大長頁拆分 / SEO canonical / JSON-LD / 章節索引
+- ✅ Phase 7 v1.6 ralph-loop 雙 cycle (2026-05): 70+ 詞名詞表 + 合規對照 (ISO/NIST/EU) + 框架校準 (A2A 協議) + OTel GenAI + 速查卡 7 個分頁
 
 ## Truth boundary
 - AgentZ = 獨立專案，與 V3 / SBS / ERP / Helix 分開
@@ -61,8 +63,12 @@
 
 ## 額外頁
 - [x] `site/quickwin.md` — 5 分鐘 Quick Win 不裝 Python（iter 8）
-- [x] `site/llm-providers.md` — 11 家 LLM 申請 + 範例 + 費用（pre v1.1）
-- [x] `site/glossary.md` — 50+ 名詞 4 欄完整（rewrite pre v1.1）
+- [x] `site/llm-providers.md` — 11 家 LLM 申請 + 範例 + 費用 → 拆 3 分頁 (商業 / 開源聚合 / 本地主權)
+- [x] `site/glossary.md` — 70+ 名詞 4 欄完整 → 拆 5 分類 (基礎 / Agent / 實務 / Production / 台灣 pair)
+- [x] `site/cheatsheet.md` — 7 個分頁 (CLI / SDK / Pricing / Patterns / MCP / Governance / Compliance)
+- [x] `site/troubleshooting.md` — 12 大類故障排除
+- [x] `site/whatsnew.md` — v1.0~v1.6 改版重點
+- [x] `site/chapters.md` — 20 章索引 landing
 - [x] `CONTRIBUTING.md` — 社群投稿閘門（iter 7）
 
 ## NOT_YET_DONE
