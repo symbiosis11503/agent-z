@@ -219,7 +219,7 @@ Anthropic 報告 retrieval 召回率提升 35-49%。**成本**：每 chunk 多 1
 | **[mem0](https://github.com/mem0ai/mem0)** | Memory layer API | Vector + Graph | 53K★ | 簡潔 API、cloud / self-host 都行 |
 | **[Letta / MemGPT](https://github.com/letta-ai/letta)** | Full agent runtime（自帶 memory） | Vector | 22K★ | OS-style agent + archival memory + agent runtime 一體 |
 | **[agentmemory](https://github.com/rohitg00/agentmemory)** | Cross-agent MCP memory server | **BM25 + Vector + Graph (RRF fusion)** | 4.9K★（2026-02 起） | 16+ agent 共用一個 memory server (Claude Code / Cursor / Hermes / OpenClaw...)、Session Replay |
-| **Helix Memory (SBS-K)** | Project-aware persistent memory（本書 V3 case study 用） | PG JSONB + pgvector + FTS5 (CJK) | 自家 | 跟 V3 audit / replay / project boundary 整合 |
+| **Helix Memory** | Project-aware persistent memory（本書 V3 case study 用） | PG JSONB + pgvector + FTS5 (CJK) | 自家 | 跟 V3 audit / replay / project boundary 整合 |
 
 ### 怎麼選
 
