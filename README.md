@@ -73,11 +73,11 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 
 - 🚀 [5 分鐘 Quick Win](https://symbiosis11503.github.io/agent-z/quickwin) — 不用裝 Python、5 min 看 agent 真的在做事
 - 🔑 [LLM / API 申請指南](https://symbiosis11503.github.io/agent-z/llm-providers) — 11 家 LLM 申請流程 + curl/Python 範例 + 費用
-- 📋 [速查卡 Cheatsheet](https://symbiosis11503.github.io/agent-z/cheatsheet) — A4 可印單頁速查（CLI / SDK / pricing / ReAct / cost cap / MCP / Computer Use）
+- 📋 [速查卡 Cheatsheet (7 個分頁)](https://symbiosis11503.github.io/agent-z/cheatsheet) — A4 可印（CLI / SDK / Pricing / Patterns / MCP / Governance / **Compliance** ISO·NIST·EU AI Act·OTel）
 - 🛠 [故障排除](https://symbiosis11503.github.io/agent-z/troubleshooting) — 12 大類常見錯誤 + 症狀 + 解法
-- 📖 [60+ 名詞表](https://symbiosis11503.github.io/agent-z/glossary) — 繁中/English + 4 欄完整解釋（含 vibe coding / SDD / TDD / AFK 執行 / Computer Use / Subagent）
+- 📖 [70+ 名詞表 (5 分類)](https://symbiosis11503.github.io/agent-z/glossary) — 繁中/English + 4 欄（基礎/Agent/實務/Production/台灣 pair，含 ICE / Consensus Trap / Slopsquatting / ISO 42001 / NIST AI RMF / EU AI Act / OTel GenAI）
 - ✅ [進度檢核表](https://symbiosis11503.github.io/agent-z/progress) — localStorage 記你跑到哪
-- 📜 [更新紀錄 What's New](https://symbiosis11503.github.io/agent-z/whatsnew) — v1.0 / v1.1 / v1.2 改版重點
+- 📜 [更新紀錄 What's New](https://symbiosis11503.github.io/agent-z/whatsnew) — v1.0 / v1.1 / v1.2 / v1.3 / v1.4 / v1.5 / v1.6 改版重點
 - 📋 [CONTRIBUTING.md](./CONTRIBUTING.md) — 5 條投稿路徑
 
 ## Starter Code（跑得起來的真實 code，10 dirs）
@@ -144,6 +144,8 @@ Node 18+ 即可。沒 lint / test，但 PR 前請至少 `npm run build` 確認 b
 **v1 complete** (2026-05-11) — 20 章 / ~6,200 行繁中 / 60+ 動手練習 / 10 starter code dirs / 互動 Web App live + PDF release ✅
 **v1.1** (2026-05-11) — Ch 16/17/18 深度補完、starter code 全 coverage、5 分鐘 Quick Win + LLM API 指南 + glossary rewrite ✅
 **v1.2** (2026-05-12) — Ralph-loop polish wave (22 iter): 速查卡 / 故障排除 / What's New / 跟其他教程比較 / 自訂 404 + 名詞表 53→62 + nav 14→7 dropdown + A4/mobile responsive CSS + 11 章「🛟 卡關時看這裡」 footer + per-page SEO ✅
+**v1.3-1.5** (2026-05-12) — 三大長頁拆分（glossary 5 分類 / cheatsheet 6 分頁 / llm-providers 3 分頁）+ SEO canonical 51 頁 + JSON-LD Course + BreadcrumbList + 20 章 frontmatter + /chapters landing ✅
+**v1.6** (2026-05) — Ralph-loop 第三輪雙 cycle (~17 iter): **70+ 名詞** (+ICE / Consensus Trap / Slopsquatting / ISO 42001 / NIST AI RMF / EU AI Act / OTel GenAI) + ch08 vendor 單價表 + ch11 A2A 協議 + ch15 OpenTelemetry GenAI + **速查卡 7th page · Compliance** + ch5/6/9/14/15 章節 cross-link ✅
 **v2 規劃中** — 章節內動手練習串 Helix V3 sandbox 真跑 + portfolio leaderboard
 
 請查 [CHANGELOG.md](./CHANGELOG.md)。
