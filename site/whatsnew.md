@@ -1,6 +1,6 @@
 ---
 title: What's New — AgentZ 更新紀錄
-description: AgentZ 版本變動 high-signal 摘要：v1.0 initial / v1.1 章節深度補完 / v1.2 ralph-loop polish / v1.3 三大長頁拆分 / v1.4 SEO canonical + 哲學金句 / v1.5 結構化資料 + 章節索引 + 20 章 frontmatter。
+description: AgentZ 版本變動 high-signal 摘要：v1.0 initial / v1.1 章節深度補完 / v1.2 ralph-loop polish / v1.3 三大長頁拆分 / v1.4 SEO canonical / v1.5 結構化資料 / v1.6 合規 + 框架 + 標準觀測性。
 ---
 
 # What's New — 更新紀錄
@@ -10,6 +10,39 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 > **Watch the repo** 不定時 polish — [GitHub Watch](https://github.com/symbiosis11503/agent-z) → Releases-only 抓重大改版。
 
 [[toc]]
+
+---
+
+## 2026-05 — v1.6 合規 + 框架校準 + 標準觀測性
+
+把 2026 業界三大缺口補上：**合規標準**（ISO / NIST / EU AI Act）、**框架地位變動**（A2A 協議 / LangGraph production standard / CrewAI 45.9k★）、**OpenTelemetry GenAI**（替代各家自家 dashboard）。
+
+### 名詞表加 7 個 2026 新詞
+
+- **[名詞表 · Agent](./glossary/agent)** §5「Multi-Agent Verification / 安全」加 **ICE (Iterative Consensus Ensemble) / Consensus Trap (arXiv 2604.17139) / Slopsquatting (Stanford 2026 三大新攻面之一)**
+- **[名詞表 · Production](./glossary/production)** §10「合規 / 國際標準」加 **ISO/IEC 42001:2023 / NIST AI RMF + GenAI Profile / EU AI Act 2026-08-02 / OpenTelemetry GenAI Semantic Conventions**
+- 60+ → **70+ 詞** 標記同步到 [glossary index](./glossary) / [index hero](/) / [about](./about)
+
+### 章節內容補強
+
+- **[Ch 8 §5.1](./chapters/ch08_cost_observability/#51-2026-05-多-vendor-token-單價對照)** — 加「2026-05 多 vendor token 單價對照表」(8 model: DeepSeek V3 / Gemini Flash / Haiku 4.5 / Gemini 2.5 Pro / Sonnet 4.6 / GPT-4o / GPT-4 / Opus 4.7) + 快速估算公式 + 省錢三招 + 跨頁 cross-link
+- **[Ch 11 §4a](./chapters/ch11_frameworks/#4a-2026-05-採用度快照)** — 加「2026-05 採用度快照」: LangGraph 14k / CrewAI 45.9k / AutoGen v0.4 38k / OpenAI Agents SDK 12k / Smolagents 10k / Pydantic AI 8k + **A2A 協議介紹** (Google + 150+ orgs 2026-04 launch) + 選框架判斷表
+- **[Ch 15 §5a](./chapters/ch15_deploy_audit_replay/#5a-opentelemetry-genai--業界標準-observability)** — 加 OpenTelemetry GenAI: 標準 span/metric 表 + OpenLLMetry Python SDK 5 分鐘上手範例
+
+### 速查卡新 7th page · Compliance
+
+- 新建 **[/cheatsheet/compliance](./cheatsheet/compliance)** — ISO 42001 / NIST AI RMF / EU AI Act / OpenTelemetry GenAI 4 大標準速查 + 何時該做哪個決策樹 + 罰款 + 時程
+- 從速查卡「6 個分頁」→「**7 個分頁**」全站 sync (cheatsheet index / all.md / index hero / quickwin / roadmap / about / 404 / llms.txt / sidebar)
+
+### Iter 21-29 commits
+
+11. iter 21 [4f09afd](https://github.com/symbiosis11503/agent-z/commit/4f09afd) — glossary/production 加合規 4 詞
+12. iter 22 [0e91588](https://github.com/symbiosis11503/agent-z/commit/0e91588) + iter 23 [1aeaaf6](https://github.com/symbiosis11503/agent-z/commit/1aeaaf6) — glossary/agent 加 multi-agent 安全 3 詞
+13. iter 24 [089434b](https://github.com/symbiosis11503/agent-z/commit/089434b) + iter 25 [9171867](https://github.com/symbiosis11503/agent-z/commit/9171867) — ch08 §5.1 vendor 單價對照表 + 版本命名校準 (Sonnet 4.6 / Opus 4.7 align commercial.md)
+14. iter 26 [9166a00](https://github.com/symbiosis11503/agent-z/commit/9166a00) — ch11 §4a 2026 採用快照 + A2A 協議
+15. iter 27 [e6ce812](https://github.com/symbiosis11503/agent-z/commit/e6ce812) — ch15 §5a OpenTelemetry GenAI
+16. iter 28 [cfa3a7b](https://github.com/symbiosis11503/agent-z/commit/cfa3a7b) — 速查卡 7th page · Compliance
+17. iter 29 [2f5eda6](https://github.com/symbiosis11503/agent-z/commit/2f5eda6) — 全站「6 → 7 個分頁」sync
 
 ---
 
