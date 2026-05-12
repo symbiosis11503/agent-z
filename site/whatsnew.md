@@ -13,6 +13,38 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 
 ---
 
+## 2026-05-13 — v1.7 cycle 1 社群與分享化
+
+第一波「讓人引用、加好友、分享 link」基建。重點不是補章節，是讓 AgentZ 從「自閉好內容」升級成「真的能 spread 的開源教程」。
+
+### 引用 / 學術可用化
+
+- 新建 **[引用 AgentZ (`/cite`)](./cite)** — BibTeX / APA 7th / Chicago 17th / CITATION.cff / Markdown 5 種引用格式都列出來，CC-BY-4.0 授權清楚標示
+- 從 nav「進度 & 社群」入口進得來，researcher / 教材作者 / blog 引用一鍵 copy
+
+### Community 正式邊界
+
+- 新建 **[CODE_OF_CONDUCT.md](https://github.com/symbiosis11503/agent-z/blob/main/CODE_OF_CONDUCT.md)** — 改寫 Contributor Covenant 2.1，繁中口語化，包含 24h 通報窗口 + 5 級處理 + 範圍說明
+- **about.md「社群」章節** 改成 6 行對照表：bug 報哪、討論去哪、PR 走哪、Capstone 投稿、學術引用、CoC 通報 — 每個場合一個入口不混
+- **全站 nav 加 💬 Discussions + Issues** 兩個外部入口（之前只有 GitHub 主頁連結）
+
+### 分享 / Link preview 化
+
+- **[og-image.png](https://symbiosis11503.github.io/agent-z/og-image.png)** 1200×630 — Twitter / FB / LinkedIn / Slack / Discord 貼 AgentZ URL 終於有正式 link preview（之前只看到 64px logo）
+- 4 chip 標：20 章 / Vendor-neutral / Claude Code 一級 / v1.6 · 2026
+- **per-page meta inject** — 每頁 og:title / og:description / og:url / twitter:image 都自動帶當前頁面，不只首頁
+
+### PWA installable
+
+- **[manifest.json](https://symbiosis11503.github.io/agent-z/manifest.json)** — Chrome / Edge / iOS Safari 可「Add to Home Screen」把 AgentZ 變 standalone web app
+- Apple meta 4 條 (mobile-web-app-capable / status-bar-style / title `AgentZ` / theme-color #5b21b6)
+
+### 不一樣的精神
+
+v1.6 是「**內容變強**」（合規 / 框架 / OTel）；v1.7 cycle 1 是「**讓人帶走它**」（cite / share / install）。AgentZ 從「我寫得多用心」進到「別人能多容易引用」這層。
+
+---
+
 ## 2026-05 — v1.6 合規 + 框架校準 + 標準觀測性
 
 把 2026 業界三大缺口補上：**合規標準**（ISO / NIST / EU AI Act）、**框架地位變動**（A2A 協議 / LangGraph production standard / CrewAI 45.9k★）、**OpenTelemetry GenAI**（替代各家自家 dashboard）。
