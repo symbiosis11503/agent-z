@@ -92,8 +92,9 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 - 🏆 [**Capstone Gallery**](./capstone) — 學員作品集 + 投稿入口
 - 📋 [**速查卡 (7 個分頁)**](./cheatsheet) — CLI / SDK / Pricing / Patterns / MCP / Governance / Compliance，每頁 A4 可印
 - 🛠 [**故障排除**](./troubleshooting) — 12 大類常見錯誤 + 症狀 + 解法
+- 📚 [**引用 AgentZ**](./cite) — BibTeX / APA / Chicago / CITATION.cff 5 種格式 (paper / blog / talk 都用得到)
 
-## 規模 (v1.6, 2026-05)
+## 規模 (v1.7 cycle 1, 2026-05)
 
 ```
 20 章 / 6,700+ 行繁中 / 60+ 動手練習
@@ -102,6 +103,7 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 70+ 名詞表 (5 分類) / 7 個 A4 速查卡 (含合規 ISO/NIST/EU AI Act)
 2026 議題：A2A 協議 / OTel GenAI / ICE / Consensus Trap / Slopsquatting
 全章 SEO sitemap / editLink / 在 GitHub 編輯本頁
+v1.7: 引用格式 (/cite) + Code of Conduct + og:image link preview + PWA installable
 MIT 授權，章節 + code 都可商用
 ```
 
