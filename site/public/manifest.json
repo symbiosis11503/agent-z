@@ -1,0 +1,27 @@
+{
+  "name": "AgentZ — 繁中 AI Agent 學習地圖",
+  "short_name": "AgentZ",
+  "description": "從零到 AI Agent 構建者 — 繁體中文 first-class、vendor-neutral、Claude Code 生態深入的學習系統",
+  "start_url": "/agent-z/",
+  "scope": "/agent-z/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f172a",
+  "theme_color": "#5b21b6",
+  "lang": "zh-TW",
+  "icons": [
+    {
+      "src": "/agent-z/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/agent-z/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["education", "developer", "productivity"]
+}

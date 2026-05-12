@@ -27,6 +27,10 @@ export default defineConfig({
     ['meta', { name: 'twitter:image', content: 'https://symbiosis11503.github.io/agent-z/og-image.png' }],
     ['meta', { name: 'keywords', content: 'AI Agent, Claude Code, MCP, AgentZ, 繁體中文, AI 學習, LLM, ReAct, RAG, multi-agent, agentic-RL, TAIDE' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/agent-z/logo.svg' }],
+    ['link', { rel: 'manifest', href: '/agent-z/manifest.json' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }],
+    ['meta', { name: 'apple-mobile-web-app-title', content: 'AgentZ' }],
   ],
 
   transformPageData(pageData) {
