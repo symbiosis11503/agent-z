@@ -162,7 +162,7 @@ description: AgentZ 故障排除指南：12 大類常見錯誤 + 症狀 + 解法
 
 1. **搜索本頁**：Ctrl-F 找關鍵字
 2. **看對應章節常見地雷**：[18 章節都有「## 常見地雷」段](./roadmap)
-3. **看 [FAQ](./faq)**：22 題 6 大類常見問題
+3. **看 [FAQ](./faq)**：30 題 7 大類常見問題
 4. **看 starter code**：[每章對應 dir](https://github.com/symbiosis11503/agent-z/tree/main/starter-code) 有 working version
 5. **開 [GitHub Discussion](https://github.com/symbiosis11503/agent-z/discussions)**：問題公開 + 答案幫到後人
 6. **報 bug**：[Open Issue](https://github.com/symbiosis11503/agent-z/issues) 附 OS / Python / SDK 版本 + 錯誤訊息

@@ -87,7 +87,7 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 - 🗺 [**課程地圖**](./roadmap) — 20 章難度/時間/4 學習計畫對照
 - 🔑 [**LLM / API 申請指南 (3 分頁)**](./llm-providers) — 11 家 LLM：商業 / 開源聚合 / 本地主權
 - 📖 [**70+ 名詞表 (5 分類)**](./glossary) — 基礎 / Agent / 實務 / Production / 台灣&pair
-- ❓ [**FAQ**](./faq) — 22 題 6 大類常見問題
+- ❓ [**FAQ**](./faq) — 30 題 7 大類常見問題
 - ✅ [**學習進度檢核**](./progress) — milestone evidence + portfolio repo 模板
 - 🏆 [**Capstone Gallery**](./capstone) — 學員作品集 + 投稿入口
 - 📋 [**速查卡 (7 個分頁)**](./cheatsheet) — CLI / SDK / Pricing / Patterns / MCP / Governance / Compliance，每頁 A4 可印

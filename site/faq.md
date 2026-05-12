@@ -126,6 +126,24 @@ A: 歡迎！開 PR 放 `i18n/<lang>/` 路徑。先在 [Discussions](https://gith
 ### Q: 我可以拿 starter code 改成商業專案嗎？
 A: MIT — 可以。不用 attribution 但歡迎你 star 一下。
 
+### Q: paper / 論文 / talk 要怎麼正式引用 AgentZ？
+A: 看 **[引用 AgentZ (`/cite`)](./cite)** — BibTeX / APA 7th / Chicago 17th / CITATION.cff / Markdown 5 種格式，每種都附帶「引用整本」跟「引用特定章節」兩種範本。內容預設 **CC-BY-4.0**（署名可自由用於教學 / 課程 / 商業 derivative），程式碼是 MIT。
+
+---
+
+## 安裝 / 分享
+
+### Q: 可以把 AgentZ 加到手機 / 桌面像 app 一樣用嗎？
+A: **可以**。AgentZ 是 PWA（Progressive Web App），支援標準「Add to Home Screen」：
+- **iOS Safari**：開 https://symbiosis11503.github.io/agent-z/ → 點下方分享鈕 → 「加到主畫面」
+- **Android Chrome**：開站 → 右上選單 → 「安裝應用程式」
+- **Mac / Windows Chrome / Edge**：網址列右邊有 + 安裝圖示，點下去裝成 standalone app
+
+裝完以後啟動就是 standalone window 不帶瀏覽器 chrome（深紫 theme color），離線 cache 第一次 load 過的章節。
+
+### Q: 我貼 AgentZ 連結到 Twitter / FB / Slack / Discord，會有預覽圖嗎？
+A: **會**。v1.7 加了 og-image 1200×630 link preview，貼任何 AgentZ 頁面 URL 都會有 AgentZ 標題 + 4 chip（20 章 / Vendor-neutral / Claude Code / v1.6） + 當前頁面標題與描述自動帶。
+
 ---
 
 ## 卡關 / 求救
