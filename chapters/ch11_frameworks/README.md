@@ -198,6 +198,31 @@ print(result.data.temp)  # 26.0
 
 ---
 
+## 4a. 2026-05 採用度快照
+
+數字會變、地位會換。學的時候參考、選的時候**自己再查一次**。
+
+| Framework | GitHub ⭐ | 業界定位 | 跨框架協議 |
+|---|---:|---|---|
+| **LangGraph** | ~14k（含 LangChain 主庫 100k+） | 2026 production standard — Klarna / Replit / LinkedIn 都在跑 | A2A 原生支援 |
+| **CrewAI** | ~45.9k | 多 agent 入門首選 — 12M+ daily exec（2026-Q1） | A2A 已 wire |
+| **AutoGen v0.4** | ~38k | Microsoft 重寫版（從 v0.2 actor-based rewrite） | A2A 規劃中 |
+| **OpenAI Agents SDK** | ~12k | 2025 末發布 + 2026 持續更新，GPT 生態主力 | 自家 Handoff 為主 |
+| **Smolagents** | ~10k | HuggingFace CodeAct 派系，小團隊主力 | 無 |
+| **Pydantic AI** | ~8k | 型別黨愛用，FastAPI / Logfire 整合佳 | 無 |
+
+**A2A 協議**（[Google Agent2Agent](https://github.com/google/A2A)）：2026-04 起 150+ 組織 (Atlassian / Salesforce / SAP / Cohere 等) 聯合推的 agent-to-agent 互通標準。讓你能 mix-and-match — 一個 LangGraph agent 呼叫另一個 CrewAI agent，不需自寫 adapter。**LangGraph 跟 CrewAI 都已原生支援。**
+
+**選 framework 的判斷**：
+- 「production 上線、要 audit / replay」 → LangGraph（生態 + LangSmith）
+- 「多 agent demo / POC 快速」 → CrewAI（API 直覺）
+- 「.NET / Microsoft 生態」 → AutoGen v0.4
+- 「已經在用 GPT」 → OpenAI Agents SDK
+
+> ⚠️ 上表為 2026-05 snapshot。star 數從 [star-history.com](https://star-history.com/) 抓、production 採用情況查各 framework changelog / 案例頁。**框架更替很快**，選之前先看 last 30-day commit 活躍度。
+
+---
+
 ## 5. AutoGen / OpenAI Agents SDK 順帶一提
 
 | Framework | 出品 | 性質 |
