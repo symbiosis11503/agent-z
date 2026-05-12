@@ -234,6 +234,33 @@ Claude Code 支援 hook——當 agent 要呼叫某個工具時（PreToolUse / P
 
 ---
 
+## 6a. Headless Agent — Claude Code 進 cron / CI / shell pipe
+
+互動 chat 不是 Claude Code 唯一用法。`claude -p "..."` 是 **headless mode**——一行命令、無互動、輸出直接到 stdout，能塞進 cron / GitHub Actions / shell pipe。
+
+```bash
+# 一行版（適合 cron）
+$ claude -p "summarize today's git log into changelog.md" --output-format json
+
+# 串 shell pipe
+$ cat error.log | claude -p "find root cause + suggest fix"
+
+# CI 自動 review PR
+$ claude -p "review diff for security issues" < diff.patch
+```
+
+| 模式 | 何時用 |
+|---|---|
+| **互動**（`claude`）| 探索性任務、邊跑邊調整、debug |
+| **headless**（`claude -p`）| 已知任務 + 自動化（cron / CI / scheduled job） |
+| **SDK / API**（`anthropic` Python lib）| 整合進你的應用 / agent framework |
+
+**重點**：headless 模式預設**不問 permission**（會跑配置好的允許工具）。如果 agent 會碰 production / 改檔案 / 推 git，**要在 hook 或 CLAUDE.md 把守備規則寫死**——cron 沒人坐在前面 [y/n] 確認。
+
+→ 詳細白話：[名詞表 § Agent 機制](https://symbiosis11503.github.io/agent-z/glossary/agent) → Headless Agent / CLI Agent。
+
+---
+
 ## 7. 對齊 ai-dict 名詞
 
 本章相關 ai-dict 詞條（[繁中版](https://ai-dict.gh.miniasp.com/)）：
