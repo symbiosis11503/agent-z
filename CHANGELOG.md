@@ -2,6 +2,39 @@
 
 All notable changes to AgentZ.
 
+## v1.6 — 2026-05 (Ralph loop iter 21-30: 合規 + 框架校準 + 標準觀測性)
+
+> 第三輪 ralph-loop (`UltraThink持續迭代優化agnetZ`) — 把 2026 業界三大缺口補上：合規標準 / 框架地位變動 / OpenTelemetry GenAI 業界 observability。10 commit 連推 origin/main，每 commit 都 GitHub Actions auto-deploy 到 Pages。
+
+### 名詞表 加 7 個 2026 新詞
+- **glossary/agent §5「Multi-Agent Verification / 安全」** — ICE (Iterative Consensus Ensemble) / Consensus Trap (arXiv 2604.17139) / Slopsquatting (Stanford 2026 三大新攻面之一)
+- **glossary/production §10「合規 / 國際標準」** — ISO/IEC 42001:2023 / NIST AI RMF + GenAI Profile (NIST-AI-600-1) / EU AI Act 2026-08-02 / OpenTelemetry GenAI Semantic Conventions
+- 60+ → **70+ 詞** 標記全站同步
+
+### 章節內容補強
+- **Ch 8 §5.1** — 2026-05 多 vendor token 單價對照表 (8 model: DeepSeek V3 / Gemini Flash / Haiku 4.5 / Sonnet 4.6 / GPT-4o / Opus 4.7 …) + 快速估算公式 + 省錢三招
+- **Ch 11 §4a** — 2026-05 採用度快照: LangGraph / CrewAI 45.9k★ / AutoGen v0.4 / OpenAI Agents SDK / Smolagents / Pydantic AI + **A2A 協議介紹** (Google + 150+ orgs)
+- **Ch 15 §5a** — OpenTelemetry GenAI 業界標準 observability: 標準 span/metric 表 + OpenLLMetry Python SDK 5 分鐘上手範例
+
+### 速查卡新 7th page · Compliance
+- **`/cheatsheet/compliance`** — ISO 42001 / NIST AI RMF / EU AI Act / OpenTelemetry GenAI 4 大標準速查 + 何時該做哪個決策樹 + 罰款 + 時程
+- 從速查卡「6 個分頁」→「**7 個分頁**」全站 sync (cheatsheet/all include + index hero + quickwin + roadmap + about + 404 + llms.txt + VitePress navbar/sidebar)
+
+### Iter 21-30 commits
+
+| iter | commit | 主題 |
+|---|---|---|
+| 21 | [4f09afd](https://github.com/symbiosis11503/agent-z/commit/4f09afd) | glossary/production 加合規 4 詞 |
+| 22+23 | [0e91588](https://github.com/symbiosis11503/agent-z/commit/0e91588) + [1aeaaf6](https://github.com/symbiosis11503/agent-z/commit/1aeaaf6) | glossary/agent 加 multi-agent 安全 3 詞 (iter 22 漏 Read 跳過, iter 23 fix-up) |
+| 24+25 | [089434b](https://github.com/symbiosis11503/agent-z/commit/089434b) + [9171867](https://github.com/symbiosis11503/agent-z/commit/9171867) | ch08 §5.1 vendor 單價表 + 版本命名 align commercial.md (Sonnet 4.6 / Opus 4.7) |
+| 26 | [9166a00](https://github.com/symbiosis11503/agent-z/commit/9166a00) | ch11 §4a 採用快照 + A2A 協議 |
+| 27 | [e6ce812](https://github.com/symbiosis11503/agent-z/commit/e6ce812) | ch15 §5a OpenTelemetry GenAI |
+| 28 | [cfa3a7b](https://github.com/symbiosis11503/agent-z/commit/cfa3a7b) | 速查卡 7th page · Compliance 新建 |
+| 29 | [2f5eda6](https://github.com/symbiosis11503/agent-z/commit/2f5eda6) | 全站「6 → 7 個分頁」sync |
+| 30 | [7126bc7](https://github.com/symbiosis11503/agent-z/commit/7126bc7) | whatsnew v1.6 entry |
+
+---
+
 ## v1.2 — 2026-05-12 (Ralph loop polish wave ✅ sealed @ iter 50/50)
 
 > 連續 ralph-loop session (`UltraThink持續迭代優化agnetZ`)：22 次 iteration (iter 28-49) + iter 50 closeout 把 v1.1 散落的 gap 收尾。Loop 達 max-iterations 50 自然 cap，每次 commit 都 push origin/main。
