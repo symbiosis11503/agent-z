@@ -254,6 +254,39 @@ AnthropicInstrumentor().instrument()  # ← 自動產生 gen_ai.* span
 
 ---
 
+## 5b. 合規 — ISO 42001 / NIST AI RMF / EU AI Act
+
+2025 H2 起 production agent 不只是「能跑」、還要能 **過稽核**。三個你最常看到的 framework：
+
+| 標準 | 全稱 | 性質 | 對 V3 / agentz_mini 的影響 |
+|---|---|---|---|
+| **ISO 42001** | ISO/IEC 42001:2023 AI Management System | 自願認證（類似 ISO 27001 之於資安） | 要求文件化 AI 政策、風險評估、決策可追溯；§3 四 pillar + §5a OTel 直接對應這個 |
+| **NIST AI RMF** | NIST AI Risk Management Framework 1.0 | 美國 NIST 自願性風險管理框架（Govern / Map / Measure / Manage） | 美國聯邦採購 / 大企業內部跑 RMF profile，agent 系統要對齊四個 function |
+| **EU AI Act** | Regulation (EU) 2024/1689 | 歐盟強制法（2024-08 生效，分階段 implementation 到 2027） | **有罰則**。high-risk agent system 要走 conformity assessment + register + 監控 incident |
+
+### 5b.1 三大要點對 production agent 的具體要求
+
+1. **風險分級**（EU AI Act 強）— agent 是 minimal / limited / high / unacceptable risk？醫療 / HR / 信用評分 / 法律是 high-risk，要走完整 conformity assessment。
+2. **可追溯性**（ISO 42001 + NIST RMF.Measure）— 每個決策能 replay 是誰跑、什麼 prompt、結果是什麼。**V3 audit + replay 設計就是這條的具體實作。**
+3. **incident reporting**（EU AI Act + NIST RMF.Manage）— high-risk agent 出 serious incident 要 15 天內通報主管機關。要先有 internal incident log + escalation SOP。
+
+### 5b.2 怎麼在 agentz_mini / V3 對齊
+
+- §6.1 audit log → 對應 ISO 42001 「決策可追溯」+ EU AI Act Article 12 「automatic logs」
+- §6.2 replay → 對應 NIST RMF.Measure 「再現性驗證」
+- §6.3 cost cap fail-closed → 對應 ISO 42001 「資源邊界控制」、防失控 cost spike 也是 risk control
+- §3 intervention gate → 對應 EU AI Act Article 14 「human oversight」
+
+### 5b.3 注意
+
+- **AgentZ 不是法律建議**。實際導入合規前找律師 / 顧問。
+- **台灣 2026 跟著走** — 國科會 AI 基本法草案 2025-11 公布、跟 EU AI Act 對齊；TAIDE 跟政府採購 agent 系統會先壓這套。
+- **小規模 / 個人專案** — 不用一次上 ISO 42001 認證，先把 audit + replay 寫好、incident log 留著，跨進 production 那刻才補認證快很多。
+
+→ 詳細白話：[名詞表 § Production](https://symbiosis11503.github.io/agent-z/glossary/production) → ISO 42001 / NIST AI RMF / EU AI Act 三條。
+
+---
+
 ## 6. 自己升級你的 agentz_mini → production
 
 ### 6.1 加 audit log
