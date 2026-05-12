@@ -210,6 +210,33 @@ Anthropic 報告 retrieval 召回率提升 35-49%。**成本**：每 chunk 多 1
 
 ---
 
+## 6a. 2026 production memory 生態 — 不一定要自己造輪
+
+§3-6 你會自己拼 session + long-term + RAG，但 2026 已有成熟的「memory-as-a-service」套件可以直接接。三家代表 + Helix 自家做法對照：
+
+| 系統 | 定位 | 檢索 | 體量 | 主要訴求 |
+|---|---|---|---|---|
+| **[mem0](https://github.com/mem0ai/mem0)** | Memory layer API | Vector + Graph | 53K★ | 簡潔 API、cloud / self-host 都行 |
+| **[Letta / MemGPT](https://github.com/letta-ai/letta)** | Full agent runtime（自帶 memory） | Vector | 22K★ | OS-style agent + archival memory + agent runtime 一體 |
+| **[agentmemory](https://github.com/rohitg00/agentmemory)** | Cross-agent MCP memory server | **BM25 + Vector + Graph (RRF fusion)** | 4.9K★（2026-02 起） | 16+ agent 共用一個 memory server (Claude Code / Cursor / Hermes / OpenClaw...)、Session Replay |
+| **Helix Memory (SBS-K)** | Project-aware persistent memory（本書 V3 case study 用） | PG JSONB + pgvector + FTS5 (CJK) | 自家 | 跟 V3 audit / replay / project boundary 整合 |
+
+### 怎麼選
+
+- **個人專案 / 學習**：先自己拼（§3-6）。理解 mechanic 比裝套件重要。
+- **想跨 agent 共用**（Claude Code 跟 Cursor 看到同一份 memory）→ **agentmemory**（MCP 即插即用）
+- **要 cloud-managed 不想自己跑**→ **mem0**（有 SaaS）
+- **要 agent runtime 一體**（連 agent loop 都託付）→ **Letta**
+- **要跟自家 audit / replay / project boundary 強整合**→ 自己寫（像 Helix Memory）
+
+### Benchmark caveat
+
+agentmemory 自家 README claim **LongMemEval-S R@5 95.2%** vs mem0 68.5% / Letta 83.2%（後兩個其實是 LoCoMo dataset，比較不嚴格）——這是供應商自家數字，**第三方還沒重現驗證**。Ch 12 練習 13.3 contextual retrieval A/B 是同款方法論，自己跑你的資料才知道哪家適合。
+
+> 💡 **學習路徑建議**：本章先自拼 (§3-6) → Ch 15 production governance → 上 production 前再決定要不要切到 mem0 / Letta / agentmemory。**不要學第一章就先裝套件**——失去理解 memory 怎麼運作的機會。
+
+---
+
 ## 7. 對齊 ai-dict 名詞
 
 本章相關 ai-dict 詞條（[繁中版](https://ai-dict.gh.miniasp.com/)）：
