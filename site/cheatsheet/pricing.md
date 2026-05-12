@@ -16,10 +16,10 @@ description: 11 家主流 LLM pricing 2026-05 snapshot + AgentZ 章節練習推�
 | Opus 4.7 | $15 | $75 |
 | GPT-4o-mini | $0.15 | $0.60 |
 | GPT-4o | $2.5 | $10 |
-| Gemini 2.0 Flash | $0.075 | $0.30 |
-| Gemini 1.5 Pro | $1.25 | $5 |
+| Gemini 2.5 Flash | $0.30 | $2.50 |
+| Gemini 2.5 Pro | $1.25-2.50 | $10-15 |
 | Groq Llama 3.3 70B | $0.59 | $0.79 |
-| DeepSeek V3 | $0.27 | — |
+| DeepSeek V3 | $0.27 | $1.10 |
 | DeepSeek R1 | $0.55 | $2.19 |
 | Mistral Large | $2 | $6 |
 

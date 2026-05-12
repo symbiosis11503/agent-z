@@ -24,7 +24,7 @@ description: LLM / Token / Context Window / Role / Temperature / Embedding / Fin
 ### 上下文視窗 / Context Window
 - **專業**：LLM 一次推論能容納的最大 token 數。受 model 架構（attention pattern）跟 GPU 記憶體限制。
 - **白話**：LLM 一次能讀的「最多多少字」。讀太多塞不下。
-- **範例**：Claude 4.x 200K-1M token、GPT-4o 128K、Gemini 2.0 Flash 1M。200K token ≈ 一本中等小說。
+- **範例**：Claude 4.x 200K-1M token、GPT-4o 128K、Gemini 2.5 Pro 2M、Gemini 2.5 Flash 1M。200K token ≈ 一本中等小說。
 - **章節**：[Ch 1 §3](../chapters/ch01_llm_basics/#3-context-window-llm-的-記憶-上限)
 
 ### 角色 / Role

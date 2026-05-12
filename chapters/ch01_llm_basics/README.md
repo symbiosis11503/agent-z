@@ -68,7 +68,7 @@ LLM 挑機率最高的「好」，吐出來。
 | Claude Opus 4.7 | $15.00 | $75.00 |
 | GPT-4o-mini | $0.15 | $0.60 |
 | GPT-4o | $2.50 | $10.00 |
-| Gemini 2.0 Flash | $0.10 | $0.40 |
+| Gemini 2.5 Flash | $0.30 | $2.50 |
 | Groq Llama-3.3-70B | 免費（限速） | 免費（限速） |
 
 > 數字會變、請查官方 pricing。重點是**輸出 token 通常比輸入貴 3-5 倍**，所以「讓 LLM 給你短回答」比「讓 LLM 看短輸入」省更多。
@@ -93,7 +93,8 @@ LLM 挑機率最高的「好」，吐出來。
 | Claude Haiku 4.5 / Sonnet 4.6 / Opus 4.7 | 200K（部分到 1M） |
 | GPT-4o | 128K |
 | GPT-4o-mini | 128K |
-| Gemini 2.0 Flash | 1M |
+| Gemini 2.5 Flash | 1M |
+| Gemini 2.5 Pro | 2M |
 | Groq Llama-3.3-70B | 128K |
 
 200K token ≈ 一本中等長度的書。所以你可以把整本書貼進 prompt 讓 Claude 摘要。
