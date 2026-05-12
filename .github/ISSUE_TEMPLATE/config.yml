@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 卡關提問 / 章節討論 / 心得分享
+    url: https://github.com/symbiosis11503/agent-z/discussions
+    about: 不是 bug 也不是建議的事情，去 Discussions 開新討論
+  - name: 🎤 Capstone 投稿
+    url: https://symbiosis11503.github.io/agent-z/capstone
+    about: 你跑完 AgentZ 做的作品，PR 投稿到 Capstone Gallery
+  - name: 📚 引用 AgentZ
+    url: https://symbiosis11503.github.io/agent-z/cite
+    about: BibTeX / APA / Chicago 5 種格式
+  - name: ⚖️ Code of Conduct
+    url: https://github.com/symbiosis11503/agent-z/blob/main/CODE_OF_CONDUCT.md
+    about: 騷擾 / 違規 → symbiosis11503@gmail.com 或 Issue 加 code-of-conduct label
