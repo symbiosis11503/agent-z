@@ -1,19 +1,19 @@
 ---
-title: 速查卡 Cheatsheet — 6 個分頁主題
-description: AgentZ 速查卡分 6 個焦點頁面：CLI/Git · SDK · Pricing · Patterns · MCP/Skills · Governance。各頁 A4 可印一頁，不再擠在單頁。
+title: 速查卡 Cheatsheet — 7 個分頁主題
+description: AgentZ 速查卡分 7 個焦點頁面：CLI/Git · SDK · Pricing · Patterns · MCP/Skills · Governance · Compliance。各頁 A4 可印一頁，不再擠在單頁。
 ---
 
 # 速查卡 Cheatsheet
 
-學完 AgentZ 後忘了哪個指令、模板、模型名、cost 公式時翻這裡。**分 6 個焦點頁面**，每頁可單獨列印 A4。
+學完 AgentZ 後忘了哪個指令、模板、模型名、cost 公式時翻這裡。**分 7 個焦點頁面**，每頁可單獨列印 A4。
 
-> 想要 A4 一次印全本？翻 **[全本一頁印刷版](./cheatsheet/all)**（用 VitePress include 自動合成，內容跟 6 分頁同步）。
+> 想要 A4 一次印全本？翻 **[全本一頁印刷版](./cheatsheet/all)**（用 VitePress include 自動合成，內容跟 7 分頁同步）。
 
 [[toc]]
 
 ---
 
-## 速查 6 頁
+## 速查 7 頁
 
 | 主題 | 內容 | 何時翻 |
 |---|---|---|
@@ -23,6 +23,7 @@ description: AgentZ 速查卡分 6 個焦點頁面：CLI/Git · SDK · Pricing �
 | 🔁 [**Patterns**](./cheatsheet/patterns) | ReAct / Plan-and-Solve / Reflection 範式 + Cost cap fail-closed | 寫 agent loop 不知怎起手 |
 | 🧩 [**MCP / Skills**](./cheatsheet/mcp) | FastMCP boilerplate + scope + Computer Use + Subagent + Skill auto-load + SKILL.md | 接 MCP / 寫 Skill / Computer Use |
 | 🛡 [**Governance**](./cheatsheet/governance) | V3 4 道閘門 + 模型路由建議 + Anti-hallucination 5 條 | 上 production / 訓 research agent |
+| 📋 [**Compliance**](./cheatsheet/compliance) | ISO 42001 / NIST AI RMF / EU AI Act 2026-08-02 / OpenTelemetry GenAI 4 大標準 | 上 EU / 美國公部門 / 銀行 客戶 |
 
 ---
 
@@ -45,6 +46,9 @@ description: AgentZ 速查卡分 6 個焦點頁面：CLI/Git · SDK · Pricing �
 | SKILL.md frontmatter | [MCP / Skills](./cheatsheet/mcp) |
 | V3 4 道閘門 | [Governance](./cheatsheet/governance) |
 | 哪個 task 用 Haiku / Sonnet / Opus | [Governance](./cheatsheet/governance) |
+| ISO 42001 / NIST AI RMF / EU AI Act 速查 | [Compliance](./cheatsheet/compliance) |
+| EU AI Act 2026-08-02 deadline + 罰款 | [Compliance](./cheatsheet/compliance) |
+| OpenTelemetry GenAI 5 分鐘上手 | [Compliance](./cheatsheet/compliance) |
 
 ---
 

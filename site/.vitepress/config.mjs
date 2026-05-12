@@ -123,6 +123,7 @@ export default defineConfig({
           { text: '— Patterns', link: '/cheatsheet/patterns' },
           { text: '— MCP / Skills', link: '/cheatsheet/mcp' },
           { text: '— Governance', link: '/cheatsheet/governance' },
+          { text: '— Compliance', link: '/cheatsheet/compliance' },
           { text: '故障排除', link: '/troubleshooting' },
           { text: '名詞表 總覽', link: '/glossary' },
           { text: '— 基礎 (LLM/Prompt)', link: '/glossary/foundation' },
@@ -153,7 +154,7 @@ export default defineConfig({
     sidebar: {
       '/cheatsheet/': [
         {
-          text: '速查卡 6 個分頁',
+          text: '速查卡 7 個分頁',
           collapsed: false,
           items: [
             { text: '🏠 總覽 / 索引', link: '/cheatsheet' },
@@ -163,6 +164,7 @@ export default defineConfig({
             { text: '🔁 Patterns', link: '/cheatsheet/patterns' },
             { text: '🧩 MCP / Skills', link: '/cheatsheet/mcp' },
             { text: '🛡 Governance', link: '/cheatsheet/governance' },
+            { text: '📋 Compliance', link: '/cheatsheet/compliance' },
           ],
         },
         {
