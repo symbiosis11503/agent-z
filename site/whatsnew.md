@@ -44,6 +44,12 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 - **[Ch 9 §4a](./chapters/ch09_function_calling/#4a-computer-use--anthropic-的特殊-tool-use-模式)** — 加 Computer Use Anthropic 特殊 tool-use 模式 + sandbox 安全
 - **[Ch 5 §6a](./chapters/ch05_cli_workflow/#6a-headless-agent--claude-code-進-cron--ci--shell-pipe)** — 加 Headless Agent (`claude -p`) + cron / CI / shell pipe 用法 + 不問 permission 的安全提醒
 
+### Memory 生態地景（iter 34）
+
+boss 5/12 ping `rohitg00/agentmemory` (4.9K★, BM25+Vec+Graph RRF, 16+ agent 共用 memory) 後加：
+
+- **[Ch 13 §6a](./chapters/ch13_memory_rag/#6a-2026-production-memory-生態--不一定要自己造輪)** — mem0 (53K★) / Letta (22K★) / agentmemory (4.9K★) / Helix Memory 四家對照表 + 怎麼選 + benchmark caveat（自家數字第三方未驗證）+ 學習路徑建議（先自拼 §3-6 理解 mechanic、production 前再決定要不要切）
+
 ### Iter 21-32 commits
 
 11. iter 21 [4f09afd](https://github.com/symbiosis11503/agent-z/commit/4f09afd) — glossary/production 加合規 4 詞
@@ -59,6 +65,7 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 21. iter 30 [0a3c732](https://github.com/symbiosis11503/agent-z/commit/0a3c732) — ch06 加 §5a MCP Scope (user/project/local)
 22. iter 31 [d3d58a1](https://github.com/symbiosis11503/agent-z/commit/d3d58a1) — ch09 加 §4a Computer Use + sandbox 安全
 23. iter 32 [87d8da6](https://github.com/symbiosis11503/agent-z/commit/87d8da6) — ch05 加 §6a Headless Agent + cron/CI 安全提醒
+24. iter 34 [f0f1009](https://github.com/symbiosis11503/agent-z/commit/f0f1009) — ch13 §6a 2026 production memory 生態 (mem0 / Letta / agentmemory / Helix) + 怎麼選 + benchmark caveat
 
 ### v1.6 收尾 polish（iter 33-41）
 
