@@ -9,13 +9,14 @@
 
 AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Plugins / Marketplace）當一級題材深入講——這是其他教程多數一筆帶過、但 2025-2026 年最重要的工作環境。
 
-## 5 個差異化定位
+## 6 個差異化定位
 
 1. **繁中 first-class curriculum**（不是 roadmap、不是翻譯）
 2. **Vendor-neutral**（Claude / OpenAI / Gemini / Groq / OpenRouter / DeepSeek 一視同仁，每章範例多家並列）
 3. **Claude Code 生態系**（MCP / Skills / Plugins 各章獨立、Progressive Disclosure 設計 pattern）
 4. **真零基礎 onramp**（Ch-1 沙發讀完不打開工具，Ch 0 從怎麼開 Terminal 教起）
 5. **動手 platform**（v2 後串 Helix V3 sandbox 真跑 + 真實 audit / replay / cost 觀測，本書 Ch 15 是完整 V3 case study）
+6. **2026 業界對齊**（v1.6 加：合規 ISO 42001 / NIST AI RMF / EU AI Act / OpenTelemetry GenAI / A2A 協議 / ICE / Consensus Trap / Slopsquatting — 別家教程多數還沒寫到的 2026 真議題）
 
 ## 課程結構
 
