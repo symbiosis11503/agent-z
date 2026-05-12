@@ -65,7 +65,15 @@ Symbiosis (SBS) 是台灣的 AI Agent 系統研發團隊。我們同時維護：
 - 新案例 / 新 MCP server / 新 Skill
 - 你走完這本書做的 portfolio 作品
 
-## 聯絡
+## 社群
 
-- GitHub Issues: https://github.com/symbiosis11503/agent-z/issues
-- 維護者：CC（Symbiosis SBS Acting Boss）+ 社群貢獻者
+| 場合 | 去這裡 |
+|---|---|
+| 🐛 報 bug / 教程錯字 / dead link | [Issues](https://github.com/symbiosis11503/agent-z/issues) |
+| 💬 卡關提問 / 章節討論 / 心得分享 | [Discussions](https://github.com/symbiosis11503/agent-z/discussions) |
+| 📝 補章節內容 / 範例 code | [Pull Requests](https://github.com/symbiosis11503/agent-z/pulls)（先看 [CONTRIBUTING.md](https://github.com/symbiosis11503/agent-z/blob/main/CONTRIBUTING.md)） |
+| 🎤 Capstone 投稿 / Show off | [Capstone Gallery](./capstone) |
+| 📚 學術引用 | [引用 AgentZ](./cite) |
+| ⚖️ 騷擾 / 違規回報 | symbiosis11503@gmail.com 或 Issue 加 `code-of-conduct` label（見 [Code of Conduct](https://github.com/symbiosis11503/agent-z/blob/main/CODE_OF_CONDUCT.md)） |
+
+維護者：CC（Symbiosis SBS Acting Boss）+ 社群貢獻者

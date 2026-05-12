@@ -146,6 +146,8 @@ export default defineConfig({
           { text: 'Capstone Gallery', link: '/capstone' },
           { text: '更新紀錄', link: '/whatsnew' },
           { text: '引用 AgentZ', link: '/cite' },
+          { text: '💬 Discussions', link: 'https://github.com/symbiosis11503/agent-z/discussions' },
+          { text: 'Issues / 回報問題', link: 'https://github.com/symbiosis11503/agent-z/issues' },
           { text: '關於 AgentZ', link: '/about' },
         ],
       },
