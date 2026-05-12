@@ -1,6 +1,6 @@
 ---
-title: AgentZ vs 其他 AI Agent 教程 — 14 維度誠實對照
-description: AgentZ 跟 hello-agents (47K⭐) / MS for Beginners (30K⭐) / HF agents-course (18K⭐) / OpenAI Cookbook (64K⭐) 14 維度比較 + 5 條 path 建議。不藏 — 誠實比較比讓你 sunk cost 好。
+title: AgentZ vs 其他 AI Agent 教程 — 16 維度誠實對照
+description: AgentZ 跟 hello-agents (47K⭐) / MS for Beginners (30K⭐) / HF agents-course (18K⭐) / OpenAI Cookbook (64K⭐) 16 維度比較 + 5 條 path 建議。含 2026 合規 / multi-agent 安全。
 ---
 
 # AgentZ vs 其他 AI Agent 教程
@@ -27,6 +27,8 @@ description: AgentZ 跟 hello-agents (47K⭐) / MS for Beginners (30K⭐) / HF a
 | Agentic-RL | Ch 17（GRPO / DeepSeek-R1）| Ch 15-16 重點 | 不涵蓋 | 不涵蓋 | 不涵蓋 |
 | 安全 / 治理 | Ch 8 + Ch 15 V3 case | 散篇 | Lesson 11-12 | 散篇 | 散篇 |
 | Cost 觀測 | **Ch 8 獨立 + cost cap pattern**| 不涵蓋 | 不涵蓋 | 不涵蓋 | 散篇 |
+| **2026 合規 / 觀測**（ISO 42001 / EU AI Act / OTel GenAI） | **Ch 15 §5a §5b + 速查卡 Compliance**| 不涵蓋 | 部分涵蓋 (Responsible AI) | 不涵蓋 | 不涵蓋 |
+| **2026 multi-agent 安全**（ICE / Consensus Trap / Slopsquatting） | **Ch 14 §8c + Ch 16 §4 ICE**| 不涵蓋 | 不涵蓋 | 不涵蓋 | 不涵蓋 |
 | Capstone | Ch 18 + Gallery | 不涵蓋 | 散篇 | 不涵蓋 | 不涵蓋 |
 | ⭐ Stars | <100（新）| 47K+ | 30K+ | 18K+ | 64K+ |
 | License | MIT | Apache 2.0 | MIT | Apache 2.0 | MIT |
