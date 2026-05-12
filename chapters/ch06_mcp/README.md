@@ -147,6 +147,29 @@ Codex CLI 用 `~/.codex/config.toml` 的 `mcp_servers` 區塊。OpenCode 用 `~/
 
 ---
 
+## 5a. MCP Scope — server 放哪一層、作用範圍不同
+
+Claude Code 的 MCP 設定有 3 個 scope，**放錯位置會出現「我裝了，怎麼別的 project 看不到」**：
+
+| Scope | 設定檔位置 | 作用範圍 | 適合什麼 |
+|---|---|---|---|
+| **user**（全機） | `~/.claude/settings.json` 的 `mcpServers` | 任何 project 啟動 Claude Code 都看得到 | 跨 project 工具：GitHub / Notion / filesystem |
+| **project**（共享） | `<repo>/.claude/settings.json` (commit 到 git) | 跟著 repo 走，team 成員 clone 即用 | 該專案專用 server（DB / staging API） |
+| **local**（個人） | `<repo>/.claude/settings.local.json` (`.gitignore` 排除) | 只給自己用 | 自己的 PAT / API key 本地測試 |
+
+```bash
+# 互動命令直接帶 --scope
+$ claude mcp add github --scope user  -- npx -y @modelcontextprotocol/server-github
+$ claude mcp add staging-db --scope project -- npx -y @modelcontextprotocol/server-postgres
+$ claude mcp add my-test-key --scope local -- ...
+```
+
+**判斷準則**：「team 成員都要用同一個 server」→ project；「只有我自己用、不要 commit」→ local；「跨 project」→ user。
+
+> ⚠️ **常見誤解**：把 PAT 寫在 project scope `settings.json`、commit 到 GitHub → token leak。**敏感 env vars 永遠走 local 或 user scope，不 commit。**
+
+---
+
 ## 6. 推薦先裝的 6 個 MCP server
 
 | Server | 用途 | 安裝 |
