@@ -50,6 +50,20 @@ boss 5/12 ping `rohitg00/agentmemory` (4.9K★, BM25+Vec+Graph RRF, 16+ agent �
 
 - **[Ch 13 §6a](./chapters/ch13_memory_rag/#6a-2026-production-memory-生態--不一定要自己造輪)** — mem0 (53K★) / Letta (22K★) / agentmemory (4.9K★) / Helix Memory 四家對照表 + 怎麼選 + benchmark caveat（自家數字第三方未驗證）+ 學習路徑建議（先自拼 §3-6 理解 mechanic、production 前再決定要不要切）
 
+### boss 推薦 11 個 GitHub repo 編寫進 AgentZ（iter 37）
+
+boss 5/12 ping 「40 GITHUB REPOS THAT ARE ACTUALLY USEFUL」清單，篩出 11 個跟 AgentZ 主題對得上、boss 確認後寫進對應章節：
+
+- **[Ch 0 §11](./chapters/ch00_setup/#_11-想要-chatgpt-風-gui-open-webui)** — open-webui (136K★) 自架 ChatGPT GUI + Docker run cheat
+- **[Ch 1 §6 開源 fine-tuned](./chapters/ch01_llm_basics/#開源-fine-tuned-模型家族)** — NousResearch/Hermes-Function-Calling + huggingface/transformers (160K★) + stable-diffusion-webui (163K★) 平行領域標記
+- **[Ch 9 §4a](./chapters/ch09_function_calling/#4a-computer-use--anthropic-的特殊-tool-use-模式)** — browser-use (93K★) 補 Computer Use 的 DOM-based 替代 + 何時 DOM / 何時 screenshot 判斷
+- **[Ch 11 §5a](./chapters/ch11_frameworks/#_5a-visual--low-code-路線--不寫-code-也想拼-agent-workflow)** Visual/Low-code 新節 — n8n (187K★) / Langflow (148K★) / Lobe Chat (76K★) / Dify + 何時 visual / 何時 code 判斷準則
+- **[Ch 13 §5](./chapters/ch13_memory_rag/#_5-rag-retrieval-augmented-generation)** RAG 起點 — markitdown (122K★) 17 格式 → md 一行 cheat
+- **[Ch 13 §6a](./chapters/ch13_memory_rag/#6a-2026-production-memory-生態--不一定要自己造輪)** memory 表 — cocoindex (9.6K★) 加入長 horizon agent 增量 indexing 一欄
+- **[Ch 14 §9](./chapters/ch14_multi_agent/#9-補充閱讀)** 補充閱讀 — TradingAgents (74K★) production-grade multi-agent 金融案例
+
+跳過 4 個（boss 5/12 確認）: `ruflo` / `agency-agents` / `browserbase-skills`（找不到對應 repo） + `the-book-of-secret-knowledge`（偏 OSINT 不適合 AgentZ 主軸）
+
 ### Iter 21-32 commits
 
 11. iter 21 [4f09afd](https://github.com/symbiosis11503/agent-z/commit/4f09afd) — glossary/production 加合規 4 詞
@@ -66,6 +80,8 @@ boss 5/12 ping `rohitg00/agentmemory` (4.9K★, BM25+Vec+Graph RRF, 16+ agent �
 22. iter 31 [d3d58a1](https://github.com/symbiosis11503/agent-z/commit/d3d58a1) — ch09 加 §4a Computer Use + sandbox 安全
 23. iter 32 [87d8da6](https://github.com/symbiosis11503/agent-z/commit/87d8da6) — ch05 加 §6a Headless Agent + cron/CI 安全提醒
 24. iter 34 [f0f1009](https://github.com/symbiosis11503/agent-z/commit/f0f1009) — ch13 §6a 2026 production memory 生態 (mem0 / Letta / agentmemory / Helix) + 怎麼選 + benchmark caveat
+25. iter 36 [3f27feb](https://github.com/symbiosis11503/agent-z/commit/3f27feb) — ch13 §6a 拿掉 SBS-K 內部代號 (A/B boundary scrub)
+26. iter 37 [53a30aa](https://github.com/symbiosis11503/agent-z/commit/53a30aa) — 11 個 boss-curated repo 編寫進 AgentZ — Ch 0/1/9/11/13/14 各補對應 repo
 
 ### v1.6 收尾 polish（iter 33-41）
 
