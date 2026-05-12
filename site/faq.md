@@ -99,6 +99,12 @@ A: 因為 2025-2026 年 CLI agent 是工程師日常工具，而 Claude Code 是
 ### Q: 為什麼用 V3 當 Ch 15 案例？
 A: V3（Helix V3）是維護者自家在做的 production agent platform，有完整 audit / replay / cost cap / MCP / multi-provider 的真 case，原始碼可看可改。教 production agent governance 用「看得到的真 case」比 textbook 章節更有重量。
 
+### Q: AgentZ 涵蓋 EU AI Act / ISO 42001 / NIST AI RMF 嗎？
+A: 涵蓋。v1.6 加了 [Ch 15 §5b 合規對照](./chapters/ch15_deploy_audit_replay/#5b-合規--iso-42001--nist-ai-rmf--eu-ai-act) 把三大標準對映到 V3 4 pillar，加 [速查卡 Compliance](./cheatsheet/compliance) 速查 + 罰款 + 時程。**注意：不是法律建議**，production 導入仍需找律師 / 顧問。台灣 AI 基本法草案 2025-11 公布、跟 EU AI Act 對齊。
+
+### Q: 多 agent 系統的新興安全議題（ICE / Consensus Trap / Slopsquatting）AgentZ 有講嗎？
+A: 有。[Ch 14 §8c 2026 multi-agent 新興安全](./chapters/ch14_multi_agent/#8c-2026-multi-agent-新興安全議題) 整理 3 個 risk + 防禦表，[Ch 16 §4 進階 ICE](./chapters/ch16_researcher/#進階跨-llm-投票ice--iterative-consensus-ensemble) 給 Python 範例。詞條深入看 [名詞表 § Agent §5](./glossary/agent#_5-multi-agent-verification--安全2026-新加)。
+
 ### Q: 我看完能找到 AI Agent 工程師工作嗎？
 A: 看完不會直接讓你找到，但能 give you the toolkit：
 - 動手做過 Capstone（[Ch 18 Rubric](./chapters/ch18_maker_educator/#5-結尾capstone-是什麼)）→ 面試 portfolio
