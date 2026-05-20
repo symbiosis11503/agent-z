@@ -287,6 +287,165 @@ AnthropicInstrumentor().instrument()  # ← 自動產生 gen_ai.* span
 
 ---
 
+## 5c. Security Hardening — 4 層 Agent 安全防護 {#_9a}
+
+§5b 是法規面。這節是**技術面**——你的 agent 系統怎麼在 runtime 防禦惡意 input、限制 tool 權限、確保 audit 不可竄改。
+
+2026 年的 agent platform survey（[Klawty](https://github.com/dcode-tec/klawty)、[OpenFang](https://github.com/RightNow-AI/OpenFang)）展示了 4 層漸進式安全架構：
+
+### Layer 1 — Tool Sandbox（隔離執行環境）
+
+Agent 呼叫的 tool（shell exec / file write / HTTP request）不應該直接跑在 host OS：
+
+| 方案 | 隔離強度 | 啟動速度 | 適合 |
+|---|---|---|---|
+| **Docker sandbox** (Klawty) | 中-高 | ~500ms | 已有 Docker infra、需要完整 filesystem |
+| **WASM sandbox** (OpenFang) | 高 | <5ms | 輕量 tool、需要 per-call 隔離 |
+| **subprocess + seccomp** | 中 | ~10ms | Linux-only、中等安全需求 |
+| **無 sandbox** (大多數框架) | 無 | 0ms | 學習 / toy — production 不接受 |
+
+**Klawty Docker sandbox 模式**：
+```yaml
+# klawty-policy.yaml — 每個 tool call 開一個 ephemeral container
+sandbox:
+  enabled: true
+  image: "klawty-sandbox:latest"
+  network: none          # 沒網路
+  readonly_root: true    # root filesystem 唯讀
+  memory_limit: 512MB
+  timeout: 30s
+  capabilities: []       # 不給任何 Linux capability
+```
+
+**OpenFang WASM 雙重計量**：
+```rust
+// WASM component 有 CPU + memory hard limit
+let config = WasmConfig {
+    max_fuel: 1_000_000,     // CPU cycle 上限
+    max_memory_bytes: 64 * 1024 * 1024,  // 64MB
+    allowed_imports: vec!["http_get", "file_read"],  // 白名單
+};
+```
+
+### Layer 2 — Deny-by-Default Policy（權限引擎）
+
+**先禁止一切，再逐條開放**。跟防火牆規則一樣。
+
+```python
+class PolicyEngine:
+    """Deny-by-default tool policy."""
+
+    def __init__(self, rules: list[dict]):
+        self.rules = rules  # 載入自 YAML
+
+    def check(self, tool_name: str, args: dict) -> bool:
+        for rule in self.rules:
+            if rule["tool"] == tool_name:
+                if rule["action"] == "allow":
+                    # 檢查 constraints (path / domain / size...)
+                    return self._check_constraints(rule, args)
+                elif rule["action"] == "deny":
+                    return False
+        return False  # default: deny
+```
+
+**Policy YAML 範例**：
+```yaml
+default: deny
+rules:
+  - tool: web_search
+    action: allow
+  - tool: file_read
+    action: allow
+    constraints:
+      paths: ["/data/*", "/tmp/*"]    # 只能讀這些目錄
+  - tool: file_write
+    action: allow
+    constraints:
+      paths: ["/tmp/*"]              # 只能寫 /tmp
+      max_size_mb: 10                # 單檔 10MB 上限
+  - tool: shell_exec
+    action: deny                     # 永遠不允許 shell
+  - tool: http_request
+    action: allow
+    constraints:
+      domains: ["api.openai.com", "api.anthropic.com"]  # 白名單
+```
+
+**為什麼重要**：大多數 agent framework 是 **allow-by-default**——agent 能用的 tool 沒有限制。一個 prompt injection 就能讓 agent 讀你的 SSH key、發 HTTP 到攻擊者 server。
+
+### Layer 3 — Tamper-proof Audit（不可竄改的稽核鏈）
+
+§3.1 的 audit log 寫進 DB。但如果攻擊者能改 DB、你的 log 就不可信。
+
+**OpenFang 解法 — Merkle hash chain**：
+
+```python
+import hashlib, json
+
+class MerkleAuditChain:
+    """每筆 audit event 的 hash 包含前一筆的 hash，形成鏈。"""
+
+    def __init__(self):
+        self.prev_hash = "0" * 64  # genesis
+
+    def append(self, event: dict) -> str:
+        payload = json.dumps(event, sort_keys=True)
+        current_hash = hashlib.sha256(
+            f"{self.prev_hash}:{payload}".encode()
+        ).hexdigest()
+        event["audit_hash"] = current_hash
+        event["prev_hash"] = self.prev_hash
+        self.prev_hash = current_hash
+        return current_hash
+
+    def verify_chain(self, events: list[dict]) -> bool:
+        """驗證整條鏈沒被竄改。"""
+        prev = "0" * 64
+        for e in events:
+            payload = {k: v for k, v in e.items() if k not in ("audit_hash", "prev_hash")}
+            expected = hashlib.sha256(
+                f"{prev}:{json.dumps(payload, sort_keys=True)}".encode()
+            ).hexdigest()
+            if expected != e["audit_hash"]:
+                return False
+            prev = e["audit_hash"]
+        return True
+```
+
+**效果**：任何人改了任何一筆 audit event，後面所有 hash 都會斷。定期 `verify_chain()` 就能發現竄改。
+
+### Layer 4 — Supply Chain Integrity（來源可信）
+
+Agent 的 code（tool / skill / plugin）從哪來？怎麼確認沒被篡改？
+
+| 方案 | 做法 | 代表 |
+|---|---|---|
+| **SHA-256 boot verify** | 啟動時 hash 比對所有 tool 檔案 | Klawty |
+| **Ed25519 signed manifest** | 每個 skill package 附 author 簽名 | OpenFang |
+| **Sigstore cosign** | 跟容器 image 一樣簽 | V3 ADR-045（spec） |
+
+```bash
+# Klawty 風格 — 啟動時驗證所有 tool 完整性
+sha256sum --check tool_manifest.sha256
+# 任何檔案被改 → 啟動失敗，降級到唯讀模式
+```
+
+### 漸進式導入建議
+
+不用一次上 4 層。依你的 production 風險等級：
+
+| 你的情境 | 建議層數 | 從哪開始 |
+|---|---|---|
+| 個人助理 / 學習 | 0-1 | 先不用 sandbox |
+| 內部工具（HR / 報表） | 1-2 | Docker sandbox + deny-by-default policy |
+| 面對客戶的 agent | 2-3 | + Merkle audit chain |
+| 金融 / 醫療 / 法規環境 | 4 | 全上 + 第三方稽核 |
+
+> 💡 **跟 §5b 合規的關係**：EU AI Act Article 15 要求 high-risk AI 有「robustness + cybersecurity」。這 4 層就是你的技術回答。
+
+---
+
 ## 6. 自己升級你的 agentz_mini → production
 
 ### 6.1 加 audit log
@@ -414,6 +573,7 @@ clone https://github.com/symbiosis11503/helix-framework，讀：
 
 - [ ] 知道 production agent 必備的 4 governance pillar
 - [ ] 看過 V3 audit_event / replay_record / cost_cap / abort 怎麼存
+- [ ] 知道 4 層安全防護（sandbox / policy / tamper-proof audit / supply chain）
 - [ ] 看過 V3 multi-provider catalog 9 家結構
 - [ ] 升級 agentz_mini 加 audit + replay
 - [ ] 包成 FastAPI deploy
