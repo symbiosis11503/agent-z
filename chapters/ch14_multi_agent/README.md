@@ -208,6 +208,107 @@ multi-agent 共享資訊有 3 種方式：
 
 ---
 
+## 7a. Cross-Model Review — 讓不同 LLM 互審品質 {#_7a}
+
+§2.2 Supervisor 跟 §2.1 Pipeline 通常全部用同一個 LLM。但 [Agenvoy](https://github.com/agenvoy/Agenvoy)（Go 語言 agent platform）把**跨模型互審**做成內建功能——這是 2026 年 multi-agent 最值得學的 pattern 之一。
+
+### 原理
+
+```
+任務 → Planner 決定拆成哪些子任務
+                ↓
+    ┌───────────┼───────────┐
+    ▼           ▼           ▼
+  Claude      GPT-4o      Gemini
+  (做子任務A)  (做子任務B)  (做子任務C)
+    │           │           │
+    └─────cross-review──────┘
+          互相審對方的 output
+                ↓
+        Planner 綜合最佳答案
+```
+
+核心想法：**你不會讓同一個人寫 code 又 review 自己的 code**。模型也一樣——Claude 審 GPT 的答案能抓到 GPT 的 blind spot，反之亦然。
+
+### 實作
+
+```python
+import asyncio
+
+async def cross_model_review(task: str) -> str:
+    """用兩個模型平行做，再互審。"""
+
+    # Step 1: 兩個模型平行產出
+    draft_a, draft_b = await asyncio.gather(
+        call_llm("claude-sonnet-4-6", f"完成這個任務：\n{task}"),
+        call_llm("gpt-4o", f"Complete this task:\n{task}"),
+    )
+
+    # Step 2: 互相 review
+    review_of_b, review_of_a = await asyncio.gather(
+        call_llm("claude-sonnet-4-6",
+                  f"Review this output for errors/gaps:\n{draft_b}\n\nOriginal task: {task}"),
+        call_llm("gpt-4o",
+                  f"Review this output for errors/gaps:\n{draft_a}\n\nOriginal task: {task}"),
+    )
+
+    # Step 3: 綜合
+    final = await call_llm("claude-sonnet-4-6", f"""
+Original task: {task}
+
+Draft A (Claude): {draft_a}
+Review of A (by GPT): {review_of_a}
+
+Draft B (GPT): {draft_b}
+Review of B (by Claude): {review_of_b}
+
+綜合以上，給出最終最佳答案。
+""")
+    return final
+```
+
+### 什麼時候用
+
+| 適合 | 不適合 |
+|---|---|
+| 重要文件（合約 / 報告 / 對外發布） | 簡單 Q&A |
+| code review（不同 model 互審 PR） | 即時對話（太慢太貴） |
+| 事實查核（兩模型交叉驗證） | token 預算很緊 |
+| 翻譯品質關鍵場景 | 已經用 framework 的 retry 夠了 |
+
+### 成本 vs 品質 trade-off
+
+Cross-review 至少 4x LLM calls（2 draft + 2 review + 1 synthesize）。用在**高價值低頻率**任務。
+
+日常用的 cost-saving 版本：用 cheap model (Haiku) 當 reviewer，只在 reviewer 發現問題時才 escalate：
+
+```python
+async def cheap_cross_review(task: str) -> str:
+    draft = await call_llm("claude-sonnet-4-6", task)
+
+    # Haiku 快速 review (便宜)
+    review = await call_llm("claude-haiku-4-5",
+        f"Check for factual errors or logical gaps:\n{draft}")
+
+    if "no issues" in review.lower():
+        return draft  # 沒問題就直接用
+
+    # 有問題才 escalate 用另一個 model 重做
+    revised = await call_llm("gpt-4o",
+        f"Task: {task}\n\nPrevious attempt had issues: {review}\n\nPlease provide a corrected version.")
+    return revised
+```
+
+### 練習 14.4：Cross-Model Review 實驗
+
+1. 選一個任務（例如「比較 Postgres vs MySQL」），分別只用 Claude / 只用 GPT 產出
+2. 實作 cross-review（Claude 審 GPT、GPT 審 Claude）
+3. 比較 3 版（Claude only / GPT only / cross-reviewed）的品質
+
+**成功標準**：能具體指出 cross-review 抓到了哪些單一模型漏掉的問題。
+
+---
+
 ## 8. 你做完這一章後 ✅
 
 - [ ] 知道 Pipeline / Supervisor / Blackboard 三架構
@@ -215,7 +316,8 @@ multi-agent 共享資訊有 3 種方式：
 - [ ] 知道 handoff 當作 tool 的實作
 - [ ] 知道 3 種共享 memory 方式
 - [ ] 知道何時用 / 何時不用 multi-agent
-- [ ] 跑完練習 14.1 / 14.2 / 14.3
+- [ ] 知道 Cross-Model Review 的原理 + 成本 trade-off
+- [ ] 跑完練習 14.1 / 14.2 / 14.3 / 14.4
 
 打勾 5 個以上，進 [Ch 15 — Deploy + audit + replay（V3 case study）](../ch15_deploy_audit_replay/)。
 
