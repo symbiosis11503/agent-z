@@ -270,6 +270,103 @@ agentmemory 自家 README claim **LongMemEval-S R@5 95.2%** vs mem0 68.5% / Lett
 
 ---
 
+## 8a. Self-Learning Loop — Agent 越用越好的秘密 {#_8a}
+
+§3-6 的 memory 都是「**你告訴 agent 該記什麼**」。但有沒有可能 agent **自己從經驗學**？
+
+2026 年 [Hermes Agent](https://github.com/NousResearch/hermes-agent) 把 Self-Learning Loop 做成核心功能（它的 5 Pillars 之一）。原理：
+
+```
+完成一個任務（5+ tool calls）
+    ↓
+自動萃取「成功 pattern」
+    ↓
+寫成 SKILL.md（結構化的可複用經驗）
+    ↓
+下次遇到類似任務 → 自動套用 skill → 更快更準
+    ↓
+使用 feedback（成功/失敗）→ patch skill → version bump
+```
+
+### 具體例子
+
+你叫 agent「查某公司最新季報營收」，它花了 8 步（search → 找到 PDF → download → parse → 萃取數字 → 格式化）。
+
+學習 loop 把這 8 步萃取成一條 skill：
+
+```markdown
+# SKILL.md: quarterly-earnings-lookup
+## Trigger
+使用者問「某公司營收 / 季報 / 財務數據」
+## Steps
+1. Search "{company} {quarter} earnings report filetype:pdf"
+2. Download first PDF result
+3. Extract revenue from "Total Revenue" or "Net Sales" row
+4. Format: {company} {quarter} revenue = ${amount}B
+## Version: 1.0.2
+## Success rate: 87% (26/30 uses)
+```
+
+下次你問另一家公司的營收，agent 不用重新「思考」8 步，直接套 skill。
+
+### 為什麼這很重要
+
+| 模式 | 沒有 Learning Loop | 有 Learning Loop |
+|---|---|---|
+| 重複任務 | 每次從零推理 | 第 2 次起自動套 pattern |
+| Token 成本 | 每次都一樣 | 逐漸降低（skip 不必要的推理） |
+| 品質 | 偶有失誤重複犯 | 從錯誤中學，不重蹈 |
+| 個人化 | 需要你手動教 | 自動適應你的使用習慣 |
+
+### ⚠️ Learning Loop 的風險
+
+Self-Learning 不是銀彈。**沒有治理的學習是危險的**：
+
+1. **學到壞 pattern** — agent 用危險方式完成任務（比如 `sudo rm` 清空暫存），學到後每次都這樣做
+2. **Skill drift** — 學到的 skill 適用舊版 API，API 改了 skill 就壞
+3. **成本失控** — 學習過程本身消耗 token，沒有 budget cap 可能比不學更貴
+4. **隱私風險** — 從對話中萃取的 pattern 可能包含 PII
+
+**Production 的做法**：
+
+```python
+class GovernedLearning:
+    """Learning loop with safety gates"""
+
+    def maybe_learn(self, task_result):
+        pattern = self.extract_pattern(task_result)
+
+        # Gate 1: 安全分類
+        if pattern.uses_dangerous_tools(["shell_exec", "file_delete"]):
+            return  # 不學危險操作
+
+        # Gate 2: 成本預算
+        if self.learning_budget_remaining <= 0:
+            return  # 今天的學習額度用完了
+
+        # Gate 3: 人工審核（高風險 pattern）
+        if pattern.risk_score > 0.7:
+            self.queue_for_human_review(pattern)
+            return
+
+        # 通過所有 gate → 寫入 skill store
+        self.skill_store.save(pattern)
+```
+
+**核心觀念**：學習能力（Hermes）+ 學習治理（safety gate）= production 可用的自我進化 agent。只有前者沒有後者 = 不可控系統。
+
+### 練習 13.4：模擬 Learning Loop
+
+在你的 agent 加一個簡單版學習 loop：
+
+1. agent 完成一個 5+ step 任務後，call LLM 萃取「步驟摘要」
+2. 存進 `skills.json`（key = trigger 關鍵字, value = 步驟清單）
+3. 下次遇到類似關鍵字，先查 `skills.json` 有沒有 match
+
+**成功標準**：第一次做某任務花 N 步，第二次做類似任務步數減少。
+
+---
+
 ## 9. 你做完這一章後 ✅
 
 - [ ] 知道 LLM 沒記憶的本質、為何要 memory 層
@@ -278,7 +375,8 @@ agentmemory 自家 README claim **LongMemEval-S R@5 95.2%** vs mem0 68.5% / Lett
 - [ ] 寫過 SQLite-backed long-term memory
 - [ ] 跑過 chromadb RAG pipeline
 - [ ] 知道 Contextual Retrieval 為什麼有用
-- [ ] 跑完練習 13.1 / 13.2 / 13.3
+- [ ] 知道 Self-Learning Loop 的原理 + 為什麼需要治理
+- [ ] 跑完練習 13.1 / 13.2 / 13.3 / 13.4
 
 打勾 5 個以上，進 [Ch 14 — Multi-agent](../ch14_multi_agent/)。
 
