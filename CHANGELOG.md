@@ -2,6 +2,34 @@
 
 All notable changes to AgentZ.
 
+## v1.8 — 2026-05-20 (競品 Survey 內化)
+
+> 5 大 Agent Platform survey 的精華變成 AgentZ 教學內容。不是翻譯 survey，是把 pattern 變成可教、可練、可帶走的知識。iter 51-55, 5 commits.
+
+### 新增章節內容
+
+| iter | commit | 章節 | 內容 |
+|---|---|---|---|
+| 51 | `3eea2d7` | Ch 11 §5b | Agent Platform/OS 品類 — 5 platform + 5 design patterns + 選擇指南 |
+| 52 | `359e83a` | Ch 13 §8a | Self-Learning Loop (from Hermes) — 原理 / GovernedLearning / 練習 13.4 |
+| 53 | `773a13e` | Ch 14 §7a | Cross-Model Review (from Agenvoy) — async 實作 / cost-saving variant / 練習 14.4 |
+| 54 | `b6d0adc` | Ch 15 §5c | 4-Layer Security Hardening (from Klawty + OpenFang) — sandbox / policy / Merkle audit / supply chain |
+| 55 | `a63357b` | Ch 3 §4a | Agent 演化路線圖 — Level 0 (LLM call) → Level 4 (Agent OS) |
+
+### Survey 來源
+
+- OpenClaw (372k★) / Hermes Agent (80k+★) / Agenvoy (5k★) / Klawty (2k★) / OpenFang (17.5k★)
+- Zo Computer (always-on cloud agent)
+- Agenvoy vs Hermes 深度比較
+
+### NOT in this version
+
+- index.md / chapters.md 規模數字更新（下版）
+- llms.txt 全文同步（下版）
+- 新 starter-code（跟新練習對應的 code 下版補）
+
+---
+
 ## v1.7 — 2026-05-12-13 (Ralph loop cycle 1: 讓人帶走它)
 
 > 第四輪 ralph-loop. 主軸不是補章節，是讓 AgentZ 從「自閉好內容」→「真能 spread 的開源教程」。v1.6 = 內容變強；v1.7 cycle 1 = **外帶 surface**. 6 commits push origin/main, GH Pages auto-deploy.
