@@ -168,7 +168,7 @@ $ /plugin install <plugin-name>
 # 或 git clone <plugin repo> 到 ~/.claude/plugins/
 ```
 
-幾個推薦逛的 marketplace（2026 Q1）：
+幾個推薦逛的 marketplace（2026）：
 - Anthropic 官方 marketplace（內建 `/plugin marketplace`）
 - `awesome-claude-code-plugins`（GitHub 社群整理）
 - WenyuChiou MCP-Skills catalog 也涵蓋部分 plugin

@@ -61,11 +61,11 @@ LLM 挑機率最高的「好」，吐出來。
 
 **因為 token = 錢**。API 按 token 計費，分輸入跟輸出兩部分：
 
-| Model（2026 Q1） | 輸入 / 1M token | 輸出 / 1M token |
+| Model（2026 Q2） | 輸入 / 1M token | 輸出 / 1M token |
 |---|---|---|
 | Claude Haiku 4.5 | $0.80 | $4.00 |
 | Claude Sonnet 4.6 | $3.00 | $15.00 |
-| Claude Opus 4.7 | $15.00 | $75.00 |
+| Claude Opus 4.6 | $15.00 | $75.00 |
 | GPT-4o-mini | $0.15 | $0.60 |
 | GPT-4o | $2.50 | $10.00 |
 | Gemini 2.5 Flash | $0.30 | $2.50 |
@@ -90,7 +90,7 @@ LLM 挑機率最高的「好」，吐出來。
 
 | Model | Context window |
 |---|---|
-| Claude Haiku 4.5 / Sonnet 4.6 / Opus 4.7 | 200K（部分到 1M） |
+| Claude Haiku 4.5 / Sonnet 4.6 / Opus 4.6 | 200K（部分到 1M） |
 | GPT-4o | 128K |
 | GPT-4o-mini | 128K |
 | Gemini 2.5 Flash | 1M |

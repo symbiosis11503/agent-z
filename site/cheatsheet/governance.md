@@ -29,8 +29,8 @@ description: V3 Production agent 4 道閘門 (cost cap / tool sandbox / audit / 
 | Routing / 分類 | Haiku 4.5 / Gemini Flash |
 | 摘要 / 整理 | Haiku 4.5 / GPT-4o-mini |
 | Coding 修 bug | Sonnet 4.6 / DeepSeek V3 |
-| Coding 大重構 | Opus 4.7 |
-| 數學 / 推理 | DeepSeek R1 / Opus 4.7 / o1 |
+| Coding 大重構 | Opus 4.6 |
+| 數學 / 推理 | DeepSeek R1 / Opus 4.6 / o1 |
 | Embedding | text-embedding-3-small (OpenAI) / cohere multilingual |
 | Function calling | Haiku 4.5 (cost) / Sonnet 4.6 (穩) |
 | Multi-agent supervisor | Sonnet 4.6 |

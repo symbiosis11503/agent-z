@@ -29,14 +29,14 @@ CLI Agent 就是「把 ReAct loop 包好的殼」：
 
 ## 2. 四家主流 CLI Agent
 
-2026 Q1 的 landscape：
+2026 Q2 的 landscape：
 
 | CLI | 出品 | 主要模型 | 安裝 | 強項 | 弱點 |
 |---|---|---|---|---|---|
-| **Claude Code** | Anthropic | Claude Sonnet/Haiku/Opus | `npm i -g @anthropic-ai/claude-code` | 寫程式最強、tool use 成熟、MCP/Skills 生態完整 | 綁 Anthropic（但 2026 新增多 provider） |
-| **Codex CLI** | OpenAI | GPT-4o 系 | `npm i -g @openai/codex-cli` | 文件型任務強、生態完整 | tool use 比 Claude 略弱 |
+| **Claude Code** | Anthropic | Claude 4.5 Sonnet / 4.6 Opus / Haiku | `npm i -g @anthropic-ai/claude-code` | 寫程式最強、tool use 成熟、MCP/Skills 生態完整、1M context (Opus 4.6) | 綁 Anthropic（但 2026 新增多 provider） |
+| **Codex CLI** | OpenAI | GPT-4o / o3 系 | `npm i -g @openai/codex-cli` | 文件型任務強、生態完整 | tool use 比 Claude 略弱 |
 | **OpenCode** | 開源社群 | 任一家（OpenRouter）| `npm i -g opencode-ai` | vendor-neutral、開源、可自 host | 沒官方 Skills/MCP 規範、學習曲線陡 |
-| **Gemini CLI** | Google | Gemini 2.0/2.5 | `npm i -g @google/gemini-cli` | 1M context 便宜、多模態 | 工具生態剛起步 |
+| **Gemini CLI** | Google | Gemini 2.5 Pro/Flash | `npm i -g @google/gemini-cli` | 1M context 便宜、多模態、free tier 大方 | 工具生態較 Claude Code 不成熟 |
 
 > 💡 **本書範例以 Claude Code 為主**——原因是 MCP / Skills 生態最完整，學會它再學其他家很順。但每一章都會標註「換成 Codex / OpenCode 該怎麼做」對應寫法。
 
@@ -118,6 +118,46 @@ Claude Code 會：
 Claude Code 會在每個工具呼叫前**逐個告訴你**它要做什麼（並等你按 Enter 同意或拒絕）。這叫 **permission mode**，預設保守。
 
 如果你想全自動：`/permission accept-all` 或在 settings.json 設 `default-mode: "accept-edits"`。但**剛開始一定要看每個動作**，學原理。
+
+---
+
+## 5b. 第一天實用技巧
+
+剛裝好 CLI agent 的人常犯的錯：直接丟大任務、不看成本、不知道怎麼煞車。
+
+### Plan mode 先
+
+不確定 agent 會做什麼之前，先用 plan mode：
+
+```bash
+> /plan 把這個專案的 API endpoint 整理成文件
+```
+
+Claude Code 會先列出它打算做什麼（讀哪些檔、寫什麼文件），你看過再 approve。**永遠先 plan 再執行**，尤其在不熟的 codebase。
+
+### 控制成本
+
+```bash
+> /cost                    # 看當前 session 花了多少
+> /model claude-haiku-4-5  # 切到便宜模型
+```
+
+- 探索性問答用 Haiku（便宜 20x）
+- 真的要改 code 再切 Sonnet / Opus
+- 每次用完看 `/cost`，養成習慣
+
+### 煞車
+
+- **`Esc`**：中斷當前 tool call（agent 跑太久時）
+- **`Ctrl+C`**：退出 session
+- **`.claudeignore`**：列出不要讓 agent 碰的檔案（像 `.gitignore` 語法）
+
+### Scope 你的任務
+
+好的 prompt：「改 `src/api.py` 第 42 行的 SQL injection bug」
+壞的 prompt：「幫我看看有沒有 bug」
+
+**給 agent 具體範圍**——它不是你的老闆，不需要自己想要做什麼。
 
 ---
 

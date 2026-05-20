@@ -13,7 +13,7 @@ description: 11 家主流 LLM pricing 2026-05 snapshot + AgentZ 章節練習推�
 |---|---|---|
 | Haiku 4.5 | $1 | $5 |
 | Sonnet 4.6 | $3 | $15 |
-| Opus 4.7 | $15 | $75 |
+| Opus 4.6 | $15 | $75 |
 | GPT-4o-mini | $0.15 | $0.60 |
 | GPT-4o | $2.5 | $10 |
 | Gemini 2.5 Flash | $0.30 | $2.50 |
