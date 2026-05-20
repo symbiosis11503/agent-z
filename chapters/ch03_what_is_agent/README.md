@@ -176,6 +176,53 @@ Act     → 再呼叫工具 / 給最終答案
 
 ---
 
+## 4a. Agent 的演化：工具 → 框架 → 平台 → Agent OS
+
+§1-4 講的 agent 是最基礎的形態：**LLM + 工具 + 循環**。但 2026 年業界已經往更高層走：
+
+```
+Level 0: 單一 LLM call（ChatGPT 問答）
+    ↓
+Level 1: Agent（LLM + 工具 + ReAct loop）         ← 你剛學完的
+    ↓
+Level 2: Agent Framework（LangGraph / CrewAI）     ← Ch 11 會教
+    ↓
+Level 3: Agent Platform（OpenClaw / Hermes）       ← Ch 11 §5b 會介紹
+    ↓
+Level 4: Agent OS（OpenFang）                      ← 業界最前沿
+```
+
+**Level 0-1**：你到目前為止在學的。一個 Python script，call LLM + tool。
+
+**Level 2 — Framework**：有人把 agent loop 的 boilerplate（state management / 錯誤處理 / checkpointing）包好了，你 `import` 來用。[Ch 11](../ch11_frameworks/) 深入比較。
+
+**Level 3 — Platform**：不只是 library，而是**整套應用**——裝好就能對話、有 CLI / Web UI、內建記憶 / 排程 / 通訊軟體整合。例如：
+- **OpenClaw** (372K ⭐)：跑在你自己電腦上的個人 AI 助理
+- **Hermes Agent** (80K+ ⭐)：會從經驗中學習、越用越好的 agent
+
+**Level 4 — Agent OS**：agent 不只「你呼叫它才動」，而是**24/7 自主運行**、有自己的排程、記憶、安全沙箱、桌面 app。像是一個作業系統，但「程式」是 agent。
+- **OpenFang** (17.5K ⭐, Rust)：180ms 冷啟動、40MB 記憶體、WASM sandbox
+
+### 你現在在哪裡
+
+```
+你現在 → [Level 1] ← 學基礎原理
+                ↓
+          Ch 4-10 寫更多 agent
+                ↓
+          Ch 11-12 升級到 framework (Level 2)
+                ↓
+          Ch 13-15 加記憶 / multi-agent / governance
+                ↓
+          你可以自由選擇：
+            • 用現成 platform (Level 3)
+            • 或繼續自己建，理解每一層原理
+```
+
+> 💡 **學習建議**：先在 Level 1 打好基礎（Ch 3-10），再看 framework / platform。直接跳 Level 3 你會不知道「它內部在幹嘛」，遇到問題就卡住。
+
+---
+
 ## 5. 對齊 ai-dict 名詞
 
 本章相關 ai-dict 詞條（[繁中版](https://ai-dict.gh.miniasp.com/)）：
