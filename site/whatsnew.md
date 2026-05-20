@@ -1,6 +1,6 @@
 ---
 title: What's New — AgentZ 更新紀錄
-description: AgentZ 版本變動 high-signal 摘要：v1.0 initial / v1.1 章節深度補完 / v1.2 ralph-loop polish / v1.3 三大長頁拆分 / v1.4 SEO canonical / v1.5 結構化資料 / v1.6 合規 + 框架 + 標準觀測性。
+description: AgentZ 版本變動 high-signal 摘要：v1.8 競品 survey 內化 / v1.7 社群分享化 / v1.6 合規+框架+標準觀測性 / v1.5 結構化資料 / v1.4 SEO / v1.3 分頁。
 ---
 
 # What's New — 更新紀錄
@@ -10,6 +10,25 @@ AgentZ 持續迭代中。這頁是 site-side 「最近一個月做了什麼」�
 > **Watch the repo** 不定時 polish — [GitHub Watch](https://github.com/symbiosis11503/agent-z) → Releases-only 抓重大改版。
 
 [[toc]]
+
+---
+
+## 2026-05-20 — v1.8 競品 Survey 內化 ✅ sealed (5 iter)
+
+**主題**：把 5 大 Agent Platform 競品 survey（OpenClaw / Hermes / Agenvoy / Klawty / OpenFang）+ Zo Computer 分析的學習內化到 AgentZ 教學內容。**iter 51-55 共 5 commits**。
+
+### 新增內容
+
+- **Ch 3 §4a** — Agent 演化路線圖（Level 0-4：LLM call → Agent → Framework → Platform → Agent OS）
+- **Ch 11 §5b** — Agent Platform / Agent OS 全新品類（5 platform 速覽 + Framework vs Platform 選擇指南）
+- **Ch 11 §5b** — 從 survey 學到的 5 個設計 pattern（Self-Learning Loop / Cross-Model Review / Deny-by-Default / WASM Sandbox / Always-On Scheduling）
+- **Ch 13 §8a** — Self-Learning Loop 完整教學（from Hermes）：原理 / 範例 / 風險 / GovernedLearning 實作 / 練習 13.4
+- **Ch 14 §7a** — Cross-Model Review 完整教學（from Agenvoy）：架構圖 / async 實作 / cost-saving 版 / 練習 14.4
+- **Ch 15 §5c** — 4 層安全硬化（from Klawty + OpenFang）：Tool Sandbox / Deny-by-Default Policy / Merkle Audit Chain / Supply Chain Integrity
+
+### 精神
+
+不是「翻譯 survey」，而是把競品最值得學的 pattern **變成可教、可練、可帶走的知識**。每個新 section 都有 code sample + 練習 + 風險提醒。
 
 ---
 
