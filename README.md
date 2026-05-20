@@ -77,7 +77,7 @@ AgentZ 補上這兩塊，並且把 **Claude Code 生態系**（MCP / Skills / Pl
 - 🛠 [故障排除](https://symbiosis11503.github.io/agent-z/troubleshooting) — 12 大類常見錯誤 + 症狀 + 解法
 - 📖 [70+ 名詞表 (5 分類)](https://symbiosis11503.github.io/agent-z/glossary) — 繁中/English + 4 欄（基礎/Agent/實務/Production/台灣 pair，含 ICE / Consensus Trap / Slopsquatting / ISO 42001 / NIST AI RMF / EU AI Act / OTel GenAI）
 - ✅ [進度檢核表](https://symbiosis11503.github.io/agent-z/progress) — localStorage 記你跑到哪
-- 📜 [更新紀錄 What's New](https://symbiosis11503.github.io/agent-z/whatsnew) — v1.0 → v1.7 改版重點
+- 📜 [更新紀錄 What's New](https://symbiosis11503.github.io/agent-z/whatsnew) — v1.0 → v1.8 改版重點
 - 📚 [引用 AgentZ](https://symbiosis11503.github.io/agent-z/cite) — BibTeX / APA 7th / Chicago 17th / CITATION.cff / Markdown 5 格式 (researcher / 教材作者 / blog)
 - 📋 [CONTRIBUTING.md](./CONTRIBUTING.md) — 5 條投稿路徑
 
@@ -148,6 +148,7 @@ Node 18+ 即可。沒 lint / test，但 PR 前請至少 `npm run build` 確認 b
 **v1.3-1.5** (2026-05-12) — 三大長頁拆分（glossary 5 分類 / cheatsheet 6 分頁 / llm-providers 3 分頁）+ SEO canonical 51 頁 + JSON-LD Course + BreadcrumbList + 20 章 frontmatter + /chapters landing ✅
 **v1.6** (2026-05) — Ralph-loop 第三輪雙 cycle (~17 iter): **70+ 名詞** (+ICE / Consensus Trap / Slopsquatting / ISO 42001 / NIST AI RMF / EU AI Act / OTel GenAI) + ch08 vendor 單價表 + ch11 A2A 協議 + ch15 OpenTelemetry GenAI + **速查卡 7th page · Compliance** + ch5/6/9/14/15 章節 cross-link ✅
 **v1.7 cycle 1** (2026-05-13) — Ralph-loop 第四輪「讓人帶走它」(6 iter): **/cite** (BibTeX/APA/Chicago/CITATION.cff) + **CODE_OF_CONDUCT.md** + nav 💬 Discussions + Issues + about「社群場合對照表」+ **og-image 1200×630** Twitter/FB link preview + per-page meta inject + **PWA manifest** (Add to Home Screen) ✅
+**v1.8** (2026-05-20) — 競品 Survey 內化 (7 iter): 5 大 Agent Platform survey 精華→教學內容。Ch 3 Agent 演化路線圖 / Ch 11 Agent Platform/OS 品類 / Ch 13 Self-Learning Loop / Ch 14 Cross-Model Review / Ch 15 4-Layer Security Hardening。7,200+ 行 / 65+ 練習 ✅
 **v2 規劃中** — 章節內動手練習串 Helix V3 sandbox 真跑 + portfolio leaderboard
 
 請查 [CHANGELOG.md](./CHANGELOG.md)。
