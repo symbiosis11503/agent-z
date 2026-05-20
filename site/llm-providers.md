@@ -66,7 +66,7 @@ description: 11 家熱門 LLM（Claude/GPT/Gemini/Groq/DeepSeek/Mistral/OpenRout
 4. **cost cap loop**——agent 寫 loop 一定要算 token，設 daily cap（Ch 8 §3 有 pattern）。
 5. **key 外洩 → 立即 revoke**——所有家都能在 dashboard 一鍵 disable old key、create new。
 6. **不要在 Discord / 截圖貼 key**——就算只是錯字、也已經算外洩。
-7. **試 model 用免費層或最便宜款**——Haiku 4.5 / Gemini 2.5 Flash / Groq / DeepSeek V3 都很便宜，比一開始就上 Opus 4.6 / GPT-4o 省幾百倍。
+7. **試 model 用免費層或最便宜款**——Haiku 4.5 / Gemini 2.5 Flash / Groq / DeepSeek V3 都很便宜，比一開始就上 Opus 4.7 / GPT-4o 省幾百倍。
 
 ---
 

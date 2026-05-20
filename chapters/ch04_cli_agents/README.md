@@ -33,7 +33,7 @@ CLI Agent 就是「把 ReAct loop 包好的殼」：
 
 | CLI | 出品 | 主要模型 | 安裝 | 強項 | 弱點 |
 |---|---|---|---|---|---|
-| **Claude Code** | Anthropic | Claude 4.5 Sonnet / 4.6 Opus / Haiku | `npm i -g @anthropic-ai/claude-code` | 寫程式最強、tool use 成熟、MCP/Skills 生態完整、1M context (Opus 4.6) | 綁 Anthropic（但 2026 新增多 provider） |
+| **Claude Code** | Anthropic | Claude Haiku 4.5 / Sonnet 4.6 / Opus 4.7 | `npm i -g @anthropic-ai/claude-code` | 寫程式最強、tool use 成熟、MCP/Skills 生態完整、1M context (Opus 4.7) | 綁 Anthropic（但 2026 新增多 provider） |
 | **Codex CLI** | OpenAI | GPT-4o / o3 系 | `npm i -g @openai/codex-cli` | 文件型任務強、生態完整 | tool use 比 Claude 略弱 |
 | **OpenCode** | 開源社群 | 任一家（OpenRouter）| `npm i -g opencode-ai` | vendor-neutral、開源、可自 host | 沒官方 Skills/MCP 規範、學習曲線陡 |
 | **Gemini CLI** | Google | Gemini 2.5 Pro/Flash | `npm i -g @google/gemini-cli` | 1M context 便宜、多模態、free tier 大方 | 工具生態較 Claude Code 不成熟 |

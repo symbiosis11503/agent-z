@@ -17,10 +17,10 @@ description: Anthropic Claude、OpenAI GPT、Google Gemini 三家美國商業 LL
 Anthropic 的 Claude 系列，是 AgentZ 預設用的模型。三檔位：
 - **Haiku 4.5**：快、便宜、適合大量 ReAct loop / 工具呼叫
 - **Sonnet 4.6**：平衡，日常 agent 用這顆
-- **Opus 4.6**：最強推理，1M context，適合 coding / 深度規劃
+- **Opus 4.7**：最強推理，1M context，適合 coding / 深度規劃
 
 特色：
-- 1M token context window（Opus 4.6）
+- 1M token context window（Opus 4.7）
 - 內建 tool use（function calling）
 - Claude Code CLI 直接綁這顆
 - API 行為相對「穩」，agent loop 不易突然亂跑
@@ -66,7 +66,7 @@ print(resp.content[0].text)
 ### 費用速算
 - Haiku 4.5：input $1 / 1M、output $5 / 1M
 - Sonnet 4.6：input $3 / 1M、output $15 / 1M
-- Opus 4.6：input $15 / 1M、output $75 / 1M
+- Opus 4.7：input $15 / 1M、output $75 / 1M
 
 一次 agent run 大約 5-50K tokens，Haiku 一次跑 < $0.05，Sonnet < $0.20。
 
