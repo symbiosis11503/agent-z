@@ -236,6 +236,100 @@ print(result.data.temp)  # 26.0
 
 ---
 
+## 5b. Agent Platform / Agent OS — 框架之上的全棧平台
+
+§2-5 講的都是「**寫 code 時選哪個框架**」。但 2026 年出現了一個新品類：**不是幫你寫 agent，而是直接給你一整個 agent 系統跑起來**。
+
+這些專案叫自己 Agent Platform 或 Agent OS。它們跟上面的 framework 根本不是同層：
+
+| | Framework (§2-5) | Agent Platform / OS |
+|---|---|---|
+| 你拿到的 | library + API | 完整應用（CLI / TUI / Web） |
+| 啟動方式 | `import crewai` 寫 code | 裝好就能對話 / 派任務 |
+| 內建能力 | 你自己接 | 記憶 / 排程 / channel / 工具 / 人格 |
+| 適合誰 | 開發者 | 開發者 + 進階使用者 |
+| 類比 | React 是框架 | VS Code 是平台 |
+
+### 2026 五大 Agent Platform 速覽
+
+| Platform | 語言 | ⭐ | 一句話 | 殺手特色 |
+|---|---|---:|---|---|
+| **[OpenClaw](https://github.com/openclaw/openclaw)** | TS/JS | 372k | 跑在你自己機器上的個人 AI 助理 | 20+ 通訊 channel、5400+ skill marketplace、SOUL.md 人格 |
+| **[Hermes Agent](https://github.com/NousResearch/hermes-agent)** | TS/Python | 80k+ | 會成長的 agent | **自我學習 loop**：完成任務→萃取 pattern→生成 skill→下次更好 |
+| **[Agenvoy](https://github.com/agenvoy/Agenvoy)** | Go | 5k | 多模型併發調度器 | planner 把子任務分給不同 LLM、**跨模型交叉 review** |
+| **[Klawty](https://github.com/dcode-tec/klawty)** | TS/JS | 2k | OpenClaw 安全硬化版 | Docker sandbox、deny-by-default policy、PII 偵測 |
+| **[OpenFang](https://github.com/RightNow-AI/OpenFang)** | Rust | 17.5k | 自主 Agent OS，24/7 運行 | 180ms 冷啟動、WASM sandbox、Merkle 稽核鏈、Tauri 桌面 app |
+
+> ⚠️ 數字為 2026-05 snapshot。這個品類變化極快，選之前查最新狀態。
+
+### 從 survey 學到的 5 個設計 pattern
+
+這些 platform 各自演化出了值得學的 pattern，即使你不用這些平台，**寫自己的 agent 時也能借鏡**：
+
+**Pattern 1 — Self-Learning Loop (Hermes)**
+
+```
+完成任務 → 萃取成功 pattern → 生成 SKILL.md → 下次遇到類似任務自動套用
+```
+
+唯一內建「越用越好」的平台。但注意：學習本身需要 **governed**（什麼能學、學到的 skill 是否安全）。→ 詳見 [Ch 13 §8a 自我學習 loop](../ch13_memory_rag/#_8a)
+
+**Pattern 2 — Cross-Model Review (Agenvoy)**
+
+```
+任務 → 多個 LLM 平行產出 → 互相 review 對方的 output → 綜合最佳答案
+```
+
+不是只用一個 LLM，而是讓 Claude 審 GPT 的答案、GPT 審 Claude 的答案。像 code review 但 reviewer 是另一個模型。→ 詳見 [Ch 14 §7a 跨模型互審](../ch14_multi_agent/#_7a)
+
+**Pattern 3 — Deny-by-Default Policy (Klawty)**
+
+```yaml
+# klawty-policy.yaml
+default: deny
+rules:
+  - tool: web_search
+    action: allow
+  - tool: file_write
+    action: allow
+    paths: ["/tmp/*"]
+  - tool: shell_exec
+    action: deny  # 永不允許
+```
+
+**先禁止一切，再逐條開放。** 跟防火牆規則一樣的思維。大多數 agent framework 是 allow-by-default（什麼都能做），這在 production 很危險。→ 詳見 [Ch 15 §9a 安全硬化](../ch15_deploy_audit_replay/#_9a)
+
+**Pattern 4 — WASM Sandbox (OpenFang)**
+
+用 WebAssembly 隔離 agent 執行的工具 code：
+- **雙重計量**：CPU cycle + 記憶體都有 hard limit
+- **能力白名單**：只給你需要的 syscall
+- 比 Docker sandbox 更輕量（啟動 < 5ms）
+
+**Pattern 5 — Always-On Scheduling**
+
+```
+Agent 不只在你呼叫時才動。
+它有自己的 cron，定時跑任務，結果推到你的 Discord / Telegram / Email。
+```
+
+OpenClaw / Hermes / Agenvoy / OpenFang 都內建 cron。**Zo Computer** 更極端 — 直接給你一台雲端 Linux + 永駐 agent，你睡覺它在替你工作。
+
+### Framework vs Platform — 你該選哪邊？
+
+| 情境 | 選 Framework | 選 Platform |
+|---|---|---|
+| 你在寫一個產品，agent 是其中一個功能 | ✅ LangGraph / Pydantic AI 嵌進去 | |
+| 你想要「一個自己的 AI 助理」 | | ✅ OpenClaw / Hermes |
+| 你的公司要治理 AI agent 的行為 | | ✅ 帶 governance 的平台 (Klawty / 或自建) |
+| 你在學 agent 原理 | ✅ Raw API → Framework | |
+| 你需要 24/7 自主排程 | | ✅ OpenFang / Hermes |
+| 你需要跟 10+ 通訊軟體連接 | | ✅ OpenClaw (20+ channel) |
+
+> 💡 **兩者不互斥**。OpenFang 內部可以用 LangGraph 當 orchestration engine。Platform 是殼，Framework 是引擎。
+
+---
+
 ## 5a. Visual / Low-code 路線 — 不寫 code 也想拼 agent workflow
 
 §2-5 都假設你會寫 Python / TS。如果你**完全不寫 code**（PM / 設計 / 業務），或想用拖拉式快速 prototype，2026 三個主流 visual builder：
